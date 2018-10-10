@@ -1,0 +1,97 @@
+<div class="contentPadding">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-3">
+                    <div class="mobileSearch large">
+                        Search
+                        <i class="fa fa-angle-down"></i>
+                    </div>
+                    <aside class="blogAside"><!--
+                        <div class="searchWrapper">
+                            <input class="simple-input" type="text" placeholder="Enter Search Keywords">
+                            <button class="searchBtn" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                        </div> -->
+                        <!-- 	Category-START 	-->
+                        <div class="recentTitle">
+                            <h5 class="h5 as">Categorias</h5>
+                        </div>
+                        <ul class="categoriesList normall">
+                          <% if @categories_menu.blank? %>
+                            <li> Sem categorias <i class="fa fa-angle-right"></i></li>
+                          <% else %>
+                            <% @categories_menu.each do |category| %>
+                              <li><%= link_to blog_category_path(category.id) do %><%= category.name %> <i class="fa fa-angle-right"></i><% end %></li>
+                            <% end %>
+                          <% end %>
+                        </ul>
+                        
+                        <!-- 	Category-END 	-->
+                        
+                        
+                        
+                        <!-- 	Recent news-START-->
+                        <div class="emptySpace30 emptySpace-xs10"></div>
+                        <!-- 	Tags-START 	-->
+                        <!--
+                        <div class="recentTitle">
+                            <h5 class="h5 as">TAGES</h5>
+                        </div>
+                        <a href="#" class="tags small">Treatment</a>
+                        <a href="#" class="tags small">Depression</a>
+                        <a href="#" class="tags small active">Stress</a>
+                        <a href="#" class="tags small">Kids Problems</a>
+                        <a href="#" class="tags small">Anxiety</a>
+                        <a href="#" class="tags small">Inner Life</a> -->
+                        <!-- 	Tags-END 	-->
+                        <div class="emptySpace-xs30"></div>
+                    </aside>
+                </div>
+                <div class="col-sm-12 col-md-9">
+                    <div class="mainBlogContent">
+                        <!-- 	Blog1-START 	-->
+
+                        <% if @posts.blank? %>
+                            <p>Sem posts =/</p>
+                        <% else %>
+                          <% @posts.each do |post| %>
+                            <div class="blogWrapper">
+                                <p class="imgWrapper blogThumbnail">
+                                    <%= image_tag post.picture.url(:large) %>
+                                    <span class="timeBlock"><%= l(post.post_date) %></span>
+                                </p>
+                                <div class="blogInfo">
+                                    <p><i class="fa fa-user"></i> Por: <%= post.admin.name %></p>
+                                    <p><i class="fa fa-tag"></i> <%= post.category.name %></p>
+                                    <!--<p><i class="fa fa-comments-o"></i> comments: <span>5</span></p>-->
+                                </div>
+                                <div class="blogContent">
+                                    <h5 class="h5 as"><%= post.title %></h5>
+                                    <div class="simple-article normall">
+                                        <p><%= post.body %></p>
+                                    </div>
+                                </div>
+                                <!--<a href="blog-details.html" class="button">Read more</a>-->
+                            </div>
+                            <!-- 	Blog1-END 	-->
+                            <div class="emptySpace80 emptySpace-xs30"></div>
+                            <div class="emptySpace80 emptySpace-xs30"></div>
+                          <% end %>
+                        <% end %>
+
+                        <div class="emptySpace90 emptySpace-xs30"></div>
+
+                        <!-- 	Page pagitaion-START 	-->
+                        <div class="paginationWrapper large">
+                            <a class="pagiPrev" href="#"><i class="fa fa-angle-left"></i></a>
+                            <div class="nubmerPagination">
+                                <a class="numberPagi activePagi" href="#">1</a>
+                                <a class="numberPagi" href="#">2</a>
+                            </div>
+                            <a class="pagiNext" href="#"><i class="fa fa-angle-right"></i></a>
+                        </div>
+                        <!-- 	Page pagitaion-END 	-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

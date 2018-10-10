@@ -1,0 +1,39 @@
+<div class="modal fade" id="sendMailModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">Agendar</h4>
+      </div>
+      <div class="modal-body">
+        <%= form_tag site_send_mail_index_path, class: "requestForm", remote: true do %>
+          <div class="sumoWrapper">
+            <label for="message-text" class="control-label">Email:</label>
+            <%= email_field_tag(:'recipient-text', nil, class:'simple-input') %>
+          </div>
+          <div class="emptySpace15"></div>
+          <div class="sumoWrapper">
+            <label for="message-text" class="control-label">Assunto:</label>
+            <%= text_field_tag(:'subject-text', nil, class:'simple-input') %>
+          </div>
+          <div class="emptySpace30"></div>
+          <div class="sumoWrapper">
+            <label for="message-text" class="control-label">Mensagem:</label>
+            <%= text_area_tag(:'message-text', nil, class:'simple-input') %>
+          </div>
+          <div class="emptySpace30"></div>
+          <div class="btnWrapper">
+            <button type="submit" class="button">Enviar</button>
+            <%#= submit_tag  %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% flash.each do |key, value| %>
+    <script>
+        $.notify("<%= value %>", "info")
+    </script>
+<% end %>

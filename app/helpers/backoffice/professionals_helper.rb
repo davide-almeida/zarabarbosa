@@ -1,0 +1,2 @@
+module Backoffice::ProfessionalsHelper
+end

@@ -1,0 +1,53 @@
+<h1 class="page-header">Dados Profissionais</h1>
+<% if @professional.errors.any? %>
+  <div class="alert alert-danger alert-dismissable">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+    <!-- message -->
+    <ul>
+      <% @professional.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+
+  </div>
+<% end %>
+<div class="panel panel-default" >
+    <div class="panel-heading">
+        <%= action %>
+    </div>
+    <!-- /.panel-heading -->
+    <div class="panel-body">
+        <div class="col-lg-6">
+            <%= form_for([:backoffice, @professional]) do |f| %>
+            <div class="form-group">
+                <label>Nome</label>
+                <%= f.text_field :name, class:"form-control", placeholder:"Nome do Local" %>
+            </div>
+            <div class="form-group">
+                <label>Título</label>
+                <%= f.text_field :title, class:"form-control", placeholder:"Cargo" %>
+            </div>
+            <div class="form-group">
+                <label>CRP</label>
+                <%= f.text_field :number, class:"form-control", placeholder:"Cargo" %>
+            </div>
+            <div class="form-group">
+                <label>Descrição</label>
+                <%= f.text_area :description, class:"form-control", placeholder:"Cargo" %>
+            </div>
+            <div class="form-group">
+                <label>Telefone</label>
+                <%= f.text_field :phone, class:"form-control", placeholder:"Cargo" %>
+            </div>
+            <div class="form-group">
+                <label>Imagem (541px X 504px)</label>
+                <div style="border:1px solid black"><%= image_tag @professional.picture.url(:thumb) %></div>
+                <%= f.file_field :picture, class:"form-control", placeholder:"Imagem" %>
+            </div>
+            <button type="submit" class="btn btn-default">Cadastrar</button>
+            <% end %>
+        </div>
+    </div>
+    <!-- /.panel-body -->
+</div>
+<!-- /panel panel-default -->

@@ -1,0 +1,47 @@
+<h1 class="page-header">Planos de Saúde</h1>
+<div class="panel panel-default" >
+    <div class="panel-heading">
+        Listando Planos de Saúde <span class="badge badge-light"><%= @contador.count %></span>
+        <%= link_to new_backoffice_health_insurance_path, class: "btn btn-success pull-right", style: "margin-top: -5px" do %>
+            Novo Cadastro
+        <% end %>
+    </div>
+    <!-- /.panel-heading -->
+    <div class="panel-body">
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nome</th>
+                        <th>Logo</th>
+                        <th colspan="2">Opções</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% @health_insurances.each do |health_insurance| %>
+                        <tr>
+                            <td width="3%"><%= health_insurance.id %></td>
+                            <td><%= health_insurance.name %></td>
+                            <td><%= image_tag health_insurance.picture.url(:thumb) %></td>
+                            <td width="3%">
+                                <%= link_to edit_backoffice_health_insurance_path(health_insurance.id), class: "btn btn-primary btn-circle" do %>
+                                    <i class="fa fa-edit"></i>
+                                <% end %>
+                            </td>
+                            <td width="3%">
+                                <%= link_to backoffice_health_insurance_path(health_insurance.id), class: "btn btn-danger btn-circle", data: {confirm: "Você realmente deseja excluir (#{health_insurance.name})?"}, method: :delete do  %>
+                                    <i class="fa fa-trash"></i>
+                                <% end %>
+                            </td>
+                        </tr>
+                    <% end %>
+                </tbody>
+            </table>
+        </div>
+        <!-- /.table-responsive -->
+        </p> <center><%= paginate @health_insurances %></center>
+    </div>
+    <!-- /.panel-body -->
+</div>
+

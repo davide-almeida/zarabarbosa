@@ -1,0 +1,37 @@
+<h1 class="page-header">Planos de Saúde</h1>
+<% if @health_insurance.errors.any? %>
+  <div class="alert alert-danger alert-dismissable">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+    <!-- message -->
+    <ul>
+      <% @health_insurance.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+
+  </div>
+<% end %>
+<div class="panel panel-default" >
+    <div class="panel-heading">
+        <%= action %>
+    </div>
+    <!-- /.panel-heading -->
+    <div class="panel-body">
+        <div class="col-lg-6">
+            <%= form_for([:backoffice, @health_insurance]) do |f| %>
+            <div class="form-group">
+                <label>Nome</label>
+                <%= f.text_field :name, class:"form-control", placeholder:"Nome do Convênio" %>
+            </div>
+            <div class="form-group">
+                <label>Logo (270px X 279px)</label>
+                <div style="border:1px solid black"><%= image_tag @health_insurance.picture.url(:thumb) %></div>
+                <%= f.file_field :picture, class:"form-control", placeholder:"Imagem" %>
+            </div>
+            <button type="submit" class="btn btn-default">Cadastrar</button>
+            <% end %>
+        </div>
+    </div>
+    <!-- /.panel-body -->
+</div>
+<!-- /panel panel-default -->
