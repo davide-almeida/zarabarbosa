@@ -321,7 +321,7 @@ DEPENDENCIES
   nested_form_fields
   paperclip (~> 6.0.0)
   pg (~> 0.18)
-  puma
+  puma (~> 3.7)
   rails (~> 5.1.4)
   rails-assets-bootbox!
   rails-assets-bootstrap (= 3.3.7)!
