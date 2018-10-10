@@ -41,7 +41,7 @@ gem 'devise-i18n'
 # https://github.com/svenfuchs/rails-i18n
 gem 'rails-i18n'
 # https://github.com/bokmann/font-awesome-rails
-#gem "font-awesome-rails"
+gem "font-awesome-rails"
 #gem 'font-awesome-rails', '>= 4.6.3.1'
 # https://github.com/dreamingechoes/bootstrap_sb_admin_base_v2
 gem 'bootstrap_sb_admin_base_v2'

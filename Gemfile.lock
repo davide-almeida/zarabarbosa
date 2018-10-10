@@ -294,6 +294,7 @@ DEPENDENCIES
   devise
   devise-i18n
   figaro
+  font-awesome-rails
   foreman
   jbuilder (~> 2.5)
   jquery-ui-rails
