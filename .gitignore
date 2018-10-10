@@ -21,3 +21,8 @@
 # Database configuration
 config/database.yml
 config/application.yml
+
+/tmp/
+/log/
+/tmp
+/log
