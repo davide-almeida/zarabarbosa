@@ -6163,17 +6163,17 @@ color:#fff;
 	    left: 51.5%;
 }
 
-@brand-color: #b20000;
+/* #b20000: #b20000; ALTERADO PRO DEPLOY */
 #tcb-testimonial-carousel {
     a{
         color: #b20000;
     }
     .text-brand{
-        color: @brand-color;
+        color: #b20000;
     }
     margin-top: 30px;
     .carousel-indicators .active {
-        background: @brand-color;
+        background: #b20000;
     }
     .no-margin{
         margin: 0;
@@ -6182,12 +6182,12 @@ color:#fff;
         border: 1px solid #ccc;
     }
     .carousel-control {
-        color: @brand-color;
+        color: #b20000;
         width: 5%;
     }
     .carousel-control:hover,
     .carousel-control:focus {
-        color: @brand-color;
+        color: #b20000;
     }
     .carousel-control.left,
     .carousel-control.right {
