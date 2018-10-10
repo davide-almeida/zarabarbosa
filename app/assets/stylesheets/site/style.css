@@ -4469,7 +4469,7 @@ blockquote p {
 	.simple-article img[align="left"] {
 		margin-right: 15px;
 	}
-	.simple-article img[class="float_right">] {
+	.simple-article img[class="float_right"] {
 		margin-left: 15px;
 	}
 }
@@ -4479,7 +4479,7 @@ blockquote p {
 		text-align: center;
 	}
 	.simple-article img[align="left"],
-	.simple-article img[class="float_right">] {
+	.simple-article img[class="float_right"] {
 		float: none;
 		margin: 0 auto;
 		margin-bottom: 29px;
