@@ -6166,7 +6166,7 @@ color:#fff;
 @brand-color: #b20000;
 #tcb-testimonial-carousel {
     a{
-        color: @brand-color;
+        color: #b20000;
     }
     .text-brand{
         color: @brand-color;
