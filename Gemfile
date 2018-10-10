@@ -80,7 +80,7 @@ group :development, :test do
 end
 
 #armazenar senhas pro deploy
-#gem 'figaro'
+gem 'figaro'
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
