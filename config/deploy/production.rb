@@ -7,9 +7,16 @@
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
 
-server '18.231.197.180', user: 'ubuntu', roles: %w{web app db}
+#server '18.231.197.180', user: 'ubuntu', roles: %w{web app db}
 
-
+set :branch, 'master'
+set :server_address, '18.231.197.180'
+ 
+#ask(:password, nil, echo: false)
+server fetch(:server_address), user: "ubuntu", roles: %w{app db web}
+ 
+set :nginx_server_name, fetch(:server_address)
+set :puma_preload_app, true
 
 # role-based syntax
 # ==================
