@@ -80,7 +80,7 @@ group :development, :test do
 end
 
 #armazenar senhas pro deploy
-gem 'figaro'
+#gem 'figaro'
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
@@ -98,12 +98,10 @@ group :development do
   # rodar o mailcatcher com o comando: mailcatcher --http-ip 0.0.0.0 -f -v
   # gem 'mailcatcher'
   #capistrano para fazer deploy
-  gem 'capistrano'
-  #gem 'capistrano3-puma'
-  gem 'capistrano3-puma', github: "seuros/capistrano-puma"
-  gem 'capistrano-rails', require: false
-  gem 'capistrano-bundler', require: false
-  gem 'capistrano-rvm'
+  gem "capistrano", "~> 3.10", require: false
+  gem "capistrano-rails", "~> 1.3", require: false
+  gem 'capistrano3-puma', require: false
+  gem 'capistrano-rvm', require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
