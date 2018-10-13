@@ -56,7 +56,7 @@ gem  'kaminari-i18n'
 # https://github.com/thoughtbot/paperclip
 gem "paperclip", "~> 6.0.0"
 # https://github.com/ddollar/foreman
-gem 'foreman'
+# gem 'foreman'
 
 source 'https://rails-assets.org' do
   # https://rails-assets.org/#/components/bootstrap?version=3.3.7
@@ -76,7 +76,7 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
   # https://github.com/voormedia/rails-erd
-  gem 'rails-erd'
+  #gem 'rails-erd'
 end
 
 #armazenar senhas pro deploy
