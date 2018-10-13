@@ -1499,7 +1499,7 @@ textarea.light:-ms-input-placeholder {
 }
 
 .SumoSelect > .CaptionCont > label > i {
-	background-image: url(../img/sumo-arrow.png);
+	background-image: image-url("../img/sumo-arrow.png");
 }
 
 .SumoSelect > .CaptionCont > span {
