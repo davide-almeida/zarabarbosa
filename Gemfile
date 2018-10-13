@@ -56,7 +56,7 @@ gem  'kaminari-i18n'
 # https://github.com/thoughtbot/paperclip
 gem "paperclip", "~> 6.0.0"
 # https://github.com/ddollar/foreman
-# gem 'foreman'
+#gem 'foreman'
 
 source 'https://rails-assets.org' do
   # https://rails-assets.org/#/components/bootstrap?version=3.3.7
@@ -93,7 +93,7 @@ group :development do
   gem "better_errors"
   gem "binding_of_caller"
   #rails erd
-  gem 'rails-erd'
+  #gem 'rails-erd'
   # https://github.com/sj26/mailcatcher
   # rodar o mailcatcher com o comando: mailcatcher --http-ip 0.0.0.0 -f -v
   # gem 'mailcatcher'
