@@ -341,47 +341,48 @@
 						<% end %>
 					</div>
 					<div class="col-sm-6 col-sm-offset-2">
-						<form class="requestForm">
+						<%= form_tag site_send_mail_index_path, class: "requestForm", remote: true, :id => "formmail" do %>
 							<div class="contentTitle">
-								<h3 class="h3 as">Solicitar <span>Agendamento</span></h3>
+								<h3 class="h3 as">Enviar <span>Mensagem</span></h3>
 							</div>
 							<div class="emptySpace15"></div>
 							<div class="row">
 								<div class="col-xs-12 col-md-6">
-									<input class="simple-input" type="text" value="" placeholder="Full Name" />
+									<!--<input class="simple-input" type="text" value="" placeholder="Nome Completo" />-->
+									<%= text_field_tag(:'name-text', nil, class:'simple-input', placeholder:'Nome Completo') %>
 									<div class="emptySpace15"></div>
 								</div>
 								<div class="col-xs-12 col-md-6">
-									<input class="simple-input" type="email" value="" placeholder="Email" />
+									<!--<input class="simple-input" type="email" value="" placeholder="Email" />-->
+									<%= email_field_tag(:'recipient-text', nil, class:'simple-input', placeholder:'Email') %>
 									<div class="emptySpace15"></div>
 								</div>
 								<div class="col-xs-12 col-md-6">
-									<input class="simple-input" type="text" value="" placeholder="Phone" />
+									<!--<input class="simple-input" type="text" value="" placeholder="Telefone" />-->
+								  <%= text_field_tag(:'phone-text', nil, class:'simple-input', placeholder:'Telefone') %>
 									<div class="emptySpace15"></div>
 								</div>
 								<div class="col-xs-12 col-md-6">
 									<!-- 	SumoSelect-START 	-->
 									<div class="sumoWrapper">
-										<select name="form" class="SelectBox">
-											<option selected disabled>I want to discuss</option>
-											<option>discuss1</option>
-											<option>discuss2</option>
-											<option>discuss3</option>
-											<option>discuss4</option>
-										</select>
+										<%= select_tag :'subject-text', "<option selected disabled>Assunto</option><option>Agendamento</option><option>D&uacute;vidas</option><option>Outros</option>".html_safe, class: 'SelectBox', id: 'subject-text' %>
 									</div>
 									<!-- 	SumoSelect-END 	-->
 									<div class="emptySpace-sm15"></div>
 								</div>
 								<div class="col-xs-12">
-									<textarea class="simple-input" placeholder="Special Request"></textarea>
+									<%= text_area_tag(:'message-text', nil, class:'simple-input', placeholder:'Texto') %>
+									<!--<textarea class="simple-input" placeholder="Texto"></textarea>-->
 								</div>
 							</div>
 							<div class="emptySpace30"></div>
 							<div class="btnWrapper">
-								<button type="submit" class="button">Submit Now</button>
+								<button type="submit" class="button">Enviar</button>
 							</div>
-						</form>
+							<div class="btnWrapper">
+								<div id="enviado"><p><center></center></p></div>
+							</div>
+						<% end %>
 					</div>
 				</div>
 			</div>

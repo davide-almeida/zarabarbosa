@@ -3,6 +3,7 @@ class Site::SendMailController < ApplicationController
     def edit
         #@admin = Admin.find(params[:id])
         @email = Setting.first.email
+        @settings = Setting.first
 
         respond_to do |format|
             format.js
@@ -11,7 +12,7 @@ class Site::SendMailController < ApplicationController
 
     def create
         @email = Setting.first.email
-        AdminMailer.send_message(params[:'recipient-text'], @email, params[:'subject-text'], params[:'message-text']).deliver_now
+        AdminMailer.send_message(@email, @email, params[:'recipient-text'], params[:'subject-text'], params[:'message-text'], params[:'name-text'], params[:'phone-text']).deliver_now
         respond_to do |format|
             format.js #{ redirect_to(site_home_path, notice: 'Enviado!') }
         end

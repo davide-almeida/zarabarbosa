@@ -1,11 +1,14 @@
 $(function(){
   // Hides the Modal
-  $('#sendMailModal').modal('hide');
+  //$('#sendMailModal').modal('hide');
 
   // Set subject and message to empty string
-  $('#recipient-text').val('');
-  $('#subject-text').val('');
-  $('#message-text').val('');
+  $('#recipient-text').val(' ');
+  $('#subject-text').val(' ');
+  $('#message-text').val(' ');
+  var form = document.getElementById("formmail");
+  form.reset();
+  document.getElementById("enviado").innerHTML = "<p><center>Enviado!</center></p>";
 
   // Show Message
   $.notify("Mensagem Enviada!", "success")
