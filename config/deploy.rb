@@ -1,6 +1,6 @@
 set :application, "zarabarbosa"
 set :repo_url, "git@github.com:davidejhonatan/zarabarbosa.git"
-set :user, 'ubuntu'
+#set :user, 'ubuntu'
 
 #set :branch, :master
 #set :deploy_to, '/home/ubuntu/zarabarbosa'
