@@ -53,7 +53,7 @@ class Backoffice::AdminsController < BackofficeController
 
     #usei o before_action para rodar a função set_admin
     if @admin.update(params_admin)
-      AdminMailer.update_email(current_admin, @admin).deliver_now
+      #AdminMailer.update_email(current_admin, @admin).deliver_now
       redirect_to backoffice_admins_path, notice: "O cadastro (#{@admin.email}) foi atualizado com sucesso!"
     else
       render :edit
