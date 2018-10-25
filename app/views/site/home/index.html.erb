@@ -46,41 +46,41 @@
     <% end %>
     	
 		<!--  	Offer Servicres-START 	-->
-		<div class="contentPadding" id="services">
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-12">
-						<div class="contentTitle normall">
-							<h2 class="h2 as">Serviços <span>Oferecidos</span></h2>
-							<p>Descubra um pouco mais sobre a psicologia.</p>
-						</div>
-						<div class="emptySpace50 emptySpace-xs30"></div>
-					</div>
-				</div>
-				<div class="row clearFix">
-					<!-- 	Tumb1-START 	-->
-					<% if @services.blank? %>
-						<p> </p>
-					<% else %>
-						<% @services.each do |service| %>
-						<div class="col-xs-12 col-sm-6 col-md-3">
-							<div class="tumbWrapper">
-								<div class="imgWrapper imgTumb bgShadow light">
-									<%= image_tag service.picture.url(:medium) %>
+		<div class="contentPadding">
+       		<div class="container">
+						<div class="row">
+							<div class="col-xs-12">
+								<div class="contentTitle normall">
+									<h2 class="h2 as">Serviços <span>Oferecidos</span></h2>
+									<p>Descubra um pouco mais sobre a psicologia.</p>
 								</div>
-							<h6 class="h6 as"><%= service.title %></h6>
-								<div class="tumbContent small">
-									<p><%= service.description %></p>
-								</div>
+								<div class="emptySpace50 emptySpace-xs30"></div>
 							</div>
-							<div class="emptySpace-sm30"></div>
 						</div>
-						<% end %>
-					<% end %>
-					<!-- 	Tumb1-END 	-->
-				</div>
-			</div>
-		</div>
+						<div class="row clearFix big">
+							<!-- 	Tumb1-START 	-->
+							<% if @services.blank? %>
+								<p> </p>
+							<% else %>
+								<% @services.each do |service| %>
+									<div class="col-xs-12 col-sm-6 col-md-3">
+										<div class="tumbWrapper">
+											<a href="stress-management.html" class="imgWrapper imgTumb bgShadow light">
+												<%= image_tag service.picture.url(:medium) %>
+											</a>
+											<h6 class="h6 as"><a href="stress-management.html"><%= service.title %></a></h6>
+											<div class="tumbContent small">
+												<p><%= service.description %></p>
+											</div>
+										</div>
+										<div class="emptySpace90 emptySpace-md30"></div>
+									</div>
+								<% end %>
+							<% end %>
+							<!-- 	Tumb1-END 	-->
+						</div>
+					</div>
+        </div>
 		<!--  	Offer Servicres-END 	-->
 		
 		<!-- 	Persone banner-START 	-->

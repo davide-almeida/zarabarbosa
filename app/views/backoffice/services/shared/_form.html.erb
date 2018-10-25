@@ -21,11 +21,11 @@
             <%= form_for([:backoffice, @service]) do |f| %>
             <div class="form-group">
                 <label>Título</label>
-                <%= f.text_field :title, class:"form-control", placeholder:"Nome do Local" %>
+                <%= f.text_field :title, class:"form-control", placeholder:"Nome do Serviço" %>
             </div>
             <div class="form-group">
                 <label>Descrição</label>
-                <%= f.text_area :description, class:"form-control", placeholder:"Cargo" %>
+                <%= f.text_area :description, class:"form-control", placeholder:"Descrição do Serviço" %>
             </div>
             <div class="form-group">
                 <label>Imagem (270px X 248px)</label>
