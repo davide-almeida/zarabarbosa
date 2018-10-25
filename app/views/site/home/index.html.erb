@@ -65,10 +65,10 @@
 								<% @services.each do |service| %>
 									<div class="col-xs-12 col-sm-6 col-md-3">
 										<div class="tumbWrapper">
-											<a href="stress-management.html" class="imgWrapper imgTumb bgShadow light">
+											<div class="imgWrapper imgTumb bgShadow light">
 												<%= image_tag service.picture.url(:medium) %>
-											</a>
-											<h6 class="h6 as"><a href="stress-management.html"><%= service.title %></a></h6>
+											</div>
+											<h6 class="h6 as"><%= service.title %></h6>
 											<div class="tumbContent small">
 												<p><%= service.description %></p>
 											</div>
