@@ -14,7 +14,7 @@
             <!-- /.navbar-header -->
 
             <ul class="nav navbar-top-links navbar-right">
-                Login: <%= current_admin.email %> | Status: <%= @status %> | Data: <%= l(Date.today) %>
+                <!-- Login: <%#= current_admin.email %> | Status: <%#= @status %> | Data: <%#= l(Date.today) %> -->
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
@@ -69,13 +69,10 @@
                                     <%= link_to backoffice_questions_path do %> Dúvidas Frequentes <% end %>
                                 </li>
                                 <li>
-                                    <%= link_to backoffice_health_insurances_path do %> Planos de Saúde <% end %>
+                                    <%= link_to backoffice_health_insurances_path do %> Convênios <% end %>
                                 </li>
                                 <li>
                                     <%= link_to backoffice_diaries_path do %> Atendimentos <% end %>
-                                </li>
-                                <li>
-                                    <a href="login.html">Agendamento</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -98,7 +95,7 @@
                         </li>
                         <li>
                             <%= link_to edit_backoffice_setting_path(1) do %>
-                            <i class="fa fa-settings"></i> Configurações
+                            <i class="fa fa-cogs" aria-hidden="true"></i> Configurações
                             <% end %>
                         </li>
                     </ul>

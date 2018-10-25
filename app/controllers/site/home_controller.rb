@@ -11,6 +11,13 @@ class Site::HomeController < SiteController
     @diaries = Diary.order(:id)
     @settings = Setting.first
 
+    @whatsapp = @settings.phone
+    @whatsapp = @whatsapp.gsub(/[^0-9]/, '')
+
+    @whatsapp2 = @professionals.first.phone.gsub(/[^0-9]/, '')
+
+
+
     
   end
 

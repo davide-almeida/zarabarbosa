@@ -105,10 +105,10 @@
                     <div class="emptySpace25"></div>
                     <div class="personePhone">
                       <div class="imgWrapper">
-                        <i class=""><%= image_tag("phone-call-white.png", :alt => "Contato") %></i>
+                        <i class=""><%= image_tag("phone-call-white.png", :alt => "Contato", class: "img-responsive") %></i>
                       </div>
                       <div class="personePhoneContent">
-                        <a href="tel:84988924854"><%= professional.phone %></a>
+                        <%= link_to "https://api.whatsapp.com/send?1=pt_BR&phone=55#{@whatsapp2}", :target => "_blank" do %><%= professional.phone %><% end %>
                         <span>Entre em contato</span>
                       </div>
                     </div>
@@ -235,7 +235,7 @@
 						<!-- 	persone1-START 	-->
 						<div class="col-xs-12 col-sm-5 col-md-3">
 							<div class="titleShortocode">
-								<h3 class="h3 as">Planos de Saúde</h3>
+								<h3 class="h3 as">Convênios</h3>
 								<div class="emptySpace30"></div>
 								<div class="simple-article normall">
 									<p> </p>
