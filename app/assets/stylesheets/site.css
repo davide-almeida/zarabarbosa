@@ -50,3 +50,14 @@ body{animation: fadeIn 1s}
 	90%{opacity:0}
 	100%{opacity:1;background:#fff}
 }
+
+/* CSS referente ao tooltip icon */
+.bs-example{
+    margin: 50px;
+}
+.bs-example a{
+    font-size: 22px;        
+    text-decoration: none;
+    margin: 0 10px;
+    background:#fff;
+}

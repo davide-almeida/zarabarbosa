@@ -1,5 +1,11 @@
 $(document).ready(function() {
     (function() {
+      //tooltip start
+      $('[data-toggle="tooltip"]').tooltip({
+          placement : 'top'
+      });
+      //tooltip end
+
       var showChar = 180;
       var ellipsestext = "...";
   
