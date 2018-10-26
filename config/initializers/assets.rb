@@ -29,6 +29,7 @@ Rails.application.config.assets.precompile += %w( site/jquery.sumoselect.min.js 
 Rails.application.config.assets.precompile += %w( site/simple-lightbox.min.js )
 Rails.application.config.assets.precompile += %w( site/global.js )
 Rails.application.config.assets.precompile += %w( site/map.js )
+Rails.application.config.assets.precompile += %w( site/site.js )
 
 #PAINEL
 Rails.application.config.assets.precompile += %w( backoffice.css )

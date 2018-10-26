@@ -36,3 +36,17 @@
         border: none;
     }
 }
+
+
+/* css referente ao toggle */
+html{overflow-y:scroll}
+
+
+/* this part is not needed for demo but hides page while js is working */
+/* its a bit hit and miss but may be useful to disguise jump when text is initially truncated */
+body{animation: fadeIn 1s}
+@keyframes fadeIn{
+	0%{opacity:0;background:#000}
+	90%{opacity:0}
+	100%{opacity:1;background:#fff}
+}
