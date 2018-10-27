@@ -21,7 +21,7 @@
             <%= form_for([:backoffice, @project]) do |f| %>
             <div class="form-group">
                 <label>Descrição</label>
-                <%= f.text_area :description, class:"form-control", placeholder:"Texto..." %>
+                <%= f.text_area :description, class:"form-control tinymce", placeholder:"Texto..." %>
                 <p class="help-block"><i>Obs.: Apenas o último cadastro será exibido no site.</i></p>
             </div>
             <button type="submit" class="btn btn-default">Cadastrar</button>

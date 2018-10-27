@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require tinymce
 //= require rails-ujs
 //= require bootstrap.growl
 //= require nested_form_fields

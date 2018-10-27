@@ -7,6 +7,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= tinymce_assets %>
     <%= favicon_link_tag 'favicon.ico' %>
 
     <title>Zara Barbosa - Psicóloga | Painel de Administração</title>
@@ -40,6 +41,8 @@
     
     <%= javascript_include_tag 'application' %>
     <%= javascript_include_tag 'backoffice' %>
+    <%= tinymce %>
+    
 
     <%= render partial: 'layouts/shared/notifications'  %>
   </body>

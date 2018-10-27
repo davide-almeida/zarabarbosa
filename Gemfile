@@ -57,6 +57,8 @@ gem  'kaminari-i18n'
 gem "paperclip", "~> 6.0.0"
 # https://github.com/ddollar/foreman
 #gem 'foreman'
+#toolbar textarea - GIT(GEM): https://github.com/spohlenz/tinymce-rails - Exemplos: https://www.tiny.cloud/docs/demo/basic-example/
+gem 'tinymce-rails'
 
 source 'https://rails-assets.org' do
   # https://rails-assets.org/#/components/bootstrap?version=3.3.7

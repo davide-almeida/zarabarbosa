@@ -28,9 +28,9 @@
 							<div class="headerTopInfo">
 								<div class="headerTopInfoContaner">
 									<!-- 	Logo-START 	-->
-									<a href="#" class="logo">
+									<%= link_to site_home_path, class:"logo" do %>
 										<%= image_tag @settings.picture.url(:medium) %>
-									</a>
+									<% end %>
 									<!-- 	Logo-END 	-->
 
 									<!-- 	Responsive menu-START 	-->

@@ -26,7 +26,7 @@
                     <div class="cell-view">
                       <div class="bannerTitle">
                         <h1 class="h1 light as"><%= flag.title %></h1>
-                        <p><%= flag.description %></p>
+                        <p><%= flag.description.html_safe %></p>
                       </div>
                       <div class="bannerBtnWrapper">
                         <!--<a href="#" class="button btnSize1">View all Services</a>
@@ -70,7 +70,7 @@
 											</div>
 											<h6 class="h6 as"><%= service.title %></h6>
 											<div class="tumbContent small truncate">
-													<p><%= service.description %></p>
+													<p><%= service.description.html_safe %></p>
 											</div>
 										</div>
 										<div class="emptySpace90 emptySpace-md30"></div>
@@ -100,7 +100,7 @@
                     <h2 class="h2 light as"><%= professional.name %></h2>
                     <p><%= professional.title %></br>CRP - <%= professional.number %></p>
                     <div class="simple-article normall extraLight">
-                      <p><%= professional.description %></p>
+                      <p><%= professional.description.html_safe %></p>
                     </div>
                     <div class="emptySpace25"></div>
                     <div class="personePhone">
@@ -145,7 +145,7 @@
 							<% else %>
 								<p><strong>Projetos e Atividades desenvolvidos:</strong></p>
 								<div class="simple-article normall">
-									<p><%= @projects.last.description %></p>
+									<p><%= @projects.last.description.html_safe %></p>
 								</div>
 								<div class="emptySpace30"></div>
 							<% end %>
@@ -200,7 +200,7 @@
 										</div>
 										<div class="accordeon-toggle" style="display: block;">
 											<div class="simple-article">
-												<p><%= question.answer %></p>
+												<p><%= question.answer.html_safe %></p>
 											</div>
 										</div>
 									<% else %>
@@ -211,7 +211,7 @@
 										</div>
 										<div class="accordeon-toggle">
 											<div class="simple-article">
-												<p><%= question.answer %></p>
+												<p><%= question.answer.html_safe %></p>
 											</div>
 										</div>
 									<% end %>
@@ -296,7 +296,7 @@
 									</div>
 									<h6 class="h6 as"><%= link_to blog_home_path do %><%= post.title %><% end %></h6>
 									<div class="tumbContent small">
-										<p><%= post.body.truncate(150, omission: '...') %></p>
+										<p><%= post.body.html_safe.truncate(150, omission: '...') %></p>
 									</div>
 									<% if post.body.length >= 150%>
 										<%= link_to blog_home_path, :class=>'readMore' do %> Continuar <% end %>

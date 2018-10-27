@@ -131,7 +131,7 @@ video {
     padding: 0;
     border: 0;
     font-size: 100%;
-    font: inherit;
+    /*font: inherit;*/ /* comentado pq causou problemas no italic */
     vertical-align: baseline;
 }
 

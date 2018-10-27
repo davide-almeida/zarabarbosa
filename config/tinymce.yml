@@ -1,0 +1,17 @@
+default:
+  branding: false
+  menubar: false
+  toolbar: undo redo | formatselect | bold italic backcolor  | alignleft aligncenter alignright alignjustify | removeformat
+  plugins: code
+  formats:
+    italic:
+      inline: i
+    bold: 
+      inline: b
+  valid_elements: b,i,b/strong,i/em
+
+
+alternate:
+  selector: textarea
+  plugins:
+    - table

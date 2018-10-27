@@ -7,9 +7,9 @@
 						<!-- 	Block1-START 	-->
 						<div class="footerBlock small">
 							<!-- 	Logo-START 	-->
-            				<a href="#" class="logo">
+            				<%= link_to site_home_path, class:"logo" do %>
             					<%= image_tag @settings.picture_footer.url(:medium) %>
-							</a>
+							<% end %>
         					<!-- 	Logo-END 	-->
          					<!-- 	Social-START 	-->
 							<div class="socialWrapper light">
@@ -55,7 +55,7 @@
 						<!-- 	Block3-END 	-->
 						<div class="footerBlock normall">
 							<div class="footerTitle">
-								<p>Sobre Mim</p>
+								<p>Quem Sou</p>
 							</div>
 							<div class="footerContants">
 								<i class="fa fa-user"></i>
