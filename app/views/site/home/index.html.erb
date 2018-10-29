@@ -296,9 +296,9 @@
 									</div>
 									<h6 class="h6 as"><%= link_to blog_home_path do %><%= post.title %><% end %></h6>
 									<div class="tumbContent small">
-										<p><%= post.body.truncate(310, omission: '...').html_safe %></p>
+										<p><%= post.body.truncate(290, omission: '...').html_safe %></p>
 									</div>
-									<% if post.body.length >= 310 %>
+									<% if post.body.length >= 290 %>
 										<%= link_to blog_home_path, :class=>'readMore' do %> ...Continuar Lendo <% end %>
 									<% end %>
 								</div>
