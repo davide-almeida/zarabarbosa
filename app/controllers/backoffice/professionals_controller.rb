@@ -1,5 +1,5 @@
 class Backoffice::ProfessionalsController < BackofficeController
-  before_action :set_professional, only: [:edit, :update]
+  before_action :set_professional, only: [:edit, :update, :destroy]
   
   def index
     #@contador = Professional.all
@@ -18,12 +18,12 @@ class Backoffice::ProfessionalsController < BackofficeController
   end
 
   def create
-    #@professional = Professional.new(params_professional)
-    #if @professional.save
-    #  redirect_to backoffice_professionals_path, notice: "O cadastro (#{@professional.name}) foi cadastrada com sucesso!"
-    #else
-    #  render :new
-    #end
+    @professional = Professional.new(params_setting)
+    if @professional.save
+      redirect_to edit_backoffice_professional_path(1), notice: "O cadastro foi realizado com sucesso!"
+    else
+      render :new
+    end
   end
 
   def edit
@@ -45,7 +45,7 @@ class Backoffice::ProfessionalsController < BackofficeController
   def update
     #usei o before_action para rodar a função set_professional
     if @professional.update(params_professional)
-      redirect_to backoffice_path, notice: "O cadastro (#{@professional.name}) foi atualizado com sucesso!"
+      redirect_to edit_backoffice_professional_path(1), notice: "O cadastro (#{@professional.name}) foi atualizado com sucesso!"
     else
       render :edit
     end

@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     resources :works, except: [:show]
     resources :flags, except: [:show]
     resources :services, except: [:show]
-    resources :professionals, except: [:show, :index, :new]
+    resources :professionals, except: [:show]
     resources :health_insurances, except: [:show]
     resources :categories#, except: [:show]
     resources :posts#, except: [:show]

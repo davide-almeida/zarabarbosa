@@ -1,17 +1,34 @@
 default:
+  selector: textarea
   branding: false
   menubar: false
-  toolbar: undo redo | formatselect | bold italic backcolor  | alignleft aligncenter alignright alignjustify | removeformat
-  plugins: code
-  formats:
-    italic:
-      inline: i
-    bold: 
-      inline: b
-  valid_elements: b,i,b/strong,i/em
-
-
-alternate:
-  selector: textarea
+  nonbreaking_force_tab: true
+  #language: "<%= I18n.locale%>"
+  mode: "exact"
+  theme: "modern"
+  #skin: "lightgray"
+  schema: "html5-strict"
+  element_format: "html"
+  resize: true
   plugins:
     - table
+    - textcolor
+    - insertdatetime
+    - preview
+    - media
+    - searchreplace
+    - contextmenu
+    - paste
+    - directionality
+    - fullscreen
+    - noneditable
+    - visualchars
+    - nonbreaking
+    - template
+
+  # Each line is a toolbar
+  toolbar:
+    - undo redo | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | outdent indent | formatselect | forecolor backcolor | removeformat
+
+
+  # https://github.com/spree-contrib/spree_editor/blob/master/lib/templates/config/tinymce.yml - EXEMPLO

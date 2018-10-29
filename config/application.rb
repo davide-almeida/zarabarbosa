@@ -11,6 +11,9 @@ module Zarabarbosa
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
 
+    require 'tinymce-rails'
+    require 'tinymce-rails-langs'
+
     #config.web_console.whitelisted_ips = '10.0.2.2'
     config.i18n.default_locale = :"pt-BR"
     config.time_zone = 'Brasilia'

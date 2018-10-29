@@ -35,3 +35,4 @@ Rails.application.config.assets.precompile += %w( site/site.js )
 Rails.application.config.assets.precompile += %w( backoffice.css )
 
 Rails.application.config.assets.precompile += %w( backoffice.js )
+#Rails.application.config.assets.precompile += %w( tinymce/langs/pt.js )
