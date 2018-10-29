@@ -3,7 +3,7 @@ default:
   branding: false
   menubar: false
   nonbreaking_force_tab: true
-  #language: "<%= I18n.locale%>"
+  language: "pt_BR"
   mode: "exact"
   theme: "modern"
   #skin: "lightgray"
