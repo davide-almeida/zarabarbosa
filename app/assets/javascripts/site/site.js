@@ -19,9 +19,9 @@ $(document).ready(function() {
             c +
             '<span class="moreellipses">' +
             ellipsestext +
-            '&nbsp;&nbsp;<a href="" class="moreless more"> ...Continuar lendo</a></span></span></div><div class="truncate-text" style="display:none">' +
+            '&nbsp;&nbsp;<a href="" class="moreless more readMore"> ...Continuar Lendo</a></span></span></div><div class="truncate-text" style="display:none">' +
             h +
-            '<a href="" class="moreless less">Esconder</a></span></div>';
+            '<a href="" class="moreless less readMore">...Esconder</a></span></div>';
   
           $(this).html(html);
         }
