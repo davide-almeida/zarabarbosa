@@ -296,7 +296,7 @@
 									</div>
 									<h6 class="h6 as"><%= link_to blog_home_path do %><%= post.title %><% end %></h6>
 									<div class="tumbContent small">
-										<p><%= post.body.html_safe.truncate(150, omission: '...') %></p>
+										<p><%= post.body.truncate(150, omission: '...').html_safe %></p>
 									</div>
 									<% if post.body.length >= 150%>
 										<%= link_to blog_home_path, :class=>'readMore' do %> Continuar <% end %>
