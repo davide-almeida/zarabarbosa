@@ -28,7 +28,7 @@ default:
 
   # Each line is a toolbar
   toolbar:
-    - undo redo | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | outdent indent | formatselect | forecolor backcolor | removeformat
+    - undo redo | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | outdent indent | formatselect | forecolor backcolor | media | removeformat
 
 
   # https://github.com/spree-contrib/spree_editor/blob/master/lib/templates/config/tinymce.yml - EXEMPLO
