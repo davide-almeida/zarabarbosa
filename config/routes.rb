@@ -35,6 +35,8 @@ Rails.application.routes.draw do
     get 'home', to: 'home#index'
     #get 'home', to: 'home#new'#, via: 'get'
     #get 'blog', to: 'blog#index'
+    get 'licenses/privacy_policy', to: 'licenses#privacy_policy'
+    get 'licenses/terms_use', to: 'licenses#terms_use'
   end
 
   namespace :blog do

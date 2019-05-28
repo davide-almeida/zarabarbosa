@@ -1,0 +1,37 @@
+<!-- 	Top banner-START 	-->
+<div class="contentPadding bg bgShadow" style="background-image: url(../../img/banner-img2.jpg)">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="servicesTitle">
+                    <div class="cell-view">
+                        <h1 class="h1 light as">Políticas de privacidade</h1>
+                        <div class="breadCrumbs small">
+                            <%= link_to 'Início', root_path %> <i class="fa fa-angle-right"></i> <span>Políticas de privacidade</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 	Top banner-END 	-->
+
+<div class="contentPadding">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="contentTitle normall">
+                    <!-- <h2 class="h2">Get in touch</h2>
+                    <p>Lorem Ipsum is simply text of the Lorem Ipsum is  simply my text of the printing and Ipsum is simply text of the Ipsum is simply text of thetypesetting Ipsum is simply text of the stry simply dummy text of the printing and typesetting industry.</p> -->
+                    <% if @settings.privacy_policy.blank? %>
+                        <p> Sem informações.</p>
+                    <% else %>
+                        <%= @settings.privacy_policy.html_safe %>
+                    <% end %>
+                </div>
+                <div class="emptySpace50 emptySpace-xs30"></div>
+            </div>
+        </div>
+    </div>
+</div>

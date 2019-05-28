@@ -3551,7 +3551,7 @@ nav ul li ul li:hover i.fa {
 
 .breadCrumbs a:hover,
 .breadCrumbs a:focus {
-	color: #ad70ba;
+	color: #3099a7;
 }
 
 .breadCrumbs i.fa {
@@ -4924,6 +4924,11 @@ footer {
 	-webkit-transition: all 150ms linear;
 	transition: all 150ms linear;	
 }
+
+ /* links do footer */
+ .copy p a:hover {
+	color: #ffffff;
+ }
 
 .created:hover a span {
 	color: #3099a7;

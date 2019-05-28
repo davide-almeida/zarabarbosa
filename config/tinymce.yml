@@ -11,6 +11,8 @@ default:
   element_format: "html"
   resize: true
   plugins:
+    - link
+    - image
     - table
     - textcolor
     - insertdatetime
@@ -28,7 +30,7 @@ default:
 
   # Each line is a toolbar
   toolbar:
-    - undo redo | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | outdent indent | formatselect | forecolor backcolor | media | removeformat
+    - bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | outdent indent | formatselect | forecolor backcolor | print link image media preview | removeformat
 
 
   # https://github.com/spree-contrib/spree_editor/blob/master/lib/templates/config/tinymce.yml - EXEMPLO
