@@ -4847,7 +4847,7 @@ footer {
 }
 
 .simple-article.style2 ul li a {
-	color: #666666;
+	color: #999999;
 	-webkit-transition: all 150ms linear;
 	transition: all 150ms linear;
 }
@@ -4893,11 +4893,11 @@ footer {
 	top: 3px;
 	left: 0;
 	font-size: 20px;
-	color: #666666;
+	color: #999999;
 }
 
 .footerContants a {
-	color: #666;
+	color: #999999;
 	padding-left: 36px;
 	-webkit-transition: all 150ms linear;
 	transition: all 150ms linear;
