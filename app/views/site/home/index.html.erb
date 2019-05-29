@@ -1,49 +1,50 @@
     
         
-      	
-		<% if @flags.blank? %>
-		  <p> </p>
-		<% else %>
-      <!-- 	Main banner swiper-START 	-->
-      <div class="swiperMainWrapper mainSwiperbanner">
-        <!-- 	Swiper slider buttons-START 	-->
-        <div class="swipert-black-button swiper-button-prev"></div>
-        <div class="swipert-black-button swiper-button-next"></div>
-        <!-- 	Swiper slider buttons-END 	-->
-        <div class="swiper-container" data-auto-height="1" data-effect="fadde" data-speed="600" data-autoplay="5000" data-loop="1">
-          <div class="swiper-wrapper">
-            <% @flags.each do |flag| %>
-            <!-- 	Slide1-START 	-->
-            <div class="swiper-slide mainBanner bgShadow">
-              <% if flag.picture.blank? %>
-                <div class="sliderBg" style="background-image: url(/banners/bannerdefault.jpg)"></div>
-              <% else %>
-                <div class="sliderBg" style="background-image: url(<%= flag.picture.url(:medium) %>)"></div>
-              <% end %>
-              <div class="container">
-                <div class="row">
-                  <div class="col-xs-12 col-md-10 col-md-offset-1">
-                    <div class="cell-view">
-                      <div class="bannerTitle">
-                        <h1 class="h1 light as"><%= flag.title %></h1>
-                        <p><%= flag.description.html_safe %></p>
-                      </div>
-                      <div class="bannerBtnWrapper">
-                        <!--<a href="#" class="button btnSize1">View all Services</a>
-                        <a href="#" class="button btnStyle3 btnSize1">Get Appointment</a>-->
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- 	Slide1-END 	--> 
-            <% end %>
-          </div>
-        </div>
-      </div>
-		<!-- 	Main banner swiper-END 	-->
-    <% end %>
+    <div id="home">
+			<% if @flags.blank? %>
+				<p> </p>
+			<% else %>
+				<!-- 	Main banner swiper-START 	-->
+				<div class="swiperMainWrapper mainSwiperbanner">
+					<!-- 	Swiper slider buttons-START 	-->
+					<div class="swipert-black-button swiper-button-prev"></div>
+					<div class="swipert-black-button swiper-button-next"></div>
+					<!-- 	Swiper slider buttons-END 	-->
+					<div class="swiper-container" data-auto-height="1" data-effect="fadde" data-speed="600" data-autoplay="5000" data-loop="1">
+						<div class="swiper-wrapper">
+							<% @flags.each do |flag| %>
+							<!-- 	Slide1-START 	-->
+							<div class="swiper-slide mainBanner bgShadow">
+								<% if flag.picture.blank? %>
+									<div class="sliderBg" style="background-image: url(/banners/bannerdefault.jpg)"></div>
+								<% else %>
+									<div class="sliderBg" style="background-image: url(<%= flag.picture.url(:medium) %>)"></div>
+								<% end %>
+								<div class="container">
+									<div class="row">
+										<div class="col-xs-12 col-md-10 col-md-offset-1">
+											<div class="cell-view">
+												<div class="bannerTitle">
+													<h1 class="h1 light as"><%= flag.title %></h1>
+													<p><%= flag.description.html_safe %></p>
+												</div>
+												<div class="bannerBtnWrapper">
+													<!--<a href="#" class="button btnSize1">View all Services</a>
+													<a href="#" class="button btnStyle3 btnSize1">Get Appointment</a>-->
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 	Slide1-END 	--> 
+							<% end %>
+						</div>
+					</div>
+				</div>
+			<!-- 	Main banner swiper-END 	-->
+			<% end %>
+		</div>
     	
 		<!--  	Offer Servicres-START 	-->
 		<div class="contentPadding" id="services">

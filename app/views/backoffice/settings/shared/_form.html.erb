@@ -44,6 +44,10 @@
                 <%= f.text_field :linkedin, class:"form-control", placeholder:"Ex.: https://www.linkedin.com/in/jeffweiner08/" %>
             </div>
             <div class="form-group">
+                <label>YouTube</label>
+                <%= f.text_field :youtube, class:"form-control", placeholder:"Ex.: https://www.youtube.com/channel/UCKLEghKhpkW35SifzQmfHrA" %>
+            </div>
+            <div class="form-group">
                 <label>Logo Topo (295px X 43px)</label>
                 <p><%= image_tag @setting.picture.url(:thumb) %></p>
                 <%= f.file_field :picture, class:"form-control", placeholder:"Imagem" %>

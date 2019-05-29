@@ -25,6 +25,9 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.3)
+    active_link_to (1.0.5)
+      actionpack
+      addressable
     activejob (5.1.6)
       activesupport (= 5.1.6)
       globalid (>= 0.3.6)
@@ -283,6 +286,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_link_to
   better_errors
   binding_of_caller
   bootstrap_sb_admin_base_v2
@@ -322,4 +326,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.16.5
+   2.0.1

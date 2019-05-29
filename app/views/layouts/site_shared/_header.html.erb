@@ -49,8 +49,8 @@
 							<div class="responsiveWrapper">
 								<div class="navScroll">
 									<nav>
-										<ul>
-											<li class="active"><%= link_to site_home_path do %>Início <% end %>
+										<ul id="top-menu">
+											<li><%= active_link_to 'Início', site_home_path(:anchor => "home"), wrap_tag: :li %>
 											<!--<i class="fa fa-angle-down"></i>
 												<ul>
 													<li><a href="index-3.html">Home Page 2</a></li>
@@ -90,7 +90,7 @@
 													</li>
 												</ul>-->
 											</li>
-											<li><%= link_to blog_home_path do %> Blog <% end %>
+											<li><%= active_link_to 'Blog', blog_home_path, wrap_tag: :li %>
 												<!--<i class="fa fa-angle-down"></i>
 												<ul>
 													<li><a href="blog.html">Blog</a></li>

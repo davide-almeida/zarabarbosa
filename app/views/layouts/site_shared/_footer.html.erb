@@ -14,16 +14,19 @@
          					<!-- 	Social-START 	-->
 							<div class="socialWrapper light">
 								<% if !@settings.facebook.blank? %>
-									<%= link_to @settings.facebook, target: '_blank' do%><i class="fa fa-facebook"></i><% end %>
+									<%= link_to @settings.facebook, target: '_blank' do%><i class="fa fa-facebook" data-toggle="tooltip" data-original-title="Facebook"></i><% end %>
 								<% end %>
 								<% if !@settings.instagram.blank? %>
-									<%= link_to @settings.instagram, target: '_blank' do%><i class="fa fa-instagram"></i><% end %>
+									<%= link_to @settings.instagram, target: '_blank' do%><i class="fa fa-instagram" data-toggle="tooltip" data-original-title="Instagram"></i><% end %>
 								<% end %>
 								<% if !@settings.twitter.blank? %>
-									<%= link_to @settings.twitter, target: '_blank' do%><i class="fa fa-twitter"></i><% end %>
+									<%= link_to @settings.twitter, target: '_blank' do%><i class="fa fa-twitter" data-toggle="tooltip" data-original-title="Twitter"></i><% end %>
 								<% end %>
 								<% if !@settings.linkedin.blank? %>
-									<%= link_to @settings.linkedin, target: '_blank' do%><i class="fa fa-linkedin-square"></i><% end %>
+									<%= link_to @settings.linkedin, target: '_blank' do%><i class="fa fa-linkedin-square" data-toggle="tooltip" data-original-title="LinkedIn"></i><% end %>
+								<% end %>
+								<% if !@settings.youtube.blank? %>
+									<%= link_to @settings.youtube, target: '_blank' do%><i class="fa fa-youtube" data-toggle="tooltip" data-original-title="YouTube"></i><% end %>
 								<% end %>
 								<!--<a href="#" target="_blank"><i class="fa fa-skype"></i></a>-->
 								

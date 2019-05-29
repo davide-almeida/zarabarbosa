@@ -99,7 +99,7 @@ puts "DIARIES(ATENDIMENTOS) cadastrados!"
 puts "------------------------------------------------------------------"
 
 puts "Cadastrando SETTINGS..."
-Setting.create!(email: "exemplo@exemplo.com.br", phone: "(84) 99629 1483", facebook: "", instagram: "", twitter: "", linkedin: "", picture: File.new(Rails.root.join('public', 'settings', 'logo_header.png'), 'r'), picture_footer: File.new(Rails.root.join('public', 'settings', 'logo_footer.png'), 'r'), privacy_policy: "Teste de política de privacidade.", terms_use: "Teste de termos de uso.")
+Setting.create!(email: "exemplo@exemplo.com.br", phone: "(84) 99629 1483", facebook: "", instagram: "", twitter: "", linkedin: "", youtube: "http://www.youtube.com/zarabarbosa", picture: File.new(Rails.root.join('public', 'settings', 'logo_header.png'), 'r'), picture_footer: File.new(Rails.root.join('public', 'settings', 'logo_footer.png'), 'r'), privacy_policy: "Teste de política de privacidade.", terms_use: "Teste de termos de uso.")
 puts "SETTINGS cadastrados!"
 
 puts "------------------------------------------------------------------"

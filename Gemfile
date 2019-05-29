@@ -59,8 +59,10 @@ gem "paperclip", "~> 6.0.0"
 #gem 'foreman'
 #toolbar textarea - GIT(GEM): https://github.com/spohlenz/tinymce-rails - Exemplos: https://www.tiny.cloud/docs/demo/basic-example/
 gem 'tinymce-rails'
-#https://github.com/spohlenz/tinymce-rails-langs - translate tools
+# https://github.com/spohlenz/tinymce-rails-langs - translate tools
 gem 'tinymce-rails-langs'
+# https://github.com/comfy/active_link_to
+gem 'active_link_to'
 
 source 'https://rails-assets.org' do
   # https://rails-assets.org/#/components/bootstrap?version=3.3.7
