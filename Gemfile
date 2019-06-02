@@ -64,7 +64,7 @@ gem 'tinymce-rails-langs'
 # https://github.com/comfy/active_link_to
 gem 'active_link_to'
 # https://github.com/kyamaguchi/shufflejs-rails
-gem 'shufflejs-rails'
+# gem 'shufflejs-rails'
 
 source 'http://insecure.rails-assets.org' do
   # https://rails-assets.org/#/components/bootstrap?version=3.3.7
