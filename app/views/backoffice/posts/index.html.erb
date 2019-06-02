@@ -27,7 +27,7 @@
                         <tr>
                             <td width="3%"><%= post.id %></td>
                             <td><%= post.title %></td>
-                            <td><%= post.body %></td>
+                            <td><%= post.body.truncate(60).html_safe %></td>
                             <td><%= l(post.post_date) %></td>
                             <% if post.category.blank? %>
                                 <td> Sem Categoria </td>

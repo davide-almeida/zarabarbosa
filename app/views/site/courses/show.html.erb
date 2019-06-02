@@ -1,0 +1,369 @@
+<!-- 	Top banner-START 	-->
+<div class="contentPadding bg bgShadow" style="background-image: url(../../img/banner-courses.png)">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="servicesTitle">
+                    <div class="cell-view">
+                        <h1 class="h1 light as">Cursos on-line</h1>
+                        <div class="breadCrumbs small">
+                            <%= link_to 'Início', root_path %> <i class="fa fa-angle-right"></i> <span><%= link_to 'Cursos on-line', site_courses_path %></span> <i class="fa fa-angle-right"></i> <span><%= @courses.title %></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 	Top banner-END 	-->
+
+<!-- description -->
+<div class="contentPadding">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="aboutOur">
+                    <h2 class="h2 as" style="margin-bottom: 0px;"><%= @courses.title %></h2>
+                    <!-- <p style="margin-top: 0;">Categoria: <%= @courses.category_course.name %></p> -->
+                    <div class="emptySpace30"></div>
+                    <div class="simple-article normall">
+                        <p><%= @courses.description.html_safe %></p>
+                    </div>
+                </div>
+                <div class="emptySpace-xs30"></div>
+            </div>
+            <div class="col-sm-6">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="imgWrapper">
+                            <%= image_tag @courses.introduction_image.url %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- description - FIM -->
+
+<!-- venda (firstbutton) -->
+<% unless @courses.link_sale.blank? || @courses.firstbutton.blank? %>
+	<div class="appointWrapper2">
+		<div class="container">
+			<div class="row verAlign">
+				<div class="col-xs-12 col-sm-12 col-md-12">
+					<div class="btnAlign">
+						<%= link_to @courses.link_sale, class: "btn btn--outline btn--large btn--1493941431965", target: '_blank' do %> <%= @courses.firstbutton.html_safe %> <% end %>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<% end %>
+<!-- venda (firstbutton) - FIM -->
+
+<!-- detalhes + vídeos -->
+<% unless @courses.detail_body.blank? %>
+	<div class="contentPadding whitebg">
+		<div class="container whitebg">
+			<div class="row whitebg">
+				<div class="col-xs-12">
+					<div class="contentTitle normall">
+						<h3 class="h3 as font-28"><%= @courses.title_detail %></h3>
+					</div>
+				</div>
+				<!-- 	Vídeo	-->
+				<!-- <div align="row center whitebg">
+					<iframe width="100%" height="600rem" src="https://www.youtube.com/embed/dY-E3_kMM68" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div> -->
+				<!-- 	vídeo - FIM 	-->
+			</div>
+			<!-- <div class="emptySpace70"></div> -->
+			<!-- conteúdo -->
+			<div class="row whitebg">
+				<div class="col-sm-12">
+					<div class="aboutOur">
+						<!-- <h2 class="h2 as">Curso de auto-cuidado</h2>
+						<span>Lorem Ipsum is simply text of the Lorem Ipsum fost.</span> -->
+						<!-- <div class="emptySpace10"></div> -->
+						<div class="simple-article normall">
+							<p><%= @courses.detail_body.html_safe %></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- conteúdo - FIM -->
+		</div>
+	</div>
+<% end %>
+<!-- detalhes + vídeos - FIM -->
+
+<!-- venda (secondbutton) -->
+<% unless @courses.link_sale.blank? || @courses.secondbutton.blank? %>
+	<div class="appointWrapper2">
+		<div class="container">
+			<div class="row verAlign">
+				<div class="col-xs-12 col-sm-12 col-md-12">
+					<div class="btnAlign">
+						<%= link_to @courses.link_sale, class: "btn btn--outline btn--large btn--1493941431965", target: '_blank' do %> <%= @courses.secondbutton.html_safe %> <% end %>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<% end %>
+<!-- venda (secondbutton) - FIM -->
+
+<!-- Testimonials -->
+<% unless @courses.testimonials.blank? %>
+	<section class="testimonial">
+		<div class="container">
+			<div id="tcb-testimonial-carousel" class="carousel slide" data-ride="carousel">
+				<h3>Depoimentos</h3>
+				<!-- Indicators -->
+				<ol class="carousel-indicators">
+					<% (0..(@courses.testimonials.count)-1).each do |i, index| %>
+						<li data-target="#tcb-testimonial-carousel" data-slide-to="<%= i %>" class="<%= "active" if index == 0 %> "></li>
+					<% end %>
+				</ol>
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner">
+					<% @courses.testimonials.each_with_index do |testimonial, index| %>
+						<div class="item <%= "active" if index == 0 %> "> <!-- active -->
+							<div class="row">
+								<div class="col-xs-12">
+									<figure class="clearfix">
+										<div class="col-md-12 col-sm-12 col-xs-12">
+											<div class="caption">
+												<div class="testimonials-icon center"><img alt="" src="../../img/homepage3/testicon.png" class="center"></div>
+												<p><%= testimonial.body.html_safe %></p>
+												<h5>- <%= testimonial.name.html_safe %></h5>
+											</div>
+										</div>
+									</figure>
+								</div>
+							</div>
+						</div>
+					<% end %>
+				</div>
+				<!-- Controls -->
+				<a class="left carousel-control" href="#tcb-testimonial-carousel" data-slide="prev"> </a>
+				<a class="right carousel-control" href="#tcb-testimonial-carousel" data-slide="next">  </a>
+			</div>
+		</div>
+	</section>
+<% end %>
+<!-- Testimonials - FIM -->
+
+<!-- características advantages -->
+<% unless @courses.check_advantage.blank? %>
+	<% unless @courses.check_advantage.video == "unchecked" &&  
+		      @courses.check_advantage.e_book == "unchecked" &&
+		      @courses.check_advantage.work_book == "unchecked" &&	
+		      @courses.check_advantage.meditation == "unchecked" &&	
+		      @courses.check_advantage.conference == "unchecked" &&	
+		      @courses.check_advantage.member == "unchecked" &&	
+		      @courses.check_advantage.access_life == "unchecked" &&
+		      @courses.check_advantage.assurance == "unchecked"
+	%>
+		<div class="blue_line">
+			<div class="container">
+				<div class="row">
+					<h2 class="h3 as whitefont"> <%= @courses.title_advantage %> </h2>
+
+					<!-- conteudo -->
+					<div class="our_clinic">
+						<% if @courses.check_advantage.video == "checked" %>
+							<div class="col-md-4">
+								<div class="cell-view">
+									<div class="block">
+										<div class="imgWrapper">
+											<i class="flatIcon Fface flaticon-video-player-1"></i>
+										</div>
+										<div class="blockContent normall">
+											<h6 class="h6 as">Vídeo aulas</h6>
+											<p>Assista as vídeo aulas online no seu melhor horário.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						<% end %>
+
+						<% if @courses.check_advantage.e_book == "checked" %>
+							<div class="col-md-4">
+								<div class="cell-view">
+									<div class="block">
+										<div class="imgWrapper">
+											<i class="flatIcon Fface flaticon-open-book"></i>
+										</div>
+										<div class="blockContent normall">
+											<h6 class="h6 as">E-Book</h6>
+											<p>Baixe o livro digital para ler a qualquer momento.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						<% end %>
+
+						<% if @courses.check_advantage.work_book == "checked" %>
+							<div class="col-md-4">
+								<div class="cell-view">
+									<div class="block">
+										<div class="imgWrapper">
+											<i class="flatIcon Fmedical flaticon-edit"></i>
+										</div>
+										<div class="blockContent normall">
+											<h6 class="h6 as">Workbook</h6>
+											<p>Baixe o livro digital de exercícios para praticar.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						<% end %>
+
+						<% if @courses.check_advantage.meditation == "checked" %>
+							<div class="col-md-4">
+								<div class="cell-view">
+									<div class="block">
+										<div class="imgWrapper">
+											<i class="flatIcon Fface flaticon-padmasana"></i>
+										</div>
+										<div class="blockContent normall">
+											<h6 class="h6 as">Meditação Guiada</h6>
+											<p>Guia de meditação para potencializar o aprendizado.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						<% end %>
+
+						<% if @courses.check_advantage.conference == "checked" %>
+							<div class="col-md-4">
+								<div class="cell-view">
+									<div class="block">
+										<div class="imgWrapper">
+											<i class="flatIcon Fface flaticon-chat-1"></i>
+										</div>
+										<div class="blockContent normall">
+											<h6 class="h6 as">Conferência Online</h6>
+											<p>Um encontro individual para tirar dúvidas.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						<% end %>
+
+						<% if @courses.check_advantage.member == "checked" %>
+							<div class="col-md-4">
+								<div class="cell-view">
+									<div class="block">
+										<div class="imgWrapper">
+											<i class="flatIcon Fface flaticon-group"></i>
+										</div>
+										<div class="blockContent normall">
+											<h6 class="h6 as">Área de Membros</h6>
+											<p>Fórum online para trocar ideias e tirar suas dúvidas.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						<% end %>
+
+						<% if @courses.check_advantage.access_life == "checked" %>
+							<div class="col-md-4">
+								<div class="cell-view">
+									<div class="block">
+										<div class="imgWrapper">
+											<i class="flatIcon Fface flaticon-calendar"></i>
+										</div>
+										<div class="blockContent normall">
+											<h6 class="h6 as">Acesso Vitalício</h6>
+											<p>Liberdade de acesso a qualquer hora e em qualquer lugar.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						<% end %>
+
+						<% if @courses.check_advantage.assurance == "checked" %>
+							<div class="col-md-4">
+								<div class="cell-view">
+									<div class="block">
+										<div class="imgWrapper">
+											<i class="flatIcon Fface flaticon-quality"></i>
+										</div>
+										<div class="blockContent normall">
+											<h6 class="h6 as">Garantia de Satisfação</h6>
+											<p>Se não estiver satisfeito(a) você terá o seu dinheiro de volta.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						<% end %>
+					</div>
+					<!-- conteúdo FIM -->
+				</div>
+			</div>
+		</div>
+	<% end %>
+<% end %>
+<!-- características advantages - FIM -->
+
+<!-- venda (secondbutton) terceiro -->
+<% unless @courses.link_sale.blank? || @courses.secondbutton.blank? %>
+	<div class="appointWrapper2">
+		<div class="container">
+			<div class="row verAlign">
+				<div class="col-xs-12 col-sm-12 col-md-12">
+					<div class="btnAlign">
+						<%= link_to @courses.link_sale, class: "btn btn--outline btn--large btn--1493941431965", target: '_blank' do %> <%= @courses.secondbutton.html_safe %> <% end %>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<% end %>
+<!-- venda (secondbutton) - FIM -->
+
+<!-- questions -->
+<% unless @courses.question_courses.blank? %>
+	<div class="homeabout5">
+		<div class="contentPadding">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="rightsection">
+							<div class="titleShortocode">
+								<h3 class="h3 as">Perguntas frequentes</h3>
+							</div>
+							<div class="emptySpace40 emptySpace-xs30"></div>
+							<!-- 	Accordeon-START 	-->
+							<div class="accordeon normall">
+								<% @courses.question_courses.each_with_index do |question, index| %>
+								<div class="accordeon-title">
+									<div class="accrodeonButton"><span></span><span></span></div>
+									<%= question.query.html_safe %>
+								</div>
+								<div class="accordeon-toggle" style="display: none;">
+									<div class="simple-article">
+									<p><%= question.answer.html_safe %></p>
+									</div>
+								</div>
+								<div class="emptySpace20"></div>
+								<% end %>
+							</div>
+							<!-- 	Accordeon-END 	-->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<% end %>
+<!-- questions - FIM -->
+
+
+
+
+
+        

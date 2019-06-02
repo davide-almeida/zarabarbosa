@@ -1,0 +1,47 @@
+<h1 class="page-header">Cursos - Categorias</h1>
+<div class="panel panel-default" >
+    <div class="panel-heading">
+        Listando Categorias de cursos <span class="badge badge-light"><%= @category_courses.count %></span>
+        <%= link_to new_backoffice_category_course_path, class: "btn btn-success pull-right", style: "margin-top: -5px" do %>
+            Novo Cadastro
+        <% end %>
+    </div>
+    <!-- /.panel-heading -->
+    <div class="panel-body">
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nome</th>
+                        <th>Qnt. cursos</th>
+                        <th colspan="2">Opções</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% @category_courses.each do |category_course| %>
+                        <tr>
+                            <td width="3%"><%= category_course.id %></td>
+                            <td><%= category_course.name %></td>
+                            <td><%= category_course.courses.count %></td>
+                            <td width="3%">
+                                <%= link_to edit_backoffice_category_course_path(category_course.id), class: "btn btn-primary btn-circle" do %>
+                                    <i class="fa fa-edit"></i>
+                                <% end %>
+                            </td>
+                            <td width="3%">
+                                <%= link_to backoffice_category_course_path(category_course.id), class: "btn btn-danger btn-circle", data: {confirm: "Você realmente deseja excluir a categoria (#{category_course.name})? Ela possui #{category_course.courses.count} cursos vinculados."}, method: :delete do  %>
+                                    <i class="fa fa-trash"></i>
+                                <% end %>
+                            </td>
+                        </tr>
+                    <% end %>
+                </tbody>
+            </table>
+        </div>
+        <!-- /.table-responsive -->
+        </p> <center><%= paginate @category_courses %></center>
+    </div>
+    <!-- /.panel-body -->
+</div>
+

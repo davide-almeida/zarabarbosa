@@ -63,8 +63,10 @@ gem 'tinymce-rails'
 gem 'tinymce-rails-langs'
 # https://github.com/comfy/active_link_to
 gem 'active_link_to'
+# https://github.com/kyamaguchi/shufflejs-rails
+gem 'shufflejs-rails'
 
-source 'https://rails-assets.org' do
+source 'http://insecure.rails-assets.org' do
   # https://rails-assets.org/#/components/bootstrap?version=3.3.7
   gem 'rails-assets-bootstrap', '3.3.7'
 
@@ -99,7 +101,7 @@ group :development do
   gem "better_errors"
   gem "binding_of_caller"
   #rails erd
-  #gem 'rails-erd'
+  gem 'rails-erd'
   # https://github.com/sj26/mailcatcher
   # rodar o mailcatcher com o comando: mailcatcher --http-ip 0.0.0.0 -f -v
   # gem 'mailcatcher'

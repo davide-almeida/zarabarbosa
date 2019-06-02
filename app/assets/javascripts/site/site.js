@@ -6,6 +6,10 @@ $(document).ready(function() {
       });
       //tooltip end
 
+      // sort categories courses
+
+      // sort categories courses - FIM
+
       var showChar = 180;
       var ellipsestext = "...";
   
@@ -46,4 +50,6 @@ $(document).ready(function() {
   
     /* end ready */
   });
+
+
   

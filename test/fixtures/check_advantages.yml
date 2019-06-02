@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  video: MyString
+  e_book: MyString
+  work_book: MyString
+  meditation: MyString
+  conference: MyString
+  member: MyString
+  access_life: MyString
+  assurance: MyString
+  course: one
+
+two:
+  video: MyString
+  e_book: MyString
+  work_book: MyString
+  meditation: MyString
+  conference: MyString
+  member: MyString
+  access_life: MyString
+  assurance: MyString
+  course: two

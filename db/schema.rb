@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190529120420) do
+ActiveRecord::Schema.define(version: 20190602114120) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,48 @@ ActiveRecord::Schema.define(version: 20190529120420) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "category_courses", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "check_advantages", force: :cascade do |t|
+    t.string "video"
+    t.string "e_book"
+    t.string "work_book"
+    t.string "meditation"
+    t.string "conference"
+    t.string "member"
+    t.string "access_life"
+    t.string "assurance"
+    t.bigint "course_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["course_id"], name: "index_check_advantages_on_course_id"
+  end
+
+  create_table "courses", force: :cascade do |t|
+    t.string "price"
+    t.string "link_sale"
+    t.string "title"
+    t.text "description"
+    t.text "link_video"
+    t.bigint "category_course_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "introduction_image_file_name"
+    t.string "introduction_image_content_type"
+    t.integer "introduction_image_file_size"
+    t.datetime "introduction_image_updated_at"
+    t.string "firstbutton"
+    t.string "secondbutton"
+    t.string "title_detail"
+    t.string "title_advantage"
+    t.text "detail_body"
+    t.index ["category_course_id"], name: "index_courses_on_category_course_id"
   end
 
   create_table "diaries", force: :cascade do |t|
@@ -102,9 +144,18 @@ ActiveRecord::Schema.define(version: 20190529120420) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "question_courses", force: :cascade do |t|
+    t.string "query"
+    t.string "answer"
+    t.bigint "course_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["course_id"], name: "index_question_courses_on_course_id"
+  end
+
   create_table "questions", force: :cascade do |t|
     t.string "doubt"
-    t.text "answer"
+    t.string "answer"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -142,6 +193,15 @@ ActiveRecord::Schema.define(version: 20190529120420) do
     t.string "youtube"
   end
 
+  create_table "testimonials", force: :cascade do |t|
+    t.string "name"
+    t.text "body"
+    t.bigint "course_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["course_id"], name: "index_testimonials_on_course_id"
+  end
+
   create_table "works", force: :cascade do |t|
     t.string "company"
     t.string "role"
@@ -149,6 +209,10 @@ ActiveRecord::Schema.define(version: 20190529120420) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "check_advantages", "courses"
+  add_foreign_key "courses", "category_courses"
   add_foreign_key "posts", "admins"
   add_foreign_key "posts", "categories"
+  add_foreign_key "question_courses", "courses"
+  add_foreign_key "testimonials", "courses"
 end

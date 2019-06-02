@@ -39,7 +39,9 @@
                             <li> Sem categorias <i class="fa fa-angle-right"></i></li>
                           <% else %>
                             <% @categories.each do |category| %>
-                              <li><%= link_to blog_category_path(category.id) do %><%= category.name %> <i class="fa fa-angle-right"></i><% end %></li>
+                                <% if !category.posts.blank? %>
+                                    <li><%= link_to blog_category_path(category.id) do %><%= category.name %> <i class="fa fa-angle-right"></i><% end %></li>
+                                <% end %>
                             <% end %>
                           <% end %>
                         </ul>

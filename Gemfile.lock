@@ -1,6 +1,6 @@
 GEM
   remote: https://rubygems.org/
-  remote: https://rails-assets.org/
+  remote: http://insecure.rails-assets.org/
   specs:
     actioncable (5.1.6)
       actionpack (= 5.1.6)
@@ -87,6 +87,7 @@ GEM
       xpath (>= 2.0, < 4.0)
     childprocess (0.9.0)
       ffi (~> 1.0, >= 1.0.11)
+    choice (0.2.0)
     climate_control (0.2.0)
     coderay (1.1.2)
     coffee-rails (4.2.2)
@@ -204,6 +205,11 @@ GEM
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
+    rails-erd (1.6.0)
+      activerecord (>= 4.2)
+      activesupport (>= 4.2)
+      choice (~> 0.2.0)
+      ruby-graphviz (~> 1.2)
     rails-html-sanitizer (1.0.4)
       loofah (~> 2.2, >= 2.2.2)
     rails-i18n (5.1.1)
@@ -222,6 +228,7 @@ GEM
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
       railties (>= 4.2.0, < 5.3)
+    ruby-graphviz (1.2.4)
     ruby_dep (1.5.0)
     rubyzip (1.2.2)
     sass (3.6.0)
@@ -238,6 +245,8 @@ GEM
     selenium-webdriver (3.14.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.2)
+    shufflejs-rails (0.1.1)
+      railties (> 3.1)
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -313,9 +322,11 @@ DEPENDENCIES
   rails-assets-bootbox!
   rails-assets-bootstrap (= 3.3.7)!
   rails-assets-bootstrap.growl!
+  rails-erd
   rails-i18n
   sass-rails (~> 5.0)
   selenium-webdriver
+  shufflejs-rails
   spring
   spring-watcher-listen (~> 2.0.0)
   tinymce-rails
@@ -326,4 +337,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.16.5
+   2.0.1

@@ -2,8 +2,8 @@
 
 one:
   doubt: MyString
-  answer: MyText
+  answer: MyString
 
 two:
   doubt: MyString
-  answer: MyText
+  answer: MyString

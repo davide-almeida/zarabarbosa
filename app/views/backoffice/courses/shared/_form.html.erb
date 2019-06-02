@@ -1,0 +1,161 @@
+<h1 class="page-header">Cursos</h1>
+<% if @course.errors.any? %>
+  <div class="alert alert-danger alert-dismissable">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+    <!-- message -->
+    <ul>
+      <% @course.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+
+  </div>
+<% end %>
+<div class="panel panel-default" >
+    <div class="panel-heading">
+        <%= action %>
+    </div>
+    <!-- /.panel-heading -->
+    <div class="panel-body">
+        <div class="col-lg-6">
+            <%= form_for([:backoffice, @course]) do |f| %>
+                <div align="center"><h2>Descrição geral do produto<h2></div>
+                <div class="form-group">
+                    <label>Título</label>
+                    <%= f.text_field :title, class:"form-control", placeholder:"Título do curso" %>
+                </div>
+                <div class="form-group">
+                    <label>Categoria</label>
+                    <%#= f.collection_select(:category_course_id, @category_course_options_for_select, :id, :name, { :prompt => 'Selecione uma categoria' }, {:class =>"form-control has-feedback-left"}) %>
+                    <%= f.collection_select(:category_course_id, @category_options_for_select, :id, :name, {}, {:class =>"form-control"}) %>
+                </div>
+                <div class="form-group">
+                    <label>Imagem Capa (1280px x 720px OU com a mesma proporção)</label>
+                    <%= f.file_field :introduction_image, class:"form-control", placeholder:"Imagem de capa." %>
+                </div>
+                <div class="form-group">
+                    <label>Descrição</label>
+                    <%= f.text_area :description, class:"form-control tinymce", placeholder:"Descrição do produto." %>
+                </div>
+                <div class="form-group">
+                    <label>Link de venda do produto</label>
+                    <%= f.text_field :link_sale, class:"form-control", placeholder:"Ex.: http://www.hotmart.com" %>
+                </div>
+                <div class="form-group">
+                    <label>Preço</label>
+                    <%= f.text_field :price, class:"form-control", placeholder:"Ex.: 7,90" %>
+                </div>
+                <div class="form-group">
+                    <label>Botão de compra (1)</label>
+                    <%= f.text_field :firstbutton, class:"form-control", placeholder:"Ex.: COMPRE AGORA POR APENAS R$7,90" %>
+                </div>
+                <div class="form-group">
+                    <label>Botão de compra (2)</label>
+                    <%= f.text_field :secondbutton, class:"form-control", placeholder:"Ex.: COMPRE AGORA POR APENAS R$7,90" %>
+                </div>
+
+                <hr class="hrpanel">
+                
+                <div align="center"><h2>Detalhes do produto<h2></div>
+                <div class="form-group">
+                    <label>Título</label>
+                    <%= f.text_field :title_detail, class:"form-control", placeholder:"Título da sessão de detalhes do produto" %>
+                </div>
+                <div class="form-group">
+                    <label>Descrição completa (P/ vídeos utilizar o tamanho: width="100%" height="600rem")</label>
+                    <%= f.text_area :detail_body, class:"form-control tinymce", placeholder:"Descrição completa do produto." %>
+                </div>
+                
+                <hr class="hrpanel">
+
+                <div align="center"><h2>Depoimentos<h2></div>
+                <div class="form-group">
+                    <label>Depoimentos</label>
+                    <%= f.nested_fields_for :testimonials do |ff| %>
+                        <p> <%= ff.text_field :name, class:"form-control", placeholder:"Nome" %> </p>
+                        <p> <%= ff.text_area :body, class:"form-control tinymce", placeholder:"Depoimento." %> </p>
+                        <p> <%= ff.remove_nested_fields_link 'Excluir', class: 'btn btn-outline btn-danger btn-sm', role: 'button' %> </p>
+                        <br />
+                    <% end  %>
+                    <p><%= f.add_nested_fields_link :testimonials, 'Adicionar', class: 'btn btn-outline btn-primary btn-sm', role: 'button' %></p>
+                </div>
+
+                <hr class="hrpanel">
+                <div align="center"><h2>Vantagens e características<h2></div>
+                <div class="form-group">
+                    <label>Título</label>
+                    <%= f.text_field :title_advantage, class:"form-control", placeholder:"Título da sessão de vantagens do produto." %>
+                </div>
+                <div class="form-group">
+                    <label>Opções</label>
+                    <%= f.fields_for :check_advantage do |adv_fields| %>
+                        <div class="checkbox">
+                            <label>
+                                <%= adv_fields.check_box :video, {}, "checked", "unchecked" %>
+                                <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                Vídeo aulas
+                            </label> </p>
+                            <label>
+                                <%= adv_fields.check_box :e_book, {}, "checked", "unchecked" %>
+                                <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                E-Book
+                            </label> </p>
+                            <label>
+                                <%= adv_fields.check_box :work_book, {}, "checked", "unchecked" %>
+                                <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                Workbook
+                            </label> </p>
+                            <label>
+                                <%= adv_fields.check_box :meditation, {}, "checked", "unchecked" %>
+                                <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                Meditação Guiada
+                            </label> </p>
+                            <label>
+                                <%= adv_fields.check_box :conference, {}, "checked", "unchecked" %>
+                                <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                Conferencia Online
+                            </label> </p>
+                            <label>
+                                <%= adv_fields.check_box :member, {}, "checked", "unchecked" %>
+                                <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                Área de membros
+                            </label> </p>
+                            <label>
+                                <%= adv_fields.check_box :access_life, {}, "checked", "unchecked" %>
+                                <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                Acesso vitalício
+                            </label> </p>
+                            <label>
+                                <%= adv_fields.check_box :assurance, {}, "checked", "unchecked" %>
+                                <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                Garantia de satisfação
+                            </label> </p>
+                        </div>
+                    <% end %>
+                </div>
+
+                <hr class="hrpanel">
+
+                <div align="center"><h2>Dúvidas frequentes<h2></div>
+                <div class="form-group">
+                    <label>Perguntas e respostas</label>
+                    <%= f.nested_fields_for :question_courses do |ff| %>
+                        <p> <%= ff.text_field :query, class:"form-control", placeholder:"Pergunta" %> </p>
+                        <p> <%= ff.text_field :answer, class:"form-control", placeholder:"Resposta" %> </p>
+                        <p> <%= ff.remove_nested_fields_link 'Excluir', class: 'btn btn-outline btn-danger btn-sm', role: 'button' %> </p>
+                        <br />
+                    <% end  %>
+                    <p><%= f.add_nested_fields_link :question_courses, 'Adicionar', class: 'btn btn-outline btn-primary btn-sm', role: 'button' %></p>
+                </div>
+
+                <hr class="hrpanel">
+
+                <button type="submit" class="btn btn-default">Cadastrar</button>
+            <% end %>
+        </div>
+    </div>
+    <!-- /.panel-body -->
+</div>
+<!-- /panel panel-default -->
+
+</br></br></br></br></br>

@@ -104,3 +104,39 @@ puts "SETTINGS cadastrados!"
 
 puts "------------------------------------------------------------------"
 
+puts "------------------------Course INÍCIO-----------------------------"
+puts "----------------------------------"
+puts "Cadastrando CATEGORY_COURSES..."
+CategoryCourse.create!(name: "Workshop")
+CategoryCourse.create!(name: "Auto-ajuda")
+CategoryCourse.create!(name: "Auto-Controle")
+puts "CATEGORY_COURSES cadastradas!"
+puts "----------------------------------"
+puts "Cadastrando COURSES..."
+Course.create!(price: "19,90", link_sale: "http://www.hotmart.com.br", title: "Curso de auto-cuidado", description: "Descrição do curso de auto-cuidado.", link_video: "http://www.youtube.com.br", introduction_image: File.new(Rails.root.join('public', 'course', 'course-img-1.jpg'), 'r'), firstbutton: "(firstbutton) R$19,90", secondbutton: "(secondbutton) R$19,90", title_detail: "Details Título", title_advantage: "Advantages Title", detail_body: "Conteúdo exemplo detail_body", category_course_id: 2)
+Course.create!(price: "7,90", link_sale: "http://www.hotmart.com.br", title: "Curso de Workshop", description: "Descrição do Workshop.", link_video: "http://www.youtube.com.br", introduction_image: File.new(Rails.root.join('public', 'course', 'course-img-1.jpg'), 'r'), firstbutton: "(firstbutton) R$19,90", secondbutton: "(secondbutton) R$19,90", title_detail: "Details Título", title_advantage: "Advantages Title", detail_body: "Conteúdo exemplo detail_body", category_course_id: 1)
+Course.create!(price: "15,00", link_sale: "http://www.hotmart.com.br", title: "2° Curso de Workshop", description: "Descrição do 2° Workshop.", link_video: "http://www.youtube.com.br", introduction_image: File.new(Rails.root.join('public', 'course', 'course-img-1.jpg'), 'r'), firstbutton: "(firstbutton) R$19,90", secondbutton: "(secondbutton) R$19,90", title_detail: "Details Título", title_advantage: "Advantages Title", detail_body: "Conteúdo exemplo detail_body", category_course_id: 1)
+puts "COURSES cadastrados!"
+puts "----------------------------------"
+puts "Cadastrando TESTIMONIALS..."
+Testimonial.create!(name: "Davide Almeida", body: "Exemplo de depoimento Davide aksjhdas dakjd as dkad asd askdha ksjdakedhakldaek dklad alk dklsa dkla eld akld aklehdkla", course_id: 1)
+Testimonial.create!(name: "Roberta Almeida", body: "Exemplo de depoimento Roberta aksjhdas dakjd as dkad asd askdha ksjdakedhakldaek dklad alk dklsa dkla eld akld aklehdkla", course_id: 1)
+Testimonial.create!(name: "Simba Gostosinho", body: "Exemplo de depoimento Simba aksjhdas dakjd as dkad asd askdha ksjdakedhakldaek dklad alk dklsa dkla eld akld aklehdkla", course_id: 1)
+puts "TESTIMONIALS cadastradOs!"
+puts "----------------------------------"
+puts "Cadastrando QUESTION_COURSES..."
+QuestionCourse.create!(query:"Primeira pergunta?", answer:"Resposta da primeira pergunta.", course_id: 1)
+QuestionCourse.create!(query:"Segunda pergunta?", answer:"Resposta da segunda pergunta.", course_id: 1)
+QuestionCourse.create!(query:"Terceira pergunta?", answer:"Resposta da terceira pergunta.", course_id: 1)
+QuestionCourse.create!(query:"Quarta pergunta?", answer:"Resposta da quarta pergunta.", course_id: 1)
+puts "QUESTION_COURSES cadastrados!"
+puts "----------------------------------"
+puts "Cadastrando CHECK_ADVANTAGE..."
+CheckAdvantage.create!(video: "checked", e_book: "checked", work_book: "checked", meditation: "checked", conference: "checked", member: "checked", access_life: "checked", assurance: "checked", course_id: 1)
+CheckAdvantage.create!(video: "checked", e_book: "checked", work_book: "unchecked", meditation: "unchecked", conference: "unchecked", member: "unchecked", access_life: "checked", assurance: "checked", course_id: 2)
+puts "CHECK_ADVANTAGE cadastrados!"
+puts "----------------------------------"
+
+puts "------------------------Course FIM--------------------------------"
+puts "------------------------------------------------------------------"
+

@@ -74,3 +74,9 @@ input.hidden {
     background: url(http://ibrahimjabbari.com/english/images/hr-11.png) repeat-x 0 0;
     border: 0;
 }
+
+hr.hrpanel {
+    border-top: 1px dashed #3099a7;
+    margin-bottom: 10%;
+    margin-top: 10%;
+}

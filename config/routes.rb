@@ -16,6 +16,8 @@ Rails.application.routes.draw do
     resources :posts#, except: [:show]
     resources :diaries, except: [:show]
     resources :settings, except: [:show]
+    resources :category_courses, except: [:show]
+    resources :courses
     get 'admin', to: 'home#index'
     get 'admins', to: 'admins#index'
     get 'questions', to: 'questions#index'
@@ -28,10 +30,13 @@ Rails.application.routes.draw do
     get 'categories', to: 'categories#index'
     get 'diaries', to: 'diaries#index'
     get 'settings', to: 'settings#index'
+    get 'category_courses', to: 'category_courses#index'
+    get 'courses', to: 'courses#index'
   end
 
   namespace :site do
     resources :send_mail, only: [:edit, :create]
+    resources :courses, only: [:show, :index]
     get 'home', to: 'home#index'
     #get 'home', to: 'home#new'#, via: 'get'
     #get 'blog', to: 'blog#index'
@@ -49,7 +54,7 @@ Rails.application.routes.draw do
   devise_for :admins, :skip => [:registrations]
   devise_scope :admin do  
     get '/admins/sign_out' => 'devise/sessions#destroy'     
- end
+  end
 
   root 'site/home#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
