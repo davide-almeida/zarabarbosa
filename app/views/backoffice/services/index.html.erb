@@ -24,7 +24,7 @@
                         <tr>
                             <td width="3%"><%= service.id %></td>
                             <td><%= service.title %></td>
-                            <td><%= service.description %></td>
+                            <td><%= service.description.html_safe %></td>
                             <td><%= image_tag service.picture.url(:thumb) %></td>
                             <td width="3%">
                                 <%= link_to edit_backoffice_service_path(service.id), class: "btn btn-primary btn-circle" do %>
