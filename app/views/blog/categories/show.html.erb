@@ -21,25 +21,27 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 col-md-3">
-                    <div class="mobileSearch large">
-                        Search
+                    <!-- <div class="mobileSearch large">
+                        
                         <i class="fa fa-angle-down"></i>
-                    </div>
-                    <aside class="blogAside"><!--
+                    </div> -->
+                    <div><!--
                         <div class="searchWrapper">
                             <input class="simple-input" type="text" placeholder="Enter Search Keywords">
                             <button class="searchBtn" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
                         </div> -->
                         <!-- 	Category-START 	-->
                         <div class="recentTitle">
-                            <h5 class="h5 as">Categorias</h5>
+                            <h5 class="h5 as">Categoriass</h5>
                         </div>
                         <ul class="categoriesList normall">
                           <% if @categories_menu.blank? %>
                             <li> Sem categorias <i class="fa fa-angle-right"></i></li>
                           <% else %>
                             <% @categories_menu.each do |category| %>
-                              <li><%= link_to blog_category_path(category.id) do %><%= category.name %> <i class="fa fa-angle-right"></i><% end %></li>
+                                <% if !category.posts.blank? %>
+                                    <li><%= link_to blog_category_path(category.id) do %><%= category.name %> <i class="fa fa-angle-right"></i><% end %></li>
+                                <% end %>
                             <% end %>
                           <% end %>
                         </ul>
@@ -63,7 +65,7 @@
                         <a href="#" class="tags small">Inner Life</a> -->
                         <!-- 	Tags-END 	-->
                         <div class="emptySpace-xs30"></div>
-                    </aside>
+                    </div>
                 </div>
                 <div class="col-sm-12 col-md-9">
                     <div class="mainBlogContent">

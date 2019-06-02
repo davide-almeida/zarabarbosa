@@ -23,7 +23,7 @@
                         <tr>
                             <td width="3%"><%= question.id %></td>
                             <td><%= question.doubt %></td>
-                            <td><%= question.answer %></td>
+                            <td><%= question.answer.html_safe %></td>
                             <td width="3%">
                                 <%= link_to edit_backoffice_question_path(question.id), class: "btn btn-primary btn-circle" do %>
                                     <i class="fa fa-edit"></i>

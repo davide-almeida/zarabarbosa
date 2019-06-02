@@ -155,7 +155,7 @@ ActiveRecord::Schema.define(version: 20190602114120) do
 
   create_table "questions", force: :cascade do |t|
     t.string "doubt"
-    t.string "answer"
+    t.text "answer"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

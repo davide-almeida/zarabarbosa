@@ -23,7 +23,7 @@
                         <tr>
                             <td width="3%"><%= flag.id %></td>
                             <td><%= flag.title %></td>
-                            <td><%= flag.description %></td>
+                            <td><%= flag.description.html_safe %></td>
                             <td><%= image_tag flag.picture.url(:thumb) %></td>
                             <td width="3%">
                                 <%= link_to edit_backoffice_flag_path(flag.id), class: "btn btn-primary btn-circle" do %>
