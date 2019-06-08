@@ -21,6 +21,7 @@ Rails.application.config.assets.precompile += %w( site/style.css )
 Rails.application.config.assets.precompile += %w( site/sumoselect.css )
 Rails.application.config.assets.precompile += %w( site/flaticon.css )
 Rails.application.config.assets.precompile += %w( site/fonts/icons/font/flaticon.css )
+Rails.application.config.assets.precompile += %w( site/shuffle.scss )
 
 Rails.application.config.assets.precompile += %w( site/bootstrap.min.js )
 Rails.application.config.assets.precompile += %w( site/jquery.min.js )
@@ -32,8 +33,22 @@ Rails.application.config.assets.precompile += %w( site/global.js )
 Rails.application.config.assets.precompile += %w( site/map.js )
 Rails.application.config.assets.precompile += %w( site/site.js )
 
-#PAINEL
+# #PAINEL
 Rails.application.config.assets.precompile += %w( backoffice.css )
 
 Rails.application.config.assets.precompile += %w( backoffice.js )
-#Rails.application.config.assets.precompile += %w( tinymce/langs/pt.js )
+# Rails.application.config.assets.precompile += %w( tinymce/langs/pt.js )
+
+
+
+#Rails.application.config.assets.paths += Dir["#{Rails.root}/vendor/sbadmin2/*"].sort_by { |dir| -dir.size }
+Rails.application.config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif *.svg)
+
+# # site
+# Rails.application.config.assets.precompile += %w( site/application.css )
+# Rails.application.config.assets.precompile += %w( site/style.css )
+# Rails.application.config.assets.precompile += %w( site.css )
+
+# #backoffice (painel)
+# Rails.application.config.assets.precompile += %w( backoffice.css )
+# Rails.application.config.assets.precompile += %w( backoffice.js )

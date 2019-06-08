@@ -245,6 +245,8 @@ GEM
     selenium-webdriver (3.14.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.2)
+    shufflejs-rails (0.1.1)
+      railties (> 3.1)
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -324,6 +326,7 @@ DEPENDENCIES
   rails-i18n
   sass-rails (~> 5.0)
   selenium-webdriver
+  shufflejs-rails
   spring
   spring-watcher-listen (~> 2.0.0)
   tinymce-rails
@@ -334,4 +337,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.16.5
+   2.0.1

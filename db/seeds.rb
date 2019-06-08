@@ -18,25 +18,25 @@ puts "ADMINS cadastrados!"
 puts "------------------------------------------------------------------"
 
 puts "Cadastrando FLAGS(BANNERS)..."
-Flag.create!(title: "Psicoterapia Infantil (Ludoterapia)", description: "", picture: File.new(Rails.root.join('public', 'banners', 'banner1.jpg'), 'r'))
-Flag.create!(title: "Psicoterapia", description: "", picture: File.new(Rails.root.join('public', 'banners', 'banner2.jpg'), 'r'))
-Flag.create!(title: "Terapia de Grupo", description: "", picture: File.new(Rails.root.join('public', 'banners', 'banner3.jpg'), 'r'))
-Flag.create!(title: "Palestras & Workshops", description: "", picture: File.new(Rails.root.join('public', 'banners', 'banner4.jpg'), 'r'))
+Flag.create!(title: "Psicoterapia Infantil (Ludoterapia)", description: "", picture: File.new(Rails.root.join('app', 'assets', 'img', 'banners', 'banner1.jpg'), 'r'))
+Flag.create!(title: "Psicoterapia", description: "", picture: File.new(Rails.root.join('app', 'assets', 'img', 'banners', 'banner2.jpg'), 'r'))
+Flag.create!(title: "Terapia de Grupo", description: "", picture: File.new(Rails.root.join('app', 'assets', 'img', 'banners', 'banner3.jpg'), 'r'))
+Flag.create!(title: "Palestras & Workshops", description: "", picture: File.new(Rails.root.join('app', 'assets', 'img', 'banners', 'banner4.jpg'), 'r'))
 puts "FLAGS(BANNERS) cadastrados!"
 
 puts "------------------------------------------------------------------"
 
 puts "Cadastrando SERVICES..."
-Service.create!(title: "Psicoterapia Infantil (Ludoterapia)", description: "A psicoterapia infantil consiste no cuidado e atenção com a saúde mental da criança. É um espaço de acolhimento que proporciona à criança, através do brincar, a liberdade para expressar seus sentimentos e dificuldades, no intuito de construir um caminho rumo ao bem-estar familiar, a prevenção e solução de conflitos.", picture: File.new(Rails.root.join('public', 'services', 'service1.jpg'), 'r'))
-Service.create!(title: "Psicoterapia", description: "simply my text of the printing and Ips um is simply text of the Ipsum is simply text of thetypesetting", picture: File.new(Rails.root.join('public', 'services', 'service2.jpg'), 'r'))
-Service.create!(title: "Terapia de Grupo", description: "simply my text of the printing and Ips um is simply text of the Ipsum is simply text of thetypesetting", picture: File.new(Rails.root.join('public', 'services', 'service3.jpg'), 'r'))
-Service.create!(title: "Palestras & Workshops", description: "simply my text of the printing and Ips um is simply text of the Ipsum is simply text of thetypesetting", picture: File.new(Rails.root.join('public', 'services', 'service4.jpg'), 'r'))
+Service.create!(title: "Psicoterapia Infantil (Ludoterapia)", description: "A psicoterapia infantil consiste no cuidado e atenção com a saúde mental da criança. É um espaço de acolhimento que proporciona à criança, através do brincar, a liberdade para expressar seus sentimentos e dificuldades, no intuito de construir um caminho rumo ao bem-estar familiar, a prevenção e solução de conflitos.", picture: File.new(Rails.root.join('app', 'assets', 'img', 'services', 'service1.jpg'), 'r'))
+Service.create!(title: "Psicoterapia", description: "simply my text of the printing and Ips um is simply text of the Ipsum is simply text of thetypesetting", picture: File.new(Rails.root.join('app', 'assets', 'img', 'services', 'service2.jpg'), 'r'))
+Service.create!(title: "Terapia de Grupo", description: "simply my text of the printing and Ips um is simply text of the Ipsum is simply text of thetypesetting", picture: File.new(Rails.root.join('app', 'assets', 'img', 'services', 'service3.jpg'), 'r'))
+Service.create!(title: "Palestras & Workshops", description: "simply my text of the printing and Ips um is simply text of the Ipsum is simply text of thetypesetting", picture: File.new(Rails.root.join('app', 'assets', 'img', 'services', 'service4.jpg'), 'r'))
 puts "SERVICES cadastrados!"
 
 puts "------------------------------------------------------------------"
 
 puts "Cadastrando PROFESSIONAL..."
-Professional.create!(name: "Zara Barbosa", title: "Mestre e Especialista em Psicologia Clínica", number: "64/3467", description: "Lorem Ipsum is simply text of the Lorem Ipsum is simply my text of the printing and Ipsum is simply text of the Ipsum is simply text of thetypesetting Ipsum is simply text of the stry simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply text of the Lorem Ipsum is simply my text of", phone: "(84) 98892 4854", picture: File.new(Rails.root.join('public', 'professional', 'professionaldefault.png'), 'r'))
+Professional.create!(name: "Zara Barbosa", title: "Mestre e Especialista em Psicologia Clínica", number: "64/3467", description: "Lorem Ipsum is simply text of the Lorem Ipsum is simply my text of the printing and Ipsum is simply text of the Ipsum is simply text of thetypesetting Ipsum is simply text of the stry simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply text of the Lorem Ipsum is simply my text of", phone: "(84) 98892 4854", picture: File.new(Rails.root.join('app', 'assets', 'img', 'professional', 'professionaldefault.png'), 'r'))
 puts "PROFESSIONALS cadastrados!"
 
 puts "------------------------------------------------------------------"
@@ -65,10 +65,10 @@ puts "QUESTIONS cadastradas!"
 puts "------------------------------------------------------------------"
 
 puts "Cadastrando HEALTHINSURANCES..."
-HealthInsurance.create!(name: "Unimed", picture: File.new(Rails.root.join('public', 'healthinsurance', 'unimed.jpg'), 'r'))
-HealthInsurance.create!(name: "Amil", picture: File.new(Rails.root.join('public', 'healthinsurance', 'amil.jpg'), 'r'))
-HealthInsurance.create!(name: "Bradesco", picture: File.new(Rails.root.join('public', 'healthinsurance', 'bradesco.jpg'), 'r'))
-HealthInsurance.create!(name: "Cassi", picture: File.new(Rails.root.join('public', 'healthinsurance', 'cassi.jpg'), 'r'))
+HealthInsurance.create!(name: "Unimed", picture: File.new(Rails.root.join('app', 'assets', 'img', 'healthinsurance', 'unimed.jpg'), 'r'))
+HealthInsurance.create!(name: "Amil", picture: File.new(Rails.root.join('app', 'assets', 'img', 'healthinsurance', 'amil.jpg'), 'r'))
+HealthInsurance.create!(name: "Bradesco", picture: File.new(Rails.root.join('app', 'assets', 'img', 'healthinsurance', 'bradesco.jpg'), 'r'))
+HealthInsurance.create!(name: "Cassi", picture: File.new(Rails.root.join('app', 'assets', 'img', 'healthinsurance', 'cassi.jpg'), 'r'))
 puts "HEALTHINSURANCES cadastrados!"
 
 puts "------------------------------------------------------------------"
@@ -81,10 +81,10 @@ Category.create!(name: "Notícias")
 puts "CATEGORIES cadastradas!"
 puts "----------------------------------"
 puts "Cadastrando POSTS..."
-Post.create!(title: "Post 1", body: "Conteúdo do Post 1", post_date: Date.today - Random.rand(5), admin_id: 1, category_id: 1, picture: File.new(Rails.root.join('public', 'blog', 'blog1.jpg'), 'r'))
-Post.create!(title: "Post 2", body: "Conteúdo do Post 2", post_date: Date.today - Random.rand(5), admin_id: 1, category_id: 2, picture: File.new(Rails.root.join('public', 'blog', 'blog2.jpg'), 'r'))
-Post.create!(title: "Post 3", body: "Conteúdo do Post 3", post_date: Date.today - Random.rand(5), admin_id: 1, category_id: 2, picture: File.new(Rails.root.join('public', 'blog', 'blog3.jpg'), 'r'))
-Post.create!(title: "Post Teste Admin", body: "Testando post com outro admin", post_date: Date.today - Random.rand(5), admin_id: 3, category_id: 1, picture: File.new(Rails.root.join('public', 'blog', 'blog4.jpg'), 'r'))
+Post.create!(title: "Post 1", body: "Conteúdo do Post 1", post_date: Date.today - Random.rand(5), admin_id: 1, category_id: 1, picture: File.new(Rails.root.join('app', 'assets', 'img', 'blog', 'blog1.jpg'), 'r'))
+Post.create!(title: "Post 2", body: "Conteúdo do Post 2", post_date: Date.today - Random.rand(5), admin_id: 1, category_id: 2, picture: File.new(Rails.root.join('app', 'assets', 'img', 'blog', 'blog2.jpg'), 'r'))
+Post.create!(title: "Post 3", body: "Conteúdo do Post 3", post_date: Date.today - Random.rand(5), admin_id: 1, category_id: 2, picture: File.new(Rails.root.join('app', 'assets', 'img', 'blog', 'blog3.jpg'), 'r'))
+Post.create!(title: "Post Teste Admin", body: "Testando post com outro admin", post_date: Date.today - Random.rand(5), admin_id: 3, category_id: 1, picture: File.new(Rails.root.join('app', 'assets', 'img', 'blog', 'blog4.jpg'), 'r'))
 puts "POSTS cadastradas!"
 puts "----------------------------------"
 puts "---------------------------BLOG FIM-------------------------------"
@@ -99,7 +99,7 @@ puts "DIARIES(ATENDIMENTOS) cadastrados!"
 puts "------------------------------------------------------------------"
 
 puts "Cadastrando SETTINGS..."
-Setting.create!(email: "exemplo@exemplo.com.br", phone: "(84) 99629 1483", facebook: "", instagram: "", twitter: "", linkedin: "", youtube: "http://www.youtube.com/zarabarbosa", picture: File.new(Rails.root.join('public', 'settings', 'logo_header.png'), 'r'), picture_footer: File.new(Rails.root.join('public', 'settings', 'logo_footer.png'), 'r'), privacy_policy: "Teste de política de privacidade.", terms_use: "Teste de termos de uso.")
+Setting.create!(email: "exemplo@exemplo.com.br", phone: "(84) 99629 1483", facebook: "", instagram: "", twitter: "", linkedin: "", youtube: "http://www.youtube.com/zarabarbosa", picture: File.new(Rails.root.join('app', 'assets', 'img', 'settings', 'logo_header.png'), 'r'), picture_footer: File.new(Rails.root.join('app', 'assets', 'img', 'settings', 'logo_footer.png'), 'r'), privacy_policy: "Teste de política de privacidade.", terms_use: "Teste de termos de uso.")
 puts "SETTINGS cadastrados!"
 
 puts "------------------------------------------------------------------"
@@ -113,9 +113,9 @@ CategoryCourse.create!(name: "Auto-Controle")
 puts "CATEGORY_COURSES cadastradas!"
 puts "----------------------------------"
 puts "Cadastrando COURSES..."
-Course.create!(price: "19,90", link_sale: "http://www.hotmart.com.br", title: "Curso de auto-cuidado", description: "Descrição do curso de auto-cuidado.", link_video: "http://www.youtube.com.br", introduction_image: File.new(Rails.root.join('public', 'course', 'course-img-1.jpg'), 'r'), firstbutton: "(firstbutton) R$19,90", secondbutton: "(secondbutton) R$19,90", title_detail: "Details Título", title_advantage: "Advantages Title", detail_body: "Conteúdo exemplo detail_body", category_course_id: 2)
-Course.create!(price: "7,90", link_sale: "http://www.hotmart.com.br", title: "Curso de Workshop", description: "Descrição do Workshop.", link_video: "http://www.youtube.com.br", introduction_image: File.new(Rails.root.join('public', 'course', 'course-img-1.jpg'), 'r'), firstbutton: "(firstbutton) R$19,90", secondbutton: "(secondbutton) R$19,90", title_detail: "Details Título", title_advantage: "Advantages Title", detail_body: "Conteúdo exemplo detail_body", category_course_id: 1)
-Course.create!(price: "15,00", link_sale: "http://www.hotmart.com.br", title: "2° Curso de Workshop", description: "Descrição do 2° Workshop.", link_video: "http://www.youtube.com.br", introduction_image: File.new(Rails.root.join('public', 'course', 'course-img-1.jpg'), 'r'), firstbutton: "(firstbutton) R$19,90", secondbutton: "(secondbutton) R$19,90", title_detail: "Details Título", title_advantage: "Advantages Title", detail_body: "Conteúdo exemplo detail_body", category_course_id: 1)
+Course.create!(price: "19,90", link_sale: "http://www.hotmart.com.br", title: "Curso de auto-cuidado", description: "Descrição do curso de auto-cuidado.", link_video: "http://www.youtube.com.br", introduction_image: File.new(Rails.root.join('app', 'assets', 'img', 'course', 'course-img-1.jpg'), 'r'), firstbutton: "(firstbutton) R$19,90", secondbutton: "(secondbutton) R$19,90", title_detail: "Details Título", title_advantage: "Advantages Title", detail_body: "Conteúdo exemplo detail_body", category_course_id: 2)
+Course.create!(price: "7,90", link_sale: "http://www.hotmart.com.br", title: "Curso de Workshop", description: "Descrição do Workshop.", link_video: "http://www.youtube.com.br", introduction_image: File.new(Rails.root.join('app', 'assets', 'img', 'course', 'course-img-1.jpg'), 'r'), firstbutton: "(firstbutton) R$19,90", secondbutton: "(secondbutton) R$19,90", title_detail: "Details Título", title_advantage: "Advantages Title", detail_body: "Conteúdo exemplo detail_body", category_course_id: 1)
+Course.create!(price: "15,00", link_sale: "http://www.hotmart.com.br", title: "2° Curso de Workshop", description: "Descrição do 2° Workshop.", link_video: "http://www.youtube.com.br", introduction_image: File.new(Rails.root.join('app', 'assets', 'img', 'course', 'course-img-1.jpg'), 'r'), firstbutton: "(firstbutton) R$19,90", secondbutton: "(secondbutton) R$19,90", title_detail: "Details Título", title_advantage: "Advantages Title", detail_body: "Conteúdo exemplo detail_body", category_course_id: 1)
 puts "COURSES cadastrados!"
 puts "----------------------------------"
 puts "Cadastrando TESTIMONIALS..."
