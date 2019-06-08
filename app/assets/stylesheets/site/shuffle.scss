@@ -10,132 +10,134 @@
     padding: 0;
   }
   
-  img {
-    display: block;
-    max-width: 100%;
-  }
+  // img {
+  //   display: block;
+  //   max-width: 100%;
+  // }
   
-  /* p {
-    margin: 1em 0;
-    line-height: 1.4
-  } */
+  // p {
+  //   margin: 1em 0;
+  //   line-height: 1.4
+  // } 
   
-  /*
-    Shuffle needs either relative or absolute positioning on the container
-    It will set it for you, but it'll cause another style recalculation and layout.
-    AKA worse performance - so just set it here
-   */
-  .my-shuffle-container {
-    position: relative;
-    overflow: hidden;
-  }
   
-  .my-sizer-element {
-    position: absolute;
-    opacity: 0;
-    visibility: hidden;
-  }
+    // Shuffle needs either relative or absolute positioning on the container
+    // It will set it for you, but it'll cause another style recalculation and layout.
+    // AKA worse performance - so just set it here
+
+    //comentei a partir daqui porque deu conflito no .card
+   
+  // .my-shuffle-container {
+  //   position: relative;
+  //   overflow: hidden;
+  // }
   
-  $picture-gutter: 24px;
-  $item-height: 220px;
-  .picture-item {
-    height: 220px;
-    margin-top: $picture-gutter;
+  // .my-sizer-element {
+  //   position: absolute;
+  //   opacity: 0;
+  //   visibility: hidden;
+  // }
   
-    img {
-      display: block;
-      width: 100%;
-    }
-  }
+  // $picture-gutter: 24px;
+  // $item-height: 220px;
+  // .picture-item {
+  //   height: 220px;
+  //   margin-top: $picture-gutter;
   
-  @supports (object-fit: cover) {
-    .picture-item img {
-      max-width: none;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
+  //   img {
+  //     display: block;
+  //     width: 100%;
+  //   }
+  // }
   
-  .picture-item--h2 {
-    height: ($item-height * 2) + $picture-gutter; /* 2x the height + 1 gutter */
-  }
+  // @supports (object-fit: cover) {
+  //   .picture-item img {
+  //     max-width: none;
+  //     height: 100%;
+  //     object-fit: cover;
+  //   }
+  // }
   
-  .picture-item__inner {
-    position: relative;
-    height: 100%;
-    overflow: hidden;
-    background: #ecf0f1;
-  }
+  // .picture-item--h2 {
+  //   height: ($item-height * 2) + $picture-gutter; /* 2x the height + 1 gutter */
+  // }
   
-  .picture-item__details {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    width: 100%;
-    padding: 1em;
-  }
+  // .picture-item__inner {
+  //   position: relative;
+  //   height: 100%;
+  //   overflow: hidden;
+  //   background: #ecf0f1;
+  // }
   
-  .picture-item__description {
-    width: 100%;
-    padding: 0 2em 1em 1em;
-    margin: 0;
-  }
+  // .picture-item__details {
+  //   display: flex;
+  //   align-items: baseline;
+  //   justify-content: space-between;
+  //   width: 100%;
+  //   padding: 1em;
+  // }
   
-  .picture-item__title {
-    flex-shrink: 0;
-    margin-right: 4px;
-  }
+  // .picture-item__description {
+  //   width: 100%;
+  //   padding: 0 2em 1em 1em;
+  //   margin: 0;
+  // }
   
-  .picture-item__tags {
-    flex-shrink: 1;
-    text-align: right;
-    margin: 0;
-  }
+  // .picture-item__title {
+  //   flex-shrink: 0;
+  //   margin-right: 4px;
+  // }
   
-  @media screen and (min-width: 768px) {
-    .picture-item--overlay {
-      .picture-item__details {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        backdrop-filter: blur(7px);
-        color: white;
-        overflow: hidden;
-      }
+  // .picture-item__tags {
+  //   flex-shrink: 1;
+  //   text-align: right;
+  //   margin: 0;
+  // }
   
-      .picture-item__description {
-        display: none;
-      }
+  // @media screen and (min-width: 768px) {
+  //   .picture-item--overlay {
+  //     .picture-item__details {
+  //       position: absolute;
+  //       bottom: 0;
+  //       left: 0;
+  //       width: 100%;
+  //       backdrop-filter: blur(7px);
+  //       color: white;
+  //       overflow: hidden;
+  //     }
+  
+  //     .picture-item__description {
+  //       display: none;
+  //     }
       
-      a {
-        color: white;
-        text-shadow: 0 0 1px black;
-      }
-    }
-  }
+  //     a {
+  //       color: white;
+  //       text-shadow: 0 0 1px black;
+  //     }
+  //   }
+  // }
   
-  @media screen and (max-width: 767px) {
-    .picture-item {
-      height: auto;
-      margin-top: 20px;
-    }
+  // @media screen and (max-width: 767px) {
+  //   .picture-item {
+  //     height: auto;
+  //     margin-top: 20px;
+  //   }
   
-    .picture-item__details,
-    .picture-item__description {
-      font-size: 0.875em;
-      padding: 0.625em;
-    }
+  //   .picture-item__details,
+  //   .picture-item__description {
+  //     font-size: 0.875em;
+  //     padding: 0.625em;
+  //   }
   
-    .picture-item__description {
-      padding-right: 0.875em;
-      padding-bottom: 1.25em;
-    }
+  //   .picture-item__description {
+  //     padding-right: 0.875em;
+  //     padding-bottom: 1.25em;
+  //   }
   
-    .picture-item--h2 {
-      height: auto;
-    }
-  }
+  //   .picture-item--h2 {
+  //     height: auto;
+  //   }
+  // }
   
   // Filter styling
   // --------------
