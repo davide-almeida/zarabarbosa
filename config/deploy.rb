@@ -31,7 +31,7 @@ set :user, 'ubuntu'
 set :deploy_to, "/var/www/zarabarbosa"
  
 append :linked_files, "config/database.yml", "config/secrets.yml"#, "config/storage.yml", "config/master.key"
-append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system", "public/assets"#,"public/assets","public/img"
+append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"#,"public/assets","public/img"
  
 set :keep_releases, 5
 set :migration_role, :app

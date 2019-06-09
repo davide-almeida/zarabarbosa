@@ -7,8 +7,8 @@ Rails.application.config.assets.version = '1.0'
 # Rails.application.config.assets.paths << Emoji.images_path
 # Add Yarn node_modules folder to the asset load path.
 
-# Rails.application.config.assets.paths << Rails.root.join('node_modules')
-Rails.application.config.assets.paths << Rails.root.join("app", "assets", "fonts")
+Rails.application.config.assets.paths << Rails.root.join('node_modules')
+# Rails.application.config.assets.paths << Rails.root.join("app", "assets", "fonts")
 
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
@@ -21,8 +21,8 @@ Rails.application.config.assets.precompile += %w( site/application.css )
 Rails.application.config.assets.precompile += %w( site/swiper.css )
 Rails.application.config.assets.precompile += %w( site/style.css )
 Rails.application.config.assets.precompile += %w( site/sumoselect.css )
-Rails.application.config.assets.precompile += %w( site/flaticon.css )
-Rails.application.config.assets.precompile += %w( site/fonts/icons/font/flaticon.css )
+#Rails.application.config.assets.precompile += %w( site/flaticon.css )
+#Rails.application.config.assets.precompile += %w( site/fonts/icons/font/flaticon.css )
 Rails.application.config.assets.precompile += %w( site/shuffle.scss )
 
 Rails.application.config.assets.precompile += %w( site/bootstrap.min.js )
