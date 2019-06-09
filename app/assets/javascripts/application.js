@@ -15,7 +15,7 @@
 //= require rails-ujs
 //= require bootstrap.growl
 //= require nested_form_fields
-//= require shuffle
+// require shuffle
 
 
 
