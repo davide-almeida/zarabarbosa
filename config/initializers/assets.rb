@@ -20,7 +20,7 @@ Rails.application.config.assets.precompile += %w( site/swiper.css )
 Rails.application.config.assets.precompile += %w( site/style.css )
 Rails.application.config.assets.precompile += %w( site/sumoselect.css )
 Rails.application.config.assets.precompile += %w( site/flaticon.css )
-Rails.application.config.assets.precompile += %w( fonts/icons/font/flaticon.css )
+Rails.application.config.assets.precompile += %w( site/fonts/icons/font/flaticon.css )
 Rails.application.config.assets.precompile += %w( site/shuffle.scss )
 
 Rails.application.config.assets.precompile += %w( site/bootstrap.min.js )
