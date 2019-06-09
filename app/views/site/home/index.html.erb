@@ -90,7 +90,7 @@
     <% else %>
       <% @professionals.each do |professional| %>
         <div class="personeBg">
-          <div class="bg" style="background-image: url(../img/persone-bg.jpg)" id="professional">
+          <div class="bg" style="background-image: url(<%= asset_path 'img/persone-bg.jpg' %>)" id="professional">
             <div class="container">
               <div class="row verAlignResponsive">
                 <div class="imgWrapper personeImg">
@@ -315,7 +315,7 @@
 		
 		<!-- 	Request-START 	-->
 		<div class="contentPadding grey colorBlack" id="contato">
-			<div class="contactBg bgShadow style2" style="background-image: url(assets/bg_endereco.jpg)"></div>
+			<div class="contactBg bgShadow style2" style="background-image: url(<%= asset_path 'bg_endereco.jpg' %>)"></div>
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-4">
