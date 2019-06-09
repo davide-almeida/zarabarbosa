@@ -1,0 +1,303 @@
+/* Small reset */
+/* line 3, /vagrant/zarabarbosa/app/assets/stylesheets/site/shuffle.scss */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+/* line 9, /vagrant/zarabarbosa/app/assets/stylesheets/site/shuffle.scss */
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 145, /vagrant/zarabarbosa/app/assets/stylesheets/site/shuffle.scss */
+.filter-label {
+  display: block;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 4px;
+  color: #3099a7;
+}
+
+/* line 153, /vagrant/zarabarbosa/app/assets/stylesheets/site/shuffle.scss */
+.filters-group {
+  padding: 0;
+  margin: 0 0 4px;
+  border: 0;
+}
+
+@media screen and (min-width: 768px) {
+  /* line 160, /vagrant/zarabarbosa/app/assets/stylesheets/site/shuffle.scss */
+  .filters-group-wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+/* line 165, /vagrant/zarabarbosa/app/assets/stylesheets/site/shuffle.scss */
+.btn-group:after, .btn-group:before {
+  content: " ";
+  display: table;
+}
+
+/* line 170, /vagrant/zarabarbosa/app/assets/stylesheets/site/shuffle.scss */
+.btn-group:after {
+  clear: both;
+}
+
+/* line 174, /vagrant/zarabarbosa/app/assets/stylesheets/site/shuffle.scss */
+.btn-group .btn {
+  float: left;
+  border-radius: 0;
+}
+
+/* line 179, /vagrant/zarabarbosa/app/assets/stylesheets/site/shuffle.scss */
+.btn-group .btn:first-child {
+  border-radius: 3px 0 0 3px;
+}
+
+/* line 183, /vagrant/zarabarbosa/app/assets/stylesheets/site/shuffle.scss */
+.btn-group .btn:not(:first-child) {
+  margin-left: -1px;
+}
+
+/* line 187, /vagrant/zarabarbosa/app/assets/stylesheets/site/shuffle.scss */
+.btn-group .btn:last-child {
+  border-radius: 0 3px 3px 0;
+}
+
+/* line 191, /vagrant/zarabarbosa/app/assets/stylesheets/site/shuffle.scss */
+.btn-group label.btn input[type=radio] {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  pointer-events: none;
+}
+
+/* line 197, /vagrant/zarabarbosa/app/assets/stylesheets/site/shuffle.scss */
+.btn {
+  display: inline-block;
+  padding: .75em .8em;
+  text-align: center;
+  border-radius: 3px;
+  border: 1px solid #34495e;
+  color: #34495e;
+  font-size: 1rem;
+  background-color: rgba(52, 73, 94, 0);
+  transition: .2s ease-out;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+@media (-moz-touch-enabled: 0), (pointer: fine) {
+  /* line 212, /vagrant/zarabarbosa/app/assets/stylesheets/site/shuffle.scss */
+  .btn:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: #34495e;
+  }
+}
+/* line 219, /vagrant/zarabarbosa/app/assets/stylesheets/site/shuffle.scss */
+.btn:focus {
+  outline-width: 0;
+  box-shadow: 0 0 0 2px rgba(52, 73, 94, 0.4);
+}
+
+/* line 224, /vagrant/zarabarbosa/app/assets/stylesheets/site/shuffle.scss */
+.btn.active, .btn:active {
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  background-color: #34495e;
+}
+
+/* line 230, /vagrant/zarabarbosa/app/assets/stylesheets/site/shuffle.scss */
+.btn:focus.active {
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3), 0 0 0 2px rgba(52, 73, 94, 0.4);
+}
+
+/* line 234, /vagrant/zarabarbosa/app/assets/stylesheets/site/shuffle.scss */
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: .7;
+  color: #34495e;
+  background-color: rgba(52, 73, 94, 0);
+}
+
+/* line 241, /vagrant/zarabarbosa/app/assets/stylesheets/site/shuffle.scss */
+.btn--primary {
+  color: #3099a7;
+  border-color: #3099a7;
+  background-color: rgba(52, 152, 219, 0);
+}
+
+@media (-moz-touch-enabled: 0), (pointer: fine) {
+  /* line 248, /vagrant/zarabarbosa/app/assets/stylesheets/site/shuffle.scss */
+  .btn--primary:hover {
+    background-color: #3099a7;
+  }
+}
+/* line 253, /vagrant/zarabarbosa/app/assets/stylesheets/site/shuffle.scss */
+.btn--primary:focus {
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.4);
+}
+
+/* line 257, /vagrant/zarabarbosa/app/assets/stylesheets/site/shuffle.scss */
+.btn--primary.active, .btn--primary:active {
+  background-color: #3099a7;
+}
+
+/* line 261, /vagrant/zarabarbosa/app/assets/stylesheets/site/shuffle.scss */
+.btn--primary:focus.active {
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3), 0 0 0 2px rgba(52, 152, 219, 0.4);
+}
+
+/* line 265, /vagrant/zarabarbosa/app/assets/stylesheets/site/shuffle.scss */
+.btn--primary:disabled {
+  color: #3099a7;
+  background-color: rgba(52, 152, 219, 0);
+}
+
+@media screen and (max-width: 767px) {
+  /* line 271, /vagrant/zarabarbosa/app/assets/stylesheets/site/shuffle.scss */
+  .btn {
+    font-size: 0.875rem;
+  }
+}
+/* line 278, /vagrant/zarabarbosa/app/assets/stylesheets/site/shuffle.scss */
+.textfield {
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  width: 100%;
+  border: 2px solid #95a5a6;
+  border-radius: 4px;
+  padding: .5em;
+  font-size: 1rem;
+  color: #34495e;
+  transition: 0.15s;
+}
+
+/* line 290, /vagrant/zarabarbosa/app/assets/stylesheets/site/shuffle.scss */
+.textfield::-webkit-input-placeholder {
+  color: #95a5a6;
+  transition: 0.15s;
+}
+
+/* line 295, /vagrant/zarabarbosa/app/assets/stylesheets/site/shuffle.scss */
+.textfield:-ms-input-placeholder {
+  color: #95a5a6;
+  transition: 0.15s;
+}
+
+/* line 300, /vagrant/zarabarbosa/app/assets/stylesheets/site/shuffle.scss */
+.textfield::-ms-input-placeholder {
+  color: #95a5a6;
+  transition: 0.15s;
+}
+
+/* line 305, /vagrant/zarabarbosa/app/assets/stylesheets/site/shuffle.scss */
+.textfield::placeholder {
+  color: #95a5a6;
+  transition: 0.15s;
+}
+
+/* line 310, /vagrant/zarabarbosa/app/assets/stylesheets/site/shuffle.scss */
+.textfield:hover {
+  outline-width: 0;
+  color: #5d6d77;
+  border-color: #5d6d77;
+}
+
+/* line 316, /vagrant/zarabarbosa/app/assets/stylesheets/site/shuffle.scss */
+.textfield:hover::-webkit-input-placeholder {
+  color: #5d6d77;
+}
+
+/* line 320, /vagrant/zarabarbosa/app/assets/stylesheets/site/shuffle.scss */
+.textfield:hover:-ms-input-placeholder {
+  color: #5d6d77;
+}
+
+/* line 324, /vagrant/zarabarbosa/app/assets/stylesheets/site/shuffle.scss */
+.textfield:hover::-ms-input-placeholder {
+  color: #5d6d77;
+}
+
+/* line 328, /vagrant/zarabarbosa/app/assets/stylesheets/site/shuffle.scss */
+.textfield:hover::placeholder {
+  color: #5d6d77;
+}
+
+/* line 332, /vagrant/zarabarbosa/app/assets/stylesheets/site/shuffle.scss */
+.textfield:focus {
+  outline-width: 0;
+  border-color: #34495e;
+}
+
+/* line 337, /vagrant/zarabarbosa/app/assets/stylesheets/site/shuffle.scss */
+.textfield:focus::-webkit-input-placeholder {
+  color: #34495e;
+}
+
+/* line 341, /vagrant/zarabarbosa/app/assets/stylesheets/site/shuffle.scss */
+.textfield:focus:-ms-input-placeholder {
+  color: #34495e;
+}
+
+/* line 345, /vagrant/zarabarbosa/app/assets/stylesheets/site/shuffle.scss */
+.textfield:focus::-ms-input-placeholder {
+  color: #34495e;
+}
+
+/* line 349, /vagrant/zarabarbosa/app/assets/stylesheets/site/shuffle.scss */
+.textfield:focus::placeholder {
+  color: #34495e;
+}
+
+/* line 353, /vagrant/zarabarbosa/app/assets/stylesheets/site/shuffle.scss */
+.row {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 358, /vagrant/zarabarbosa/app/assets/stylesheets/site/shuffle.scss */
+.row:after,
+.row:before {
+  content: " ";
+  display: table;
+}
+
+/* line 364, /vagrant/zarabarbosa/app/assets/stylesheets/site/shuffle.scss */
+.row:after {
+  clear: both;
+}
+
+/* line 368, /vagrant/zarabarbosa/app/assets/stylesheets/site/shuffle.scss */
+.row .row {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+/* Ensure images take up the same space when they load */
+/* https://vestride.github.io/Shuffle/images */
+/* line 375, /vagrant/zarabarbosa/app/assets/stylesheets/site/shuffle.scss */
+.aspect {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  overflow: hidden;
+}
+
+/* line 383, /vagrant/zarabarbosa/app/assets/stylesheets/site/shuffle.scss */
+.aspect__inner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+/* line 391, /vagrant/zarabarbosa/app/assets/stylesheets/site/shuffle.scss */
+.aspect--16x9 {
+  padding-bottom: 56.25%;
+}
