@@ -11,10 +11,11 @@
  * It is generally better to create a new file per style scope.
  *
  *= require font-awesome
+ *= require fonts/icons/font/flaticon.css
  *= require_self
  */
 
- @import "fonts/icons/font/flaticon.css";
+ /* @import "fonts/icons/font/flaticon.css"; */
 
 
  /* CSS DA PAGINAÇÃO */
