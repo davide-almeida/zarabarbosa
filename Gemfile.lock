@@ -48,7 +48,7 @@ GEM
       sshkit (>= 1.6.1, != 1.7.0)
     arel (8.0.0)
     bcrypt (3.1.12)
-    better_errors (2.5.0)
+    better_errors (2.5.1)
       coderay (>= 1.0.0)
       erubi (>= 1.0.0)
       rack (>= 0.9.0)
@@ -337,4 +337,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.16.5
+   2.0.1
