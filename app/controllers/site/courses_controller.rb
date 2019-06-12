@@ -1,4 +1,6 @@
 class Site::CoursesController < SiteController
+  before_action :set_course, only: [:show]
+
   def index
     @settings = Setting.first
     @professionals = Professional.order(:id)
@@ -11,8 +13,12 @@ class Site::CoursesController < SiteController
     @settings = Setting.first
     @professionals = Professional.order(:id)
     
-    #@category_courses = CategoryCourse.find(params[:id])
-    @courses = Course.find(params[:id])
-    #@advantages = CheckAdvantage.where(:course_id => @courses.id)
+    #@courses = Course.find(params[:id])
   end
+
+  private
+    def set_course
+      @courses = Course.friendly.find(params[:id])
+    end
+
 end

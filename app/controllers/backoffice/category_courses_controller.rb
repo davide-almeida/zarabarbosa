@@ -50,7 +50,7 @@ class Backoffice::CategoryCoursesController < BackofficeController
     end
 
     def set_category_course
-      @category_course = CategoryCourse.find(params[:id])
+      @category_course = CategoryCourse.friendly.find(params[:id])
     end
 
     def params_category_course

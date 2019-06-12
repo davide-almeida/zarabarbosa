@@ -12,4 +12,13 @@ class Course < ApplicationRecord
   #paperclip
   has_attached_file :introduction_image, styles: { medium: "295x43>", thumb: "100x15>" }, default_url: "/settings/logoheaderdefault_:style.png"
   validates_attachment_content_type :introduction_image, content_type: /\Aimage\/.*\z/
+
+  #friendly_id
+  extend FriendlyId
+  friendly_id :title, use: :slugged
+
+  def should_generate_new_friendly_id?
+    title_changed? || super
+    #new_record?
+  end
 end

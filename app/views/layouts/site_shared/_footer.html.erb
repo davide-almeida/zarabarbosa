@@ -44,10 +44,12 @@
 							</div>
 							<div class="simple-article style2">
 								<ul>
-									<li><%= link_to site_home_path do %>Início <% end %></li>
-									<li><a href="#professional">Sobre</a></li>
-									<li><%= link_to blog_home_path do %> Blog <% end %></li>
-									<li><a href="#contato">Contato</a></li>
+									<li><%= active_link_to 'Início', site_home_path(:anchor => "home") %></li>
+									<li><%= link_to("Serviços", site_home_path(:anchor => "services")) %></li>
+									<li><%= active_link_to 'Cursos On-line', site_courses_path %></li>
+									<li><%= link_to("Sobre", site_home_path(:anchor => "professional")) %></li>
+									<li><%= active_link_to 'Blog', blog_root_path %></li>
+									<li><%= link_to("Contato", site_home_path(:anchor => "contato")) %></li>
 								</ul>
 							</div>
 							<div class="emptySpace-md30"></div>
@@ -106,7 +108,7 @@
 					<div class="bottomInfo small">
 						<div class="col-xs-12 col-sm-8">
 						<div class="copy">
-								<p> zarabarbosa.com 2018 ~ 2019. Todos os direitos reservados. | <%= link_to 'Políticas de privacidade', site_licenses_privacy_policy_path %> | <%= link_to 'Termos de uso', site_licenses_terms_use_path %> </p>
+								<p> zarabarbosa.com 2018 ~ 2019. Todos os direitos reservados. | <%= link_to 'Políticas de privacidade', site_politicas_de_privacidade_path %> | <%= link_to 'Termos de uso', site_termos_de_uso_path %> </p>
 							</div>
 						</div>
 						<div class="col-xs-12 col-sm-4">

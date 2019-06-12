@@ -40,7 +40,7 @@
                           <% else %>
                             <% @categories_menu.each do |category| %>
                                 <% if !category.posts.blank? %>
-                                    <li><%= link_to blog_category_path(category.id) do %><%= category.name %> <i class="fa fa-angle-right"></i><% end %></li>
+                                    <li><%= link_to blog_category_path(category.slug) do %><%= category.name %> <i class="fa fa-angle-right"></i><% end %></li>
                                 <% end %>
                             <% end %>
                           <% end %>
@@ -86,10 +86,13 @@
                                     <!--<p><i class="fa fa-comments-o"></i> comments: <span>5</span></p>-->
                                 </div>
                                 <div class="blogContent">
-                                    <h5 class="h5 as"><%= post.title %></h5>
+                                    <h5 class="h5 as"><%= link_to blog_post_path(post.slug) do %><%= post.title %><% end %></h5>
                                     <div class="simple-article normall">
-                                        <p><%= post.body.html_safe %></p>
+                                        <p><%= post.body.truncate(400, omission: '...').html_safe %></p>
                                     </div>
+                                    <% if post.body.length >= 400 %>
+										<%= link_to blog_post_path(post.slug), :class=>'readMore' do %> ...Continuar Lendo <% end %>
+									<% end %>
                                 </div>
                                 <!--<a href="blog-details.html" class="button">Read more</a>-->
                             </div>

@@ -28,7 +28,7 @@
 							<div class="headerTopInfo">
 								<div class="headerTopInfoContaner">
 									<!-- 	Logo-START 	-->
-									<%= link_to site_home_path, class:"logo" do %>
+									<%= link_to root_url, class:"logo" do %>
 										<%= image_tag @settings.picture.url(:medium) %>
 									<% end %>
 									<!-- 	Logo-END 	-->
@@ -92,7 +92,7 @@
 													</li>
 												</ul>-->
 											</li>
-											<li><%= active_link_to 'Blog', blog_home_path, wrap_tag: :li %>
+											<li><%= active_link_to 'Blog', blog_root_path, wrap_tag: :li %>
 												<!--<i class="fa fa-angle-down"></i>
 												<ul>
 													<li><a href="blog.html">Blog</a></li>

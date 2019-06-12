@@ -56,7 +56,7 @@ class Backoffice::CoursesController < BackofficeController
     end
 
     def set_course
-      @course = Course.find(params[:id])
+      @course = Course.friendly.find(params[:id])
     end
 
     def params_course

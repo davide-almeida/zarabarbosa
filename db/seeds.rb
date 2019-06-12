@@ -78,6 +78,7 @@ puts "----------------------------------"
 puts "Cadastrando CATEGORIES..."
 Category.create!(name: "Artigos")
 Category.create!(name: "Notícias")
+Category.find_each(&:save)
 puts "CATEGORIES cadastradas!"
 puts "----------------------------------"
 puts "Cadastrando POSTS..."
@@ -85,6 +86,7 @@ Post.create!(title: "Post 1", body: "Conteúdo do Post 1", post_date: Date.today
 Post.create!(title: "Post 2", body: "Conteúdo do Post 2", post_date: Date.today - Random.rand(5), admin_id: 1, category_id: 2, picture: File.new(Rails.root.join('app', 'assets', 'img', 'blog', 'blog2.jpg'), 'r'))
 Post.create!(title: "Post 3", body: "Conteúdo do Post 3", post_date: Date.today - Random.rand(5), admin_id: 1, category_id: 2, picture: File.new(Rails.root.join('app', 'assets', 'img', 'blog', 'blog3.jpg'), 'r'))
 Post.create!(title: "Post Teste Admin", body: "Testando post com outro admin", post_date: Date.today - Random.rand(5), admin_id: 3, category_id: 1, picture: File.new(Rails.root.join('app', 'assets', 'img', 'blog', 'blog4.jpg'), 'r'))
+Post.find_each(&:save)
 puts "POSTS cadastradas!"
 puts "----------------------------------"
 puts "---------------------------BLOG FIM-------------------------------"
@@ -113,9 +115,11 @@ CategoryCourse.create!(name: "Auto-Controle")
 puts "CATEGORY_COURSES cadastradas!"
 puts "----------------------------------"
 puts "Cadastrando COURSES..."
-Course.create!(price: "19,90", link_sale: "http://www.hotmart.com.br", title: "Curso de auto-cuidado", description: "Descrição do curso de auto-cuidado.", link_video: "http://www.youtube.com.br", introduction_image: File.new(Rails.root.join('app', 'assets', 'img', 'course', 'course-img-1.jpg'), 'r'), firstbutton: "(firstbutton) R$19,90", secondbutton: "(secondbutton) R$19,90", title_detail: "Details Título", title_advantage: "Advantages Title", detail_body: "Conteúdo exemplo detail_body", category_course_id: 2)
-Course.create!(price: "7,90", link_sale: "http://www.hotmart.com.br", title: "Curso de Workshop", description: "Descrição do Workshop.", link_video: "http://www.youtube.com.br", introduction_image: File.new(Rails.root.join('app', 'assets', 'img', 'course', 'course-img-1.jpg'), 'r'), firstbutton: "(firstbutton) R$19,90", secondbutton: "(secondbutton) R$19,90", title_detail: "Details Título", title_advantage: "Advantages Title", detail_body: "Conteúdo exemplo detail_body", category_course_id: 1)
-Course.create!(price: "15,00", link_sale: "http://www.hotmart.com.br", title: "2° Curso de Workshop", description: "Descrição do 2° Workshop.", link_video: "http://www.youtube.com.br", introduction_image: File.new(Rails.root.join('app', 'assets', 'img', 'course', 'course-img-1.jpg'), 'r'), firstbutton: "(firstbutton) R$19,90", secondbutton: "(secondbutton) R$19,90", title_detail: "Details Título", title_advantage: "Advantages Title", detail_body: "Conteúdo exemplo detail_body", category_course_id: 1)
+Course.create(price: "19,90", link_sale: "http://www.hotmart.com.br", title: "Curso de auto-cuidado", description: "Descrição do curso de auto-cuidado.", link_video: "http://www.youtube.com.br", introduction_image: File.new(Rails.root.join('app', 'assets', 'img', 'course', 'course-img-1.jpg'), 'r'), firstbutton: "(firstbutton) R$19,90", secondbutton: "(secondbutton) R$19,90", title_detail: "Details Título", title_advantage: "Advantages Title", detail_body: "Conteúdo exemplo detail_body", category_course_id: 2)
+Course.create(price: "7,90", link_sale: "http://www.hotmart.com.br", title: "Curso de Workshop", description: "Descrição do Workshop.", link_video: "http://www.youtube.com.br", introduction_image: File.new(Rails.root.join('app', 'assets', 'img', 'course', 'course-img-1.jpg'), 'r'), firstbutton: "(firstbutton) R$19,90", secondbutton: "(secondbutton) R$19,90", title_detail: "Details Título", title_advantage: "Advantages Title", detail_body: "Conteúdo exemplo detail_body", category_course_id: 1)
+Course.create(price: "15,00", link_sale: "http://www.hotmart.com.br", title: "2° Curso de Workshop", description: "Descrição do 2° Workshop.", link_video: "http://www.youtube.com.br", introduction_image: File.new(Rails.root.join('app', 'assets', 'img', 'course', 'course-img-1.jpg'), 'r'), firstbutton: "(firstbutton) R$19,90", secondbutton: "(secondbutton) R$19,90", title_detail: "Details Título", title_advantage: "Advantages Title", detail_body: "Conteúdo exemplo detail_body", category_course_id: 1)
+# slug do friendly_id
+Course.find_each(&:save)
 puts "COURSES cadastrados!"
 puts "----------------------------------"
 puts "Cadastrando TESTIMONIALS..."

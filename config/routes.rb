@@ -25,7 +25,6 @@ Rails.application.routes.draw do
     get 'works', to: 'works#index'
     get 'flags', to: 'flags#index'
     get 'services', to: 'services#index'
-    #get 'professionals', to: 'professionals#edit'
     get 'health_insurances', to: 'health_insurances#index'
     get 'categories', to: 'categories#index'
     get 'diaries', to: 'diaries#index'
@@ -36,18 +35,16 @@ Rails.application.routes.draw do
 
   namespace :site do
     resources :send_mail, only: [:edit, :create]
-    resources :courses, only: [:show, :index]
+    resources :courses, only: [:show, :index], path: 'cursos'#, as: 'cursos'
     get 'home', to: 'home#index'
-    #get 'home', to: 'home#new'#, via: 'get'
-    #get 'blog', to: 'blog#index'
-    get 'licenses/privacy_policy', to: 'licenses#privacy_policy'
-    get 'licenses/terms_use', to: 'licenses#terms_use'
+    get 'politicas-de-privacidade', to: 'licenses#privacy_policy'
+    get 'termos-de-uso', to: 'licenses#terms_use'
   end
 
   namespace :blog do
-    resources :categories
-    get 'home', to: 'home#index'
-    get 'categories', to: 'categories#index'
+    resources :categories, path: 'categorias'
+    resources :posts, only: [:show, :index]
+    root :to => "posts#index"
   end
 
   #devise
@@ -56,6 +53,7 @@ Rails.application.routes.draw do
     get '/admins/sign_out' => 'devise/sessions#destroy'     
   end
 
+  # root path
   root 'site/home#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
