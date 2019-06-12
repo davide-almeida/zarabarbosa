@@ -66,6 +66,9 @@ namespace :puma do
     desc "Restart Nginx"
     task :nginx_restart do
       on roles(:app) do
+        Post.find_each(&:save)
+        Category.find_each(&:save)
+        Course.find_each(&:save)
         execute "sudo service nginx restart"
       end
     end
