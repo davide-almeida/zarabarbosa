@@ -60,11 +60,6 @@ namespace :puma do
       on roles(:app) do
         execute "mkdir #{shared_path}/tmp/sockets -p"
         execute "mkdir #{shared_path}/tmp/pids -p"
-        puts "-- friendly_id seed --"
-        execute "Post.find_each(&:save)"
-        execute "Category.find_each(&:save)"
-        execute "Course.find_each(&:save)"
-        puts "-- friendly_id seed - END --"
       end
     end
    
