@@ -56,7 +56,7 @@ gem  'kaminari-i18n'
 # https://github.com/thoughtbot/paperclip
 gem "paperclip", "~> 6.0.0"
 # https://github.com/ddollar/foreman
-#gem 'foreman'
+gem 'foreman'
 #toolbar textarea - GIT(GEM): https://github.com/spohlenz/tinymce-rails - Exemplos: https://www.tiny.cloud/docs/demo/basic-example/
 gem 'tinymce-rails'
 # https://github.com/spohlenz/tinymce-rails-langs - translate tools
@@ -67,6 +67,8 @@ gem 'active_link_to'
 # gem 'shufflejs-rails'
 # https://github.com/norman/friendly_id
 gem 'friendly_id', '~> 5.2.4'
+# https://github.com/ambethia/recaptcha
+gem "recaptcha"
 
 source 'http://insecure.rails-assets.org' do
   # https://rails-assets.org/#/components/bootstrap?version=3.3.7
