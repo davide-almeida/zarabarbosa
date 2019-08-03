@@ -36,7 +36,7 @@ append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/syst
 set :keep_releases, 5
 set :migration_role, :app
 
-set :ssh_options, { forward_agent: true, user: fetch(:user), keys: %w(/vagrant/key/newkey.pem) }
+set :ssh_options, { forward_agent: true, user: fetch(:user), keys: %w(/vagrant/key/zarabarbosa.pem) }
 
 set :puma_pid, "#{shared_path}/tmp/pids/puma.pid"
 set :puma_bind, "unix://#{shared_path}/tmp/sockets/puma.sock"
