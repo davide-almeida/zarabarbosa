@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190611142643) do
+ActiveRecord::Schema.define(version: 20190804094338) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -208,6 +208,7 @@ ActiveRecord::Schema.define(version: 20190611142643) do
     t.text "privacy_policy"
     t.text "terms_use"
     t.string "youtube"
+    t.text "header"
   end
 
   create_table "testimonials", force: :cascade do |t|
