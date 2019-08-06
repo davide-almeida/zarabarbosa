@@ -10,7 +10,7 @@
 #server '18.231.197.180', user: 'ubuntu', roles: %w{web app db}
 
 set :branch, 'master'
-set :server_address, '18.231.176.73' #'18.228.6.230'
+set :server_address, '18.231.176.73'
  
 #ask(:password, nil, echo: false)
 server fetch(:server_address), user: "ubuntu", roles: %w{app db web}
