@@ -14,6 +14,7 @@
                     <tr>
                         <!-- <th>#</th> -->
                         <th>Status</th>
+                        <th>Ordem</th>
                         <th>Título</th>
                         <th>Preço</th>
                         <th>Link de venda</th>
@@ -30,6 +31,13 @@
                             <td>
                                 <% if course.is_active.present? %>
                                     <%= course.is_active %>
+                                <% else %>
+                                    Não definido
+                                <% end %>
+                            </td>
+                            <td>
+                                <% if course.order_course.present? %>
+                                    <%= course.order_course %>
                                 <% else %>
                                     Não definido
                                 <% end %>

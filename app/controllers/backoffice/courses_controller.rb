@@ -2,7 +2,7 @@ class Backoffice::CoursesController < BackofficeController
   before_action :set_course, only: [:edit, :update, :destroy]
 
   def index
-    @courses = Course.order(id: :desc).page(params[:page]).per(15)
+    @courses = Course.order(:order_course).page(params[:page]).per(15)
   end
 
   def new
@@ -61,7 +61,7 @@ class Backoffice::CoursesController < BackofficeController
     end
 
     def params_course
-      params.require(:course).permit(:is_active, :title, :description, :introduction_image, :firstbutton, :secondbutton, :link_sale, :price, :title_detail, :title_advantage, :detail_body, :category_course_id,
+      params.require(:course).permit(:is_active, :order_course, :title, :description, :introduction_image, :firstbutton, :secondbutton, :link_sale, :price, :title_detail, :title_advantage, :detail_body, :category_course_id,
                                       testimonials_attributes:[:name, :body, :_destroy, :id],
                                       question_courses_attributes:[:query, :answer, :_destroy, :id],
                                       check_advantage_attributes:[:video, :e_book, :work_book, :meditation, :conference, :member, :access_life, :assurance, :_destroy, :id]

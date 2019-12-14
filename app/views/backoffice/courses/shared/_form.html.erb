@@ -25,6 +25,10 @@
                     <%= f.select(:is_active, @active_options_for_select, {}, {:class =>"form-control", :tabindex => "-1"}) %>
                 </div>
                 <div class="form-group">
+                    <label>Ordem de exibição</label>
+                    <%= f.number_field :order_course, class:"form-control", placeholder:"Ex.: 1" %>
+                </div>
+                <div class="form-group">
                     <label>Título</label>
                     <%= f.text_field :title, class:"form-control", placeholder:"Título do curso" %>
                 </div>
