@@ -40,3 +40,28 @@
   .checkbox label input[type="checkbox"]:checked+.cr>.cr-icon {
     opacity: 1;
   }
+
+  /* retangulo roxo adicionado no dashboard (backoffice) */
+  .panel-purple {
+    border-color: #9d33b7;
+  }
+
+  /* line 6568, /home/vagrant/.rvm/gems/ruby-2.4.3/gems/bootstrap_sb_admin_base_v2-0.3.6/vendor/assets/stylesheets/bootstrap/bootstrap.scss */
+  .panel-purple > .panel-heading {
+    color: #fff;
+    background-color: #9d33b7;
+    border-color: #9d33b7;
+  }
+  /* line 6572, /home/vagrant/.rvm/gems/ruby-2.4.3/gems/bootstrap_sb_admin_base_v2-0.3.6/vendor/assets/stylesheets/bootstrap/bootstrap.scss */
+  .panel-purple > .panel-heading + .panel-collapse > .panel-body {
+    border-top-color: #9d33b7;
+  }
+  /* line 6575, /home/vagrant/.rvm/gems/ruby-2.4.3/gems/bootstrap_sb_admin_base_v2-0.3.6/vendor/assets/stylesheets/bootstrap/bootstrap.scss */
+  .panel-purple > .panel-heading .badge {
+    color: #9d33b7;
+    background-color: #fff;
+  }
+  /* line 6580, /home/vagrant/.rvm/gems/ruby-2.4.3/gems/bootstrap_sb_admin_base_v2-0.3.6/vendor/assets/stylesheets/bootstrap/bootstrap.scss */
+  .panel-purple > .panel-footer + .panel-collapse > .panel-body {
+    border-bottom-color: #9d33b7;
+  }
