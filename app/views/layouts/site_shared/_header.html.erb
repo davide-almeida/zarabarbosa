@@ -60,45 +60,10 @@
 													</ul>-->
 											
 											</li>
-											<li><%= link_to("SERVIÇOS", site_home_path(:anchor => "services")) %>
-												<!--<i class="fa fa-angle-down"></i>
-												<ul>
-													<li><a href="services.html">Todos</a></li>
-													<li><a href="stress-management.html">Psicoterapia </a></li>
-													<li><a href="depression-treatment.html">Depression Therapy</a></li>
-													<li><a href="couple-counselling.html">Couple Counselling</a></li>
-													<li><a href="anxiety-treatment.html">Anxiety Treatment</a></li>
-													<li><a href="elderly-issues.html">Elderly Couple Issues</a></li>
-													<li><a href="therapy-for-children.html">Therapy for Children</a></li>
-													<li><a href="family-psycology.html">Family Psycology</a></li>
-													<li><a href="gruop-therapy.html">Group Therapy</a></li>
-												</ul>-->
-											</li>
-											<li><%= active_link_to 'Cursos', site_courses_path, wrap_tag: :li %>
-											</li>
-											<li><%= link_to("SOBRE", site_home_path(:anchor => "professional")) %>
-												<!--<i class="fa fa-angle-down"></i>
-												<ul>
-													<li><a href="#">Our Introduction</a></li>
-													<li><a href="counsellors.html">Counsellors</a></li>
-													<li><a href="#">Doctor Profile</a></li>
-													<li>
-														<a href="gallery.html">Gallery</a>
-														<i class="fa fa-angle-right"></i>
-														<ul>
-															<li><a href="gallery.html">Gallery Classic</a></li>
-															<li><a href="gallery-fluid.html">Gallery Full Screen</a></li>
-														</ul>
-													</li>
-												</ul>-->
-											</li>
-											<li><%= active_link_to 'Blog', blog_root_path, wrap_tag: :li %>
-												<!--<i class="fa fa-angle-down"></i>
-												<ul>
-													<li><a href="blog.html">Blog</a></li>
-													<li><a href="blog-details.html">Blog Details</a></li>
-												</ul>-->
-											</li>
+											<li><%= active_link_to 'Blog', blog_root_path, wrap_tag: :li %></li>
+											<li><%= link_to("SOBRE", site_home_path(:anchor => "professional")) %></li>
+											<li><%= link_to("SERVIÇOS", site_home_path(:anchor => "services")) %></li>
+											<li><%= active_link_to 'Cursos', site_courses_path, wrap_tag: :li %></li>
 											<li><%= link_to("CONTATO", site_home_path(:anchor => "contato")) %></li>
 										</ul>
 									</nav>
