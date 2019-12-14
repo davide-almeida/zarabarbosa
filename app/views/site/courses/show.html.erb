@@ -5,9 +5,9 @@
             <div class="col-xs-12">
                 <div class="servicesTitle">
                     <div class="cell-view">
-                        <h1 class="h1 light as">Cursos on-line</h1>
+                        <h1 class="h1 light as">Cursos</h1>
                         <div class="breadCrumbs small">
-                            <%= link_to 'Início', root_path %> <i class="fa fa-angle-right"></i> <span><%= link_to 'Cursos on-line', site_courses_path %></span> <i class="fa fa-angle-right"></i> <span><%= @courses.title %></span>
+                            <%= link_to 'Início', root_path %> <i class="fa fa-angle-right"></i> <span><%= link_to 'Cursos', site_courses_path %></span> <i class="fa fa-angle-right"></i> <span><%= @courses.title %></span>
                         </div>
                     </div>
                 </div>
@@ -312,18 +312,20 @@
 	<!-- características advantages - FIM -->
 
 	<!-- venda (secondbutton) terceiro -->
-	<% unless @courses.link_sale.blank? || @courses.secondbutton.blank? %>
-		<div class="appointWrapper2">
-			<div class="container">
-				<div class="row verAlign">
-					<div class="col-xs-12 col-sm-12 col-md-12">
-						<div class="btnAlign">
-							<%= link_to @courses.link_sale, class: "btn btn--outline btn--large btn--1493941431965", target: '_blank' do %> <%= @courses.secondbutton.html_safe %> <% end %>
+	<% unless @courses_attributes_count == 8 %>
+		<% unless @courses.link_sale.blank? || @courses.secondbutton.blank? %>
+			<div class="appointWrapper2">
+				<div class="container">
+					<div class="row verAlign">
+						<div class="col-xs-12 col-sm-12 col-md-12">
+							<div class="btnAlign">
+								<%= link_to @courses.link_sale, class: "btn btn--outline btn--large btn--1493941431965", target: '_blank' do %> <%= @courses.secondbutton.html_safe %> <% end %>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		<% end %>
 	<% end %>
 	<!-- venda (secondbutton) - FIM -->
 

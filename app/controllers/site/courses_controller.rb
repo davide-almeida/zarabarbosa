@@ -13,7 +13,13 @@ class Site::CoursesController < SiteController
     @settings = Setting.first
     @professionals = Professional.order(:id)
     
-    #@courses = Course.find(params[:id])
+    @courses_attributes_count = 0
+    @courses.check_advantage.attributes.values.each do |adv|
+      if adv == "unchecked"
+        @courses_attributes_count += 1
+      end
+    end
+
   end
 
   private
