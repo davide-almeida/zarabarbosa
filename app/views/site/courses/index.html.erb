@@ -28,7 +28,7 @@
                                 <p>Não há cursos disponíveis</p>
                             <% else %>
                                 <% @category_courses.each do |category| %>
-                                    <% if !category.courses.blank? %>
+                                    <% if !category.courses.blank? && category.courses.where(is_active: "Ativo").count > 0 %>
                                         <%= button_tag "#{category.name}", "data-group": category.name.downcase, class: "btn btn--primary" %>
                                     <% end %>
                                 <% end %>

@@ -53,6 +53,7 @@ class Backoffice::CoursesController < BackofficeController
   private
     def options_for_select
       @category_options_for_select = CategoryCourse.all
+      @active_options_for_select = ["Ativo", "Inativo"]
     end
 
     def set_course
@@ -60,7 +61,7 @@ class Backoffice::CoursesController < BackofficeController
     end
 
     def params_course
-      params.require(:course).permit(:title, :description, :introduction_image, :firstbutton, :secondbutton, :link_sale, :price, :title_detail, :title_advantage, :detail_body, :category_course_id,
+      params.require(:course).permit(:is_active, :title, :description, :introduction_image, :firstbutton, :secondbutton, :link_sale, :price, :title_detail, :title_advantage, :detail_body, :category_course_id,
                                       testimonials_attributes:[:name, :body, :_destroy, :id],
                                       question_courses_attributes:[:query, :answer, :_destroy, :id],
                                       check_advantage_attributes:[:video, :e_book, :work_book, :meditation, :conference, :member, :access_life, :assurance, :_destroy, :id]

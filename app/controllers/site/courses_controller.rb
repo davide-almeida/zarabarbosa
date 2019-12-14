@@ -6,7 +6,7 @@ class Site::CoursesController < SiteController
     @professionals = Professional.order(:id)
     
     @category_courses = CategoryCourse.all
-    @courses = Course.all
+    @courses = Course.where(is_active: "Ativo")
   end
 
   def show
