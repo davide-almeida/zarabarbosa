@@ -67,8 +67,6 @@ gem 'active_link_to'
 # gem 'shufflejs-rails'
 # https://github.com/norman/friendly_id
 gem 'friendly_id', '~> 5.2.4'
-# https://github.com/ambethia/recaptcha
-gem "recaptcha"
 
 source 'http://insecure.rails-assets.org' do
   # https://rails-assets.org/#/components/bootstrap?version=3.3.7
@@ -80,8 +78,6 @@ source 'http://insecure.rails-assets.org' do
   #bootboxJS - https://rails-assets.org/#/components/bootbox
   gem 'rails-assets-bootbox'
 end
-
-gem "recaptcha"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -116,7 +112,13 @@ group :development do
   gem "capistrano-rails", "~> 1.3", require: false
   gem 'capistrano3-puma', require: false
   gem 'capistrano-rvm', require: false
+
+  # reCAPTCHA
+  # gem 'dotenv-rails'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# https://github.com/ambethia/recaptcha
+  gem "recaptcha"
