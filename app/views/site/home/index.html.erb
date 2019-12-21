@@ -313,5 +313,83 @@
 	<% end %>
 	<!-- 	Health Insurance-END 	-->
 	
+	<!-- 	Request-START 	-->
+	
+	<div class="contentPadding grey colorBlack" id="contato">
+		<div class="contactBg bgShadow style2" style="background-image: url(<%= asset_path 'bg_endereco.jpg' %>)"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="contactContent">
+						<div class="simple-article light large">
+							<p>Endereços & Horários de Atendimentos:</p>
+						</div>
+					</div>
+					<% if @diaries.blank? %>
+						<p> </p>
+					<% else %>
+						<% @diaries.each do |diary| %>
+							<div class="emptySpace30"></div>
+							<div class="contactContent normall">
+								<span><u><%= diary.name %></u></span></br>
+								<p><%= diary.address %></p></br>
+								<p><span>Telefone:</span> <%= diary.phone %></p>
+								<div class="emptySpace5"></div>
+								<span><%= diary.week %></span> <p><%= diary.start_time.strftime("%H:%M") %> às <%= diary.end_time.strftime("%H:%M") %></p>
+							</div>
 
+							<div class="emptySpace-xs30"></div>
+						<% end %>
+					<% end %>
+				</div>
+				<div class="col-sm-6 col-sm-offset-2">
+					<%= form_tag site_send_mail_index_path, class: "requestForm", remote: true, :id => "formmail" do %>
+						<div class="contentTitle">
+							<h3 class="h3 as">Enviar <span>Mensagem</span></h3>
+						</div>
+						<div class="emptySpace15"></div>
+						<div class="row">
+							<div class="col-xs-12 col-md-6">
+								<!--<input class="simple-input" type="text" value="" placeholder="Nome Completo" />-->
+								<%= text_field_tag(:'name-text', nil, class:'simple-input', placeholder:'Nome Completo') %>
+								<div class="emptySpace15"></div>
+							</div>
+							<div class="col-xs-12 col-md-6">
+								<!--<input class="simple-input" type="email" value="" placeholder="Email" />-->
+								<%= email_field_tag(:'recipient-text', nil, class:'simple-input', placeholder:'Email') %>
+								<div class="emptySpace15"></div>
+							</div>
+							<div class="col-xs-12 col-md-6">
+								<!--<input class="simple-input" type="text" value="" placeholder="Telefone" />-->
+								<%= text_field_tag(:'phone-text', nil, class:'simple-input', placeholder:'Telefone') %>
+								<div class="emptySpace15"></div>
+							</div>
+							<div class="col-xs-12 col-md-6">
+								<!-- 	SumoSelect-START 	-->
+								<div class="sumoWrapper">
+									<%= select_tag :'subject-text', "<option selected disabled>Assunto</option><option>Agendamento</option><option>D&uacute;vidas</option><option>Outros</option>".html_safe, class: 'SelectBox', id: 'subject-text' %>
+								</div>
+								<!-- 	SumoSelect-END 	-->
+								<div class="emptySpace-sm15"></div>
+							</div>
+							<div class="col-xs-12">
+								<%= text_area_tag(:'message-text', nil, class:'simple-input', placeholder:'Texto') %>
+								<!--<textarea class="simple-input" placeholder="Texto"></textarea>-->
+							</div>
+							<%= recaptcha_tags %>
+						</div>
+						<div class="emptySpace30"></div>
+						<div class="btnWrapper">
+							<button type="submit" class="button">Enviar</button>
+						</div>
+						<%#= recaptcha_tags %>
+						<div class="btnWrapper">
+							<div id="enviado"><p><center></center></p></div>
+						</div>
+					<% end %>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 	Request-END 	-->
 
