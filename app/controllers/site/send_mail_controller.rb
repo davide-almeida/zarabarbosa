@@ -21,7 +21,7 @@ class Site::SendMailController < ApplicationController
         else
             redirect_to root_path, notice: "Você deve responder o captcha corretamente!"
             respond_to do |format|
-                format.js { render :action => "teste" }
+                format.js { render :action => 'teste.js.erb'}
             end
         end
     end
