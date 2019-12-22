@@ -17,9 +17,12 @@ class Site::SendMailController < ApplicationController
             respond_to do |format|
                 format.js #{ redirect_to(site_home_path, notice: 'Enviado!') }
             end
-            flash.now[:error] = "Recebemos sua mensagem. Obrigado!"
+            # flash.now[:error] = "Recebemos sua mensagem. Obrigado!"
         else
             redirect_to root_path, notice: "Você deve responder o captcha corretamente!"
+            respond_to do |format|
+                format.js { render :action => "teste" }
+            end
         end
     end
 
