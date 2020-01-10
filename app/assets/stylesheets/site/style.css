@@ -1188,7 +1188,7 @@ button {
     text-align: center;
     position: relative;
     cursor: pointer;
-	background: #3099a7;
+	background: #cc6b71;
     padding: 13px 43px;
     font-size: 15px;
     line-height: 18px;
@@ -1251,7 +1251,7 @@ button {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background: #1f6e79;
+	background: #e48c92;
 	border-radius: 100%;
 	-webkit-transform: scale(0);
 	transform: scale(0);
@@ -1273,11 +1273,11 @@ button {
 }
 
 .btnStyle2 {
-	background: #1f6e79;
+	background: #ea787e;
 }
 
 .btnStyle2:before {
-	background: #3099a7;
+	background: #eb787f;
 }
 
 .btnStyle3 {
@@ -1286,7 +1286,7 @@ button {
 }
 
 .btnStyle3:before {
-	background: #1f6e79;
+	background: #ea787e;
 }
 
 .btnSize1 {
@@ -1316,7 +1316,7 @@ button {
 }
 
 .simple-input:focus {
-    border-color: #3099a7;
+    border-color: #eb787f;
 }
 
 .simple-input.invalid {
@@ -1435,8 +1435,8 @@ textarea.light:-ms-input-placeholder {
 }
 
 .checkbox-entry input:checked+span:before {
-    border-color: #3099a7;
-    background-color: #3099a7;
+    border-color: #eb787f;
+    background-color: #eb787f;
     background-position: center center;
 }
 
@@ -1447,7 +1447,7 @@ textarea.light:-ms-input-placeholder {
 }
 
 .checkbox-entry.radio input:checked+span:before {
-    border-color: #3099a7;
+    border-color: #eb787f;
     background-color: #fff;
     border-width: 7px;
 }
@@ -1527,7 +1527,7 @@ textarea.light:-ms-input-placeholder {
 }
 
 .SumoSelect.open > .CaptionCont {
-	border-color: #3099a7;
+	border-color: #eb787f;
 	box-shadow: none;
 }
 
@@ -1550,7 +1550,7 @@ textarea.light:-ms-input-placeholder {
 }
 
 .SumoSelect > .optWrapper > .options li.opt:hover {
-	background-color: #3099a7;
+	background-color: #eb787f;
 }
 
 .SumoSelect > .optWrapper > .options li.opt:hover label {
@@ -1562,7 +1562,7 @@ textarea.light:-ms-input-placeholder {
 }
 
 .SumoSelect > .optWrapper {
-	border-color: #3099a7;
+	border-color: #eb787f;
 	border-radius: 0;
 	box-shadow: none;
 }
@@ -1594,7 +1594,7 @@ textarea.light:-ms-input-placeholder {
 }
 
 .socialWrapper a:hover {
-	color: #3099a7;
+	color: #ffc2b3;
 }
 
 /*Gallery*/
@@ -1620,8 +1620,8 @@ textarea.light:-ms-input-placeholder {
 	}
 
 	::-webkit-scrollbar-thumb {
-		-webkit-box-shadow: inset 0 0 5px #3099a7;
-		background: #3099a7;
+		-webkit-box-shadow: inset 0 0 5px #eb787f;
+		background: #eb787f;
 		border-radius: 10px;
 		width: 3px;
 	}
@@ -1718,7 +1718,7 @@ body.hidden-scroll {
 
 .sl-wrapper .sl-navigation button.sl-next:hover:after,
 .sl-wrapper .sl-navigation button.sl-prev:hover:after {
-	color: #3099a7
+	color: #eb787f
 }
 
 .sl-close {
@@ -1739,7 +1739,7 @@ body.hidden-scroll {
 }
 
 .sl-close:hover:after {
-	color: #3099a7;
+	color: #eb787f;
 }
 
 .sl-wrapper .sl-image {
@@ -1947,7 +1947,7 @@ body.hidden-scroll {
 }
 
 .swiper-pagination-bullet-active {
-	background: #3099a7;
+	background: #eb787f;
 }
 
 /*Swiper buttons*/
@@ -1961,7 +1961,7 @@ body.hidden-scroll {
 	font-family: "FontAwesome";
 	content: "\f104";
 	font-size: 70px;
-	color: #1f6e79;
+	color: #ea787e;
 	-webkit-transition: all 150ms linear;
 	transition: all 150ms linear;
 }
@@ -1970,14 +1970,14 @@ body.hidden-scroll {
 	font-family: "FontAwesome";
 	content: "\f105";
 	font-size: 70px;
-	color: #1f6e79;
+	color: #ea787e;
 	-webkit-transition: all 150ms linear;
 	transition: all 150ms linear;
 }
 
 .swiper-button-next:hover:before,
 .swiper-button-prev:hover:before{
-	color: #3099a7;
+	color: #eb787f;
 }
 
 .mainSwiperbanner .swiper-button-next,
@@ -2054,12 +2054,12 @@ body.hidden-scroll {
 
 .ourTeamSlider .swiper-button-prev:hover,
 .ourTeamSlider .swiper-button-next:hover {
-	border-color: #3099a7;
+	border-color: #eb787f;
 }
 
 .ourTeamSlider .swiper-button-prev:hover:before,
 .ourTeamSlider .swiper-button-next:hover:before{
-	color: #3099a7;
+	color: #eb787f;
 }
 
 .ourTeamSlider .swiper-container {
@@ -2160,7 +2160,7 @@ body.hidden-scroll {
 }
 
 .accordeon-title.active .accrodeonButton {
-    background: #3099a7;
+    background: #eb787f;
 }
 
 .accordeon-title.active .accrodeonButton span {
@@ -2173,7 +2173,7 @@ body.hidden-scroll {
 }
 
 .accordeon-title:hover .accrodeonButton {
-	background: #3099a7;
+	background: #eb787f;
 }
 
 .accordeon-title:hover .accrodeonButton span {
@@ -2329,7 +2329,7 @@ header {
 }
 
 .phoneBlock .as a:hover {
-	color: #3099a7;
+	color: #869173;
 }
 
 .phoneBlock .as,
@@ -2382,7 +2382,7 @@ header {
 
 .tumbWrapper .as a:focus,
 .tumbWrapper .as a:hover {
-	color: #3099a7;
+	color: #eb787f;
 	text-decoration: underline;
 }
 
@@ -2407,7 +2407,7 @@ header {
 	position: absolute;
 	left: 20px;
 	bottom: -16px;
-	background: #3099a7;
+	background: #eb787f;
 	color: #fff;
 	padding: 9px 21px;
 	border-radius: 2px;
@@ -2417,7 +2417,7 @@ header {
 .readMore {
 	font-size: 13px;
 	line-height: 18px;
-	color: #3bbdce;
+	color: #eb787f;
 	text-transform: uppercase;
 	font-weight: 700;
 	-webkit-transition: all 150ms linear;
@@ -2425,7 +2425,7 @@ header {
 }
 
 .tumbWrapper .readMore:hover {
-	color: #3099a7;
+	color: #869173;
 }
 
 .tumbWrapper.persone .blockContent {
@@ -2444,7 +2444,7 @@ header {
 }
 
 .tumbWrapper.persone .blockContent a:hover {
-	color: #3099a7;
+	color: #eb787f;
 	text-decoration: underline;
 }
 
@@ -2465,7 +2465,7 @@ header {
 }
 
 .block .as a:hover {
-	color: #3099a7;
+	color: #eb787f;
 }
 
 .block .blockContent {
@@ -2578,7 +2578,7 @@ nav > ul > li > a:first-child {
 nav ul li.active > a,
 nav ul li a:hover,
 nav ul li a:focus {
-	color: #3099a7;
+	color: #869173;
 }
 
 /*Responsive menu*/
@@ -2640,13 +2640,13 @@ nav ul li a:focus {
 .menuIconActive span:nth-child(2) {
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
-    background: #3099a7;
+    background: #eb787f;
 }
 
 .menuIconActive span:nth-child(3) {
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
-    background: #3099a7;
+    background: #eb787f;
 }
 
 /*Menu drop downs*/
@@ -2700,7 +2700,7 @@ nav ul li ul li a {
 nav > ul > li > ul > li > ul > li:hover > a,
 nav > ul > li > ul > li:hover > a {
 	color: #fff;
-	background: #3099a7;
+	background: #eb787f;
 }
 
 @keyframes fadeItIn {
@@ -2954,7 +2954,7 @@ nav ul li ul li:hover i.fa {
 	nav ul li ul li,
 	nav ul li ul li a {
 		display: block;
-		background: #3099a7;
+		background: #eb787f;
 		color: #fff;
 	}
 	nav ul li ul li {
@@ -2975,7 +2975,7 @@ nav ul li ul li:hover i.fa {
 	}
 	nav ul li.active > a,
 	nav ul li a:hover, nav ul li a:focus {
-		background: #3099a7;
+		background: #eb787f;
 		color: #fff;
 	}
 	nav ul li > i.fa {
@@ -3116,7 +3116,7 @@ nav ul li ul li:hover i.fa {
 }
 
 .contentTitle .as span {
-	color: #3099a7;
+	color: #eb787f;
 }
 
 .btnWrapper {
@@ -3189,7 +3189,7 @@ nav ul li ul li:hover i.fa {
 }
 
 .personePhone a:hover {
-	color: #3099a7;
+	color: #869173;
 }
 
 .personePhone span {
@@ -3286,7 +3286,7 @@ nav ul li ul li:hover i.fa {
 }
 
 .contactContent a:hover {
-	color: #3099a7;
+	color: #869173;
 }
 
 .contactContent:last-of-type {
@@ -3315,7 +3315,7 @@ nav ul li ul li:hover i.fa {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background: rgba(48, 153, 167, 0.75);
+	background: rgba(255, 194, 179, 0.75);
 	content: '';
 	-webkit-transform: scale(0);
 	transform: scale(0);
@@ -3551,7 +3551,7 @@ nav ul li ul li:hover i.fa {
 
 .breadCrumbs a:hover,
 .breadCrumbs a:focus {
-	color: #3099a7;
+	color: #eb787f;
 }
 
 .breadCrumbs i.fa {
@@ -3689,7 +3689,7 @@ nav ul li ul li:hover i.fa {
 
 .blogContent .as a:hover,
 .blogContent .as a:focus {
-	color: #3099a7;
+	color: #eb787f;
 	text-decoration: underline;
 }
 
@@ -3717,7 +3717,7 @@ nav ul li ul li:hover i.fa {
 }
 
 .searchWrapper .searchBtn {
-	background: #3099a7;
+	background: #eb787f;
 	padding: 17px 15px;
 	position: absolute;
 	top: 0;
@@ -3727,7 +3727,7 @@ nav ul li ul li:hover i.fa {
 }
 
 .searchWrapper .searchBtn:hover { 
-	background: #1f6e79;
+	background: #ea787e;
 }
 
 .recentNewsBlock {
@@ -3774,11 +3774,11 @@ nav ul li ul li:hover i.fa {
 .tags.active,
 .tags:hover {
 	color: #fff;
-	background: #3099a7;
+	background: #eb787f;
 }
 
 .mobileSearch {
-	background: #3099a7;
+	background: #eb787f;
 	color: #fff;
 	padding: 10px 50px 10px 30px;
 	margin-bottom: 15px;
@@ -3821,7 +3821,7 @@ nav ul li ul li:hover i.fa {
 }
 
 .categoriesList li a:hover {
-	color: #3099a7;
+	color: #eb787f;
 }
 
 .pagination {
@@ -3848,7 +3848,7 @@ nav ul li ul li:hover i.fa {
 .pagination a.activePagi,
 .pagination a:hover {
 	color: #fff;
-	background: #3099a7;
+	background: #eb787f;
 }
 
 .mainBlogContent {
@@ -3871,7 +3871,7 @@ blockquote {
 
 blockquote a {
 	font-style: italic;
-	color: #3099a7;
+	color: #eb787f;
 	float: right;
 	-webkit-transition: all 150ms linear;
 	transition: all 150ms linear;
@@ -3879,7 +3879,7 @@ blockquote a {
 
 blockquote a:hover,
 blockquote a:focus {
-	color: #3099a7;
+	color: #eb787f;
 	text-decoration: underline;
 }
 
@@ -3887,7 +3887,7 @@ blockquote i.fa {
 	position: absolute;
 	top: 18px;
 	left: 33px;
-	color: #3099a7;
+	color: #eb787f;
 	font-size: 55px;
 }
 
@@ -3937,7 +3937,7 @@ blockquote p {
 
 .comment .commentContent a:hover,
 .comment .commentContent a:focus {
-	color: #3099a7;
+	color: #eb787f;
 }
 
 .comment .commentTime {
@@ -3949,14 +3949,14 @@ blockquote p {
 }
 
 .comment .commentTime p a {
-	color: #3099a7;
+	color: #eb787f;
 	-webkit-transition: all 150ms linear;
 	transition: all 150ms linear;
 }
 
 .comment .commentTime p a:hover,
 .comment .commentTime p a:focus {
-	color: #3099a7;
+	color: #eb787f;
 	text-decoration: underline;
 }
 
@@ -4078,7 +4078,7 @@ blockquote p {
 
 .contactDetails {
 	position: relative;
-	background: #3099a7;
+	background: #eb787f;
 	padding: 45px 43px 45px 43px;
 	min-height: 425px;
 }
@@ -4322,7 +4322,7 @@ blockquote p {
 
 .categoryList li a {
 	display: block;
-	background: #3099a7;
+	background: #eb787f;
 	color: #fff;
 	padding: 17px 29px;
 	-webkit-transition: all 150ms linear;
@@ -4711,7 +4711,7 @@ blockquote p {
 
 .appointWrapper {
 	position: relative;
-	background: #3099a7;
+	background: #eb787f;
 	padding: 50px 0;
 }
 
@@ -4761,7 +4761,7 @@ blockquote p {
 
 .customerName i.fa {
 	font-size: 30px;
-	color: #3099a7;
+	color: #eb787f;
 } 
 
 /*Media Queries*/
@@ -4808,7 +4808,7 @@ footer {
 }
 
 .footerBlock .readMore:hover {
-	color: #3099a7;
+	color: #eb787f;
 }
 
 .footerBlock .simple-article {
@@ -4838,7 +4838,7 @@ footer {
 	left: 0;
 	height: 2px;
 	width: 40px;
-	background: #3099a7;
+	background: #ffc2b3;
 	content: '';
 }
 
@@ -4853,7 +4853,7 @@ footer {
 }
 
 .simple-article.style2 ul li a:hover {
-	color: #3099a7;
+	color: #ffc2b3;
 	text-decoration: none;
 }
 
@@ -4904,7 +4904,7 @@ footer {
 }
 
 .footerContants a:hover {
-	color: #3099a7;
+	color: #ffc2b3;
 }
 
 .copy,
@@ -4931,7 +4931,7 @@ footer {
  }
 
 .created:hover a span {
-	color: #3099a7;
+	color: #ffc2b3;
 }
 
 .bottomInfo {
@@ -5502,7 +5502,7 @@ vertical-align: middle;
 }
 .service2 .readmore{
 	margin-left:5px;
-	color:#3691de;
+	color:#869173;
 	font-size:12px;
 	font-weight:700;
 	text-transform:uppercase;
@@ -6030,7 +6030,7 @@ background:#f3f4f6;
 	padding-top:45px;
 }
 .service3 .readmore{
-	color:#3099a7;
+	color:#eb787f;
 	font-weight:700;
 	font-family: 'Open Sans', sans-serif;
 	font-size:14px;    line-height: 36px;
@@ -6282,7 +6282,7 @@ color:#fff;
 }
 
 .need_consult .number{
-	color:#3099a7;
+	color:#eb787f;
 	font-size:30px;
 	padding-left:28px;
 	font-family: 'Open Sans', sans-serif;
@@ -6388,7 +6388,7 @@ color:#fff;
 
 @media(max-width:1200px){
 	.query_bg{
-	background:#3099a7;
+	background:#eb787f;
 	}
 }
 
@@ -6694,7 +6694,7 @@ color:#fff;
 
 .appointWrapper4{
 	position: absolute;
-    background: #3099a7;
+    background: #eb787f;
     padding: 35px 45px;
     top: -58px;
     width: 100%;
@@ -6733,12 +6733,12 @@ color:#fff;
 }
 .our_clinic .block {
     position: relative;
-    border: 1px solid #3099a7;
+    border: 1px solid #eb787f;
     padding: 20px;
 }
 
 .our_clinic .flatIcon{
-	color:#3099a7;
+	color:#eb787f;
 	
 }
 .our_clinic .block .as a{
@@ -6853,7 +6853,7 @@ color:#fff;
     margin-top: -68px;
     width: 174px;
     height: 53px;
-    background: #3099a7;
+    background: #eb787f;
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     color: #fff;
@@ -6894,7 +6894,7 @@ color:#fff;
 }
 .appointWrapper4 {
     position: absolute;
-    background: #3099a7;
+    background: #eb787f;
     padding: 35px 45px;
     top: -75px;
     width: 100%;
@@ -6972,7 +6972,7 @@ color:#fff;
 @media(min-width:768px) and (max-width:991px){
 		.appointWrapper4 {
     position: absolute;
-    background: #3099a7;
+    background: #eb787f;
     padding: 35px 45px;
    top: -72px;
     width: 100%;
@@ -6990,7 +6990,7 @@ color:#fff;
 @media(max-width:767px){
 	.appointWrapper4 {
     position: relative;
-    background: #3099a7;
+    background: #eb787f;
     padding: 35px 45px;
     top: 0;
     width: 100%;
@@ -7061,7 +7061,7 @@ color:#fff;
 }
 .strip5{
 	position:relative;
-	background:#3099a7;
+	background:#eb787f;
 }
 .strip5 h4{
 	color:#fff;
@@ -7140,7 +7140,7 @@ text-align:center;
     font-weight: 300;
 }
 .need_consultation .number {
-    color: #3099a7;
+    color: #eb787f;
     font-size: 30px;
     padding-left: 28px;
     font-family: 'Open Sans', sans-serif;
@@ -7181,21 +7181,21 @@ text-align:center;
 	font-size:18px;
 }
 .homeabout5  .accordeon-title.active{
-	color:#ffffff;background:#3099a7;
+	color:#ffffff;background:#eb787f;
 	
 }
 .accordeon-toggle{
-	background:#3099a7;
+	background:#eb787f;
 }
 .homeabout5 .accordeon-toggle .simple-article p{
 	color:#fff;
 }
 
 .homeabout5 .accordeon .simple-article{
-	background:#3099a7;
+	background:#eb787f;
 }
 .homeabout5 .accordeon-title.active .accrodeonButton {
-    background: #3099a7;
+    background: #eb787f;
 }
 .homeabout5 .rightsection{
 	margin-left:40px;
@@ -7210,7 +7210,7 @@ text-align:center;
 color:#fff;
 }
 .success5 h3{
-	color:#3099a7;
+	color:#eb787f;
 }
 
 .success5 p{
