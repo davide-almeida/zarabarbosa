@@ -6229,7 +6229,7 @@ color:#fff;
 }
 
 .blue_line{
-	background:url("../../assets/img/homepage3/blue_bg.jpg") no-repeat;
+	/* background:url("../../assets/img/homepage3/blue_bg.jpg") no-repeat; */
 	background-size:cover;
 	padding-top:75px;
 	padding-bottom:45px;
