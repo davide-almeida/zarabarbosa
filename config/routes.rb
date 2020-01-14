@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   get 'backoffice', to: 'backoffice/home#index'
   get 'admin', to: 'backoffice/home#index'
-  
+
   namespace :backoffice do
     resources :admins, except: [:show]
     resources :questions, except: [:show]
@@ -18,6 +18,7 @@ Rails.application.routes.draw do
     resources :settings, except: [:show]
     resources :category_courses, except: [:show]
     resources :courses
+    resources :site_storages
     get 'admin', to: 'home#index'
     get 'admins', to: 'admins#index'
     get 'questions', to: 'questions#index'
@@ -49,8 +50,8 @@ Rails.application.routes.draw do
 
   #devise
   devise_for :admins, :skip => [:registrations]
-  devise_scope :admin do  
-    get '/admins/sign_out' => 'devise/sessions#destroy'     
+  devise_scope :admin do
+    get '/admins/sign_out' => 'devise/sessions#destroy'
   end
 
   # root path

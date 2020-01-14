@@ -1,0 +1,52 @@
+<h1 class="page-header">Storage</h1>
+<div class="panel panel-default" >
+    <div class="panel-heading">
+        Listando arquivos <span class="badge badge-light"><%= @site_storages_count %></span>
+        <%= link_to new_backoffice_site_storage_path, class: "btn btn-success pull-right", style: "margin-top: -5px" do %>
+            Novo Cadastro
+        <% end %>
+    </div>
+    <!-- /.panel-heading -->
+    <div class="panel-body">
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nome</th>
+                        <th>Descrição</th>
+                        <th>URL</th>
+                        <th>Tamanho</th>
+                        <th colspan="2">Opções</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% @site_storages.each do |storage| %>
+                        <tr>
+                            <td width="3%"><%= storage.id %></td>
+                            <td><%= storage.name %></td>
+                            <td><%= storage.description.truncate(200).html_safe %></td>
+                            <td><%= link_to 'DOWNLOAD', storage.annex.url, target: "_blank" %> </td>
+                            <td><%= storage.annex_file_size/1024 %>kb</td>
+                            <td width="3%">
+                                <%= link_to edit_backoffice_site_storage_path(storage.id), class: "btn btn-primary btn-circle" do %>
+                                    <i class="fa fa-edit"></i>
+                                <% end %>
+                            </td>
+                            <td width="3%">
+                                <%= link_to backoffice_site_storage_path(storage.id), class: "btn btn-danger btn-circle", data: {confirm: "Você realmente deseja excluir (#{storage.name})?"}, method: :delete do  %>
+                                    <i class="fa fa-trash"></i>
+                                <% end %>
+                            </td>
+                            <%#= raise %>
+                        </tr>
+                    <% end %>
+                </tbody>
+            </table>
+        </div>
+        <!-- /.table-responsive -->
+        </p> <center><%= paginate @site_storages %></center>
+    </div>
+    <!-- /.panel-body -->
+</div>
+

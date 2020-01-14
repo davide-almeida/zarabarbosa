@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191214102946) do
+ActiveRecord::Schema.define(version: 20200114150347) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -211,6 +211,17 @@ ActiveRecord::Schema.define(version: 20191214102946) do
     t.text "terms_use"
     t.string "youtube"
     t.text "header"
+  end
+
+  create_table "site_storages", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "annex_file_name"
+    t.string "annex_content_type"
+    t.integer "annex_file_size"
+    t.datetime "annex_updated_at"
   end
 
   create_table "testimonials", force: :cascade do |t|
