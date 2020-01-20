@@ -1,0 +1,91 @@
+<!-- 	Top banner-START 	-->
+<div class="contentPadding bg bgShadow" style="background-image: url(<%= asset_path 'img/banner-courses.png' %>)">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="servicesTitle">
+                    <div class="cell-view">
+                        <h1 class="h1 light as">Downloads</h1>
+                        <div class="breadCrumbs small">
+                            <%= link_to 'Início', root_path %> <i class="fa fa-angle-right"></i> <span><%= link_to 'Downloads', site_downloads_path %></span> <i class="fa fa-angle-right"></i> <span><%= @downloads.title %></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 	Top banner-END 	-->
+
+<% if @downloads.is_active == "Ativo" %>
+
+	<!-- description -->
+	<div class="contentPadding">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="aboutOur">
+						<h2 class="h2 as" style="margin-bottom: 0px;"><%= @downloads.title %></h2>
+						<!-- <p style="margin-top: 0;">Categoria: <%#= @courses.category_course.name %></p> -->
+						<div class="emptySpace30"></div>
+						<div class="simple-article normall">
+							<p><%= @downloads.description.html_safe %></p>
+						</div>
+					</div>
+					<div class="emptySpace-xs30"></div>
+				</div>
+				<div class="col-sm-6">
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="imgWrapper">
+								<%= image_tag @downloads.picture.url %>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- description - FIM -->
+
+	<!-- venda (firstbutton) -->
+	<% unless @downloads.lead_frame.blank? %>
+		<div class="appointWrapper2">
+			<div class="container">
+				<div class="row verAlign">
+					<div class="col-xs-12 col-sm-12 col-md-12">
+						<div class="btnAlign">
+							<%#= @downloads.lead_frame.html_safe %>
+							<%= link_to @downloads.lead_frame, class: "btn btn--outline btn--large btn--1493941431965", target: '_blank' do %> <%= @downloads.first_button %> <% end %>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br><br>
+	<% end %>
+	<%#= @downloads.lead_frame.html_safe %>
+	<!-- venda (firstbutton) - FIM -->
+
+<% else %>
+
+	<div class="contentPadding">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="aboutOur">
+						<h2 class="h2 as" style="margin-bottom: 0px; text-align: center;">O <%= @downloads.title %> não está disponível. <br />Em caso de dúvidas entre em contato conosco.</h2>
+						<!-- <p style="margin-top: 0;">Categoria: <%= @courses.category_course.name %></p> -->
+						<div class="emptySpace30"></div>
+					</div>
+					<div class="emptySpace-xs30"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+<% end %>
+
+<br><br>
+
+
+<br><br>

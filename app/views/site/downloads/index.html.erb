@@ -1,0 +1,76 @@
+<!-- 	Top banner-START 	-->
+<div class="contentPadding bg bgShadow" style="background-image: url(<%= asset_path 'img/banner-courses.png' %>)">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="servicesTitle">
+                    <div class="cell-view">
+                        <h1 class="h1 light as">Downloads</h1>
+                        <div class="breadCrumbs small">
+                            <%= link_to 'Início', root_path %> <i class="fa fa-angle-right"></i> <span>Downloads</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 	Top banner-END 	-->
+
+<div class="contentPadding service3">
+    <div class="container"> 
+            <div class="row">
+                <div class="col-xs-12 filters-group-wrap">
+                    <div class="filters-group">
+                        <!-- <p class="filter-label">Filter</p> -->
+                        <div class="btn-group filter-options">
+                            <% if @download_categories.blank? %>
+                                <p>Não há downloads disponíveis</p>
+                            <% else %>
+                                <% @download_categories.each do |category| %>
+                                    <% if !category.downloads.blank? && category.downloads.where(is_active: "Ativo").count > 0 %>
+                                        <%= button_tag "#{category.name}", "data-group": category.name.downcase, class: "btn btn--primary" %>
+                                    <% end %>
+                                <% end %>
+                            <% end %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="thick">
+
+
+        <div class="container">
+            <div id="grid">
+                <% if @downloads.blank? %>
+                    <p>Não há downloads disponíveis.</p>
+                <% else %>
+                    <% @downloads.each do |download| %>
+                        <!-- Card INI -->
+                        <div class="col-xs-12 col-sm-6 col-md-4 picture-item" data-groups='["<%= download.download_category.name.downcase %>"]'>
+                            <div class="container-card">
+                                <div class="card">
+                                    <!-- <img class="thumb" src="" alt="Avatar" style="width:100%"> -->
+                                    <%= image_tag(download.picture.url, alt:"Imagem", style:"width:100%") %>
+                                    <div class="container-card">
+                                        <h6 class="h6 as card-title"><%= download.title %></h6>
+                                        <div class="card-category"> <%= download.download_category.name %> </div>
+                                        <div class="tumbContent small card-text">
+                                            <p class="card-text"><%= download.description.html_safe %></p>
+                                        </div>
+                                        <!-- <p class="price">Por R$<%#= course.price %></p> -->
+                                    </div>
+                                    <div class="card-footer text-muted">
+                                        <p class="readmore"><%= link_to 'Baixar', site_download_path(download.slug) %></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card FIM -->
+                    <% end %>
+                <% end %>
+
+            </div>
+        </div>
+    </div>
+</div>

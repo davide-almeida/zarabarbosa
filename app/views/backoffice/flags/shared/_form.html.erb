@@ -28,6 +28,18 @@
                 <%= f.text_field :description, class:"form-control tinymce", placeholder:"Descrição (abaixo do título)" %>
             </div>
             <div class="form-group">
+                <label>Link</label>
+                <%= f.text_field :link_flag, class:"form-control", placeholder:"Ex.: http://www.google.com.br" %>
+            </div>
+            <div class="form-group">
+                <label>Nome do botão (link)</label>
+                <%= f.text_field :link_name, class:"form-control", placeholder:"Ex.: Baixar agora" %>
+            </div>
+            <div class="form-group">
+                <label>Link Target</label>
+                <%= f.select(:target_link, @target_link_options_for_select, {prompt: "Escolha uma opção"}, {:class =>"form-control", :tabindex => "-1"}) %>
+            </div>
+            <div class="form-group">
                 <label>Imagem (1920px X 748px)</label>
                 <%= f.file_field :picture, class:"form-control", placeholder:"Imagem" %>
             </div>

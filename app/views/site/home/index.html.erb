@@ -1,5 +1,3 @@
-    
-        
     <div id="home">
 		<% if @flags.blank? %>
 			<p> </p>
@@ -29,15 +27,32 @@
 												<p><%= flag.description.html_safe %></p>
 											</div>
 											<div class="bannerBtnWrapper">
-												<!--<a href="#" class="button btnSize1">View all Services</a>
-												<a href="#" class="button btnStyle3 btnSize1">Get Appointment</a>-->
+												<!--<a href="#" class="button btnSize1">View all Services</a> -->
+												<% if flag.link_flag.present? %>
+													<!-- <a href="#" class="button btnStyle3 btnSize1">Get Appointment</a> -->
+													<%#definiindo o target do link %>
+													<% if flag.target_link == "Mesma aba" %>
+														<% @target_link == "_self" %>
+													<% else %>
+														<% @target_link == "_blank" %>
+													<% end %>
+
+													<%#definindo o nome do link (botão) %>
+													<% if flag.link_name.present? %>
+														<% @link_name = flag.link_name %>
+													<% else %>
+														<% @link_name = "Clique aqui" %>
+													<% end %>
+
+													<%= link_to flag.link_flag, class: "button btnStyle3 btnSize1", target: "#{@target_link}" do %> <%= @link_name %> <% end %>
+												<% end %>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-						<!-- 	Slide1-END 	--> 
+						<!-- 	Slide1-END 	-->
 						<% end %>
 					</div>
 				</div>

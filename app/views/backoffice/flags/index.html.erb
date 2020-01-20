@@ -15,6 +15,8 @@
                         <th>#</th>
                         <th>Título</th>
                         <th>Descrição</th>
+                        <th>Link</th>
+                        <th>Imagem</th>
                         <th colspan="2">Opções</th>
                     </tr>
                 </thead>
@@ -24,7 +26,25 @@
                             <td width="3%"><%= flag.id %></td>
                             <td><%= flag.title %></td>
                             <td><%= flag.description.html_safe %></td>
-                            <td><%= image_tag flag.picture.url(:thumb) %></td>
+                            <td>
+                                <% if flag.target_link.present? %>
+                                    <%= link_to flag.link_flag, target: "_blank" do %> <%= flag.link_flag %> <% end %> - <%= flag.target_link %>
+                                    <% if flag.link_name.present? %>
+                                        - <%= flag.link_name %>
+                                    <% else %>
+                                        - Sem nome
+                                    <% end %>
+                                <% else %>
+                                    Sem link
+                                <% end %>
+                            </td>
+                            <td>
+                                <% if flag.picture.present?%>
+                                    <%= image_tag flag.picture.url(:thumb) %>
+                                <% else %>
+                                    Sem Imagem
+                                <% end %>
+                            </td>
                             <td width="3%">
                                 <%= link_to edit_backoffice_flag_path(flag.id), class: "btn btn-primary btn-circle" do %>
                                     <i class="fa fa-edit"></i>

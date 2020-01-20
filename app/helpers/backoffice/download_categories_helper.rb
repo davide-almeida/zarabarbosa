@@ -1,0 +1,2 @@
+module Backoffice::DownloadCategoriesHelper
+end

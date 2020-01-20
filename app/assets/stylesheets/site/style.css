@@ -925,7 +925,7 @@ html.overflow-hidden body {
 
 ::selection {
     color: #fefefe;
-    background: #1e1e1e;
+    background: #eb787f;
 }
 
 ::-moz-selection {
@@ -1286,7 +1286,7 @@ button {
 }
 
 .btnStyle3:before {
-	background: #ea787e;
+	background: #e98086;
 }
 
 .btnSize1 {

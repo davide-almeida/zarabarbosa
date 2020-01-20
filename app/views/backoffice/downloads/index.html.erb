@@ -1,0 +1,73 @@
+<h1 class="page-header">Downloads - Páginas</h1>
+<div class="panel panel-default" >
+    <div class="panel-heading">
+        Listando downloads <span class="badge badge-light"><%= @downloads.count %></span>
+        <%= link_to new_backoffice_download_path, class: "btn btn-success pull-right", style: "margin-top: -5px" do %>
+            Novo Cadastro
+        <% end %>
+    </div>
+    <!-- /.panel-heading -->
+    <div class="panel-body">
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>Status</th>
+                        <th>Ordem</th>
+                        <th>Categoria</th>
+                        <th>Título</th>
+                        <th>Descrição</th>
+                        <th>Imagem</th>
+
+                        <th colspan="2">Opções</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% @downloads.each do |download| %>
+                        <tr>
+                            <td>
+                                <% if download.is_active.present? %>
+                                    <%= download.is_active %>
+                                <% else %>
+                                    Não definido
+                                <% end %>
+                            </td>
+                            <td>
+                                <% if download.order_download.present? %>
+                                    <%= download.order_download %>
+                                <% else %>
+                                    Não definido
+                                <% end %>
+                            </td>
+                            <td><%= download.download_category.name %></td>
+                            <td><%= download.title %></td>
+                            <td><%= download.description.truncate(60).html_safe %></td>
+                            <td>
+                                <% if download.picture.present? %>
+                                    <%= image_tag download.picture.url(:thumb) %>
+                                <% else %>
+                                    Sem imagem
+                                <% end %>
+                            </td>
+
+                            <td width="3%">
+                                <%= link_to edit_backoffice_download_path(download.id), class: "btn btn-primary btn-circle" do %>
+                                    <i class="fa fa-edit"></i>
+                                <% end %>
+                            </td>
+                            <td width="3%">
+                                <%= link_to backoffice_download_path(download.id), class: "btn btn-danger btn-circle", data: {confirm: "Você realmente deseja excluir o download (#{download.title})?"}, method: :delete do  %>
+                                    <i class="fa fa-trash"></i>
+                                <% end %>
+                            </td>
+                        </tr>
+                    <% end %>
+                </tbody>
+            </table>
+        </div>
+        <!-- /.table-responsive -->
+        </p> <center><%= paginate @downloads %></center>
+    </div>
+    <!-- /.panel-body -->
+</div>
+

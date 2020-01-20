@@ -22,7 +22,7 @@
 							<%= link_to "https://api.whatsapp.com/send?1=pt_BR&phone=55#{@whatsapp}", class:"button", :target => "_blank", rel:"offline-resource" do %>Agendar<% end %>
 						</div>
 						<!-- 	Header more info-END 	-->
-						
+
 						<div class="responsiveSrollWrapper">
 							<!-- 	Header top-START 	-->
 							<div class="headerTopInfo">
@@ -58,12 +58,15 @@
 													<li><a href="index-5.html">Home Page 4</a></li>
 													<li><a href="index-6.html">Home Page 5</a></li>
 													</ul>-->
-											
+
 											</li>
 											<li><%= active_link_to 'Blog', blog_root_path, wrap_tag: :li %></li>
 											<li><%= link_to("SOBRE", site_home_path(:anchor => "professional")) %></li>
 											<li><%= link_to("SERVIÇOS", site_home_path(:anchor => "services")) %></li>
 											<li><%= active_link_to 'Cursos', site_courses_path, wrap_tag: :li %></li>
+											<% if Download.where(:is_active => "Ativo").count > 0 %>
+												<li><%= active_link_to 'Downloads', site_downloads_path, wrap_tag: :li %></li>
+											<% end %>
 											<li><%= link_to("CONTATO", site_home_path(:anchor => "contato")) %></li>
 										</ul>
 									</nav>

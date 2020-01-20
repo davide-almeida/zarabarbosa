@@ -53,7 +53,7 @@ class Backoffice::FlagsController < BackofficeController
 
   private
     def options_for_select
-      #@branch_options_for_select = Branch.all
+      @target_link_options_for_select = ["Nova aba", "Mesma aba"]
     end
 
     def set_flag
@@ -61,7 +61,7 @@ class Backoffice::FlagsController < BackofficeController
     end
 
     def params_flag
-      params.require(:flag).permit(:title, :description, :picture)
+      params.require(:flag).permit(:title, :description, :picture, :link_flag, :target_link, :link_name)
     end
 
 

@@ -19,6 +19,8 @@ Rails.application.routes.draw do
     resources :category_courses, except: [:show]
     resources :courses
     resources :site_storages
+    resources :download_categories
+    resources :downloads
     get 'admin', to: 'home#index'
     get 'admins', to: 'admins#index'
     get 'questions', to: 'questions#index'
@@ -37,6 +39,7 @@ Rails.application.routes.draw do
   namespace :site do
     resources :send_mail, only: [:edit, :create]
     resources :courses, only: [:show, :index], path: 'cursos'#, as: 'cursos'
+    resources :downloads, only: [:show, :index], path: 'downloads'#, as: 'downloads'
     get 'home', to: 'home#index'
     get 'politicas-de-privacidade', to: 'licenses#privacy_policy'
     get 'termos-de-uso', to: 'licenses#terms_use'
