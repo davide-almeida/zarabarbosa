@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200120192349) do
+ActiveRecord::Schema.define(version: 20200206183054) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -129,6 +129,7 @@ ActiveRecord::Schema.define(version: 20200120192349) do
     t.string "link_flag"
     t.string "target_link"
     t.string "link_name"
+    t.string "is_active"
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|

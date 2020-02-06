@@ -3,7 +3,7 @@ class Site::HomeController < SiteController
     @questions = Question.order(:id)
     @projects = Project.order(:id)
     @works = Work.order(:id)
-    @flags = Flag.order(:id)
+    @flags = Flag.order(:id).where(:is_active => "Ativo")
     @services = Service.order(:id)
     @professionals = Professional.order(:id)
     @health_insurances = HealthInsurance.order(:id)

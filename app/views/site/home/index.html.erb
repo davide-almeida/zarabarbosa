@@ -1,5 +1,5 @@
     <div id="home">
-		<% if @flags.blank? %>
+		<% if @flags.count < 1 %>
 			<p> </p>
 		<% else %>
 			<!-- 	Main banner swiper-START 	-->
@@ -16,7 +16,34 @@
 							<% if flag.picture.blank? %>
 								<div class="sliderBg" style="background-image: url(/banners/bannerdefault.jpg)"></div>
 							<% else %>
-								<div class="sliderBg" style="background-image: url(<%= flag.picture.url(:medium) %>)"></div>
+								<div class="sliderBg" style="background-image: url(<%= flag.picture.url(:medium) %>)">
+									<!-- MOBILE START -->
+									<section class="slideMobile align-middle hidden-md hidden-lg"">
+										<h4 class="h4 light as"><%= flag.title %></h1> <br />
+										<div class="bannerBtnWrapper">
+											<!--<a href="#" class="button btnSize1">View all Services</a> -->
+											<% if flag.link_flag.present? %>
+												<!-- <a href="#" class="button btnStyle3 btnSize1">Get Appointment</a> -->
+												<%#definiindo o target do link %>
+												<% if flag.target_link == "Mesma aba" %>
+													<% @target_link == "_self" %>
+												<% else %>
+													<% @target_link == "_blank" %>
+												<% end %>
+
+												<%#definindo o nome do link (botão) %>
+												<% if flag.link_name.present? %>
+													<% @link_name = flag.link_name %>
+												<% else %>
+													<% @link_name = "Clique aqui" %>
+												<% end %>
+
+												<%= link_to flag.link_flag, class: "button btnStyle3 btnSize1", target: "#{@target_link}" do %> <%= @link_name %> <% end %>
+											<% end %>
+										</div>
+									</section>
+									<!-- MOBILE END -->
+								</div>
 							<% end %>
 							<div class="container">
 								<div class="row">

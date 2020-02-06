@@ -3040,7 +3040,9 @@ nav ul li ul li:hover i.fa {
 	bottom: 0;
 	left: 0;
 	background-size: cover;
-	background-position: 50% 25%;
+	background-position: 100% 25%;
+	/* background-size: 100% 100%; */
+	/* background-repeat:no-repeat; */
 }
 
 .bg {
@@ -7381,4 +7383,16 @@ margin-bottom:60px;
         float: none;
         border: none;
     }
+}
+
+/* slide mobile */
+.slideMobile {
+    padding: 15px 25px;
+    width: 100%;
+    max-width: 300px;    
+    position: absolute;
+    transform: translate(-50%, -50%);
+	left: 50%;top: 50%;
+	text-align: center;
+	z-index: 9999;
 }

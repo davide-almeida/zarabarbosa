@@ -13,6 +13,7 @@
                 <thead>
                     <tr>
                         <th>#</th>
+                        <th>Status</th>
                         <th>Título</th>
                         <th>Descrição</th>
                         <th>Link</th>
@@ -24,6 +25,13 @@
                     <% @flags.each do |flag| %>
                         <tr>
                             <td width="3%"><%= flag.id %></td>
+                            <td>
+                                <% if flag.is_active.present? %>
+                                    <%= flag.is_active %>
+                                <% else %>
+                                    Sem Status
+                                <% end %>
+                            </td>
                             <td><%= flag.title %></td>
                             <td><%= flag.description.html_safe %></td>
                             <td>

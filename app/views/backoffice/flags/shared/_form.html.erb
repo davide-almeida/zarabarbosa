@@ -20,6 +20,10 @@
         <div class="col-lg-6">
             <%= form_for([:backoffice, @flag]) do |f| %>
             <div class="form-group">
+                <label>Status</label>
+                <%= f.select(:is_active, @active_options_for_select, {}, {:class =>"form-control", :tabindex => "-1"}) %>
+            </div>
+            <div class="form-group">
                 <label>Título</label>
                 <%= f.text_field :title, class:"form-control", placeholder:"Título do banner" %>
             </div>
