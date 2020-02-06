@@ -59,17 +59,18 @@
 													<!-- <a href="#" class="button btnStyle3 btnSize1">Get Appointment</a> -->
 													<%#definiindo o target do link %>
 													<% if flag.target_link == "Mesma aba" %>
-														<% @target_link == "_self" %>
+														<% @target_link = "_self" %>
 													<% else %>
-														<% @target_link == "_blank" %>
+														<% @target_link = "_blank" %>
 													<% end %>
-
+													
 													<%#definindo o nome do link (botão) %>
 													<% if flag.link_name.present? %>
 														<% @link_name = flag.link_name %>
 													<% else %>
 														<% @link_name = "Clique aqui" %>
 													<% end %>
+													
 
 													<%= link_to flag.link_flag, class: "button btnStyle3 btnSize1", target: "#{@target_link}" do %> <%= @link_name %> <% end %>
 												<% end %>
