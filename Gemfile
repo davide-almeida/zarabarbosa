@@ -100,10 +100,10 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   # Better error page for Rack apps
-   gem "better_errors"
-   gem "binding_of_caller"
+  #  gem "better_errors"
+  #  gem "binding_of_caller"
   #rails erd
-   gem 'rails-erd'
+  #  gem 'rails-erd'
   # https://github.com/sj26/mailcatcher
   # rodar o mailcatcher com o comando: mailcatcher --http-ip 0.0.0.0 -f -v
   # gem 'mailcatcher'
