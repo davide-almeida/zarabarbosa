@@ -1,6 +1,6 @@
 set :application, "zarabarbosa"
 set :repo_url, "git@github.com:davidejhonatan/zarabarbosa.git"
-set :user, 'ubuntu'
+# set :user, 'ubuntu'
 
 #set :branch, :master
 #set :deploy_to, '/home/ubuntu/zarabarbosa'
@@ -36,7 +36,7 @@ append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/syst
 set :keep_releases, 5
 set :migration_role, :app
 
-set :ssh_options, { forward_agent: true, user: fetch(:user), keys: %w(/vagrant/key/zarabarbosa.pem) }
+# set :ssh_options, { forward_agent: true, user: fetch(:user), keys: %w(/vagrant/key/zarabarbosa.pem) }
 
 set :puma_pid, "#{shared_path}/tmp/pids/puma.pid"
 set :puma_bind, "unix://#{shared_path}/tmp/sockets/puma.sock"
