@@ -51,7 +51,7 @@
                             <div class="container-card">
                                 <div class="card">
                                     <!-- <img class="thumb" src="" alt="Avatar" style="width:100%"> -->
-                                    <%= image_tag(course.introduction_image.url, alt:"Avatar", style:"width:100%") %>
+                                    <%= link_to site_course_path(course.slug) do %><%= image_tag(course.introduction_image.url, alt:"Avatar", style:"width:100%") %><% end %>
                                     <div class="container-card">
                                         <h6 class="h6 as card-title"><%= course.title %></h6>
                                         <div class="card-category"> <%= course.category_course.name %> </div>

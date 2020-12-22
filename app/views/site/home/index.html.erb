@@ -14,9 +14,9 @@
 						<!-- 	Slide1-START 	-->
 						<div class="swiper-slide mainBanner bgShadow">
 							<% if flag.picture.blank? %>
-								<div class="sliderBg" style="background-image: url(/banners/bannerdefault.jpg)"></div>
+								<div class="sliderBg img-fluid" style="background-image: url(/banners/bannerdefault.jpg)"></div>
 							<% else %>
-								<div class="sliderBg" style="background-image: url(<%= flag.picture.url(:medium) %>)">
+								<div class="sliderBg img-fluid" style="background-image: url(<%= flag.picture.url(:medium) %>)">
 									<!-- MOBILE START -->
 									<section class="slideMobile align-middle hidden-md hidden-lg"">
 										<h4 class="h4 light as"><%= flag.title %></h1> <br />

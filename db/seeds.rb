@@ -18,10 +18,10 @@ puts "ADMINS cadastrados!"
 puts "------------------------------------------------------------------"
 
 puts "Cadastrando FLAGS(BANNERS)..."
-Flag.create!(title: "Psicoterapia Infantil (Ludoterapia)", description: "", picture: File.new(Rails.root.join('app', 'assets', 'img', 'banners', 'banner1.jpg'), 'r'))
-Flag.create!(title: "Psicoterapia", description: "", picture: File.new(Rails.root.join('app', 'assets', 'img', 'banners', 'banner2.jpg'), 'r'))
-Flag.create!(title: "Terapia de Grupo", description: "", picture: File.new(Rails.root.join('app', 'assets', 'img', 'banners', 'banner3.jpg'), 'r'))
-Flag.create!(title: "Palestras & Workshops", description: "", picture: File.new(Rails.root.join('app', 'assets', 'img', 'banners', 'banner4.jpg'), 'r'))
+Flag.create!(title: "Psicoterapia Infantil (Ludoterapia)", description: "", picture: File.new(Rails.root.join('app', 'assets', 'img', 'banners', 'banner1.jpg'), 'r'), is_active: "Ativo")
+Flag.create!(title: "Psicoterapia", description: "", picture: File.new(Rails.root.join('app', 'assets', 'img', 'banners', 'banner2.jpg'), 'r'), is_active: "Ativo")
+Flag.create!(title: "Terapia de Grupo", description: "", picture: File.new(Rails.root.join('app', 'assets', 'img', 'banners', 'banner3.jpg'), 'r'), is_active: "Ativo")
+Flag.create!(title: "Palestras & Workshops", description: "", picture: File.new(Rails.root.join('app', 'assets', 'img', 'banners', 'banner4.jpg'), 'r'), is_active: "Ativo")
 puts "FLAGS(BANNERS) cadastrados!"
 
 puts "------------------------------------------------------------------"
@@ -36,7 +36,7 @@ puts "SERVICES cadastrados!"
 puts "------------------------------------------------------------------"
 
 puts "Cadastrando PROFESSIONAL..."
-Professional.create!(name: "Zara Barbosa", title: "Mestre e Especialista em Psicologia Clínica", number: "64/3467", description: "Lorem Ipsum is simply text of the Lorem Ipsum is simply my text of the printing and Ipsum is simply text of the Ipsum is simply text of thetypesetting Ipsum is simply text of the stry simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply text of the Lorem Ipsum is simply my text of", phone: "(84) 98892 4854", picture: File.new(Rails.root.join('app', 'assets', 'img', 'professional', 'professionaldefault.png'), 'r'))
+Professional.create!(name: "Zara Barbosa", title: "Mestre e Especialista em Psicologia Clínica", number: "64/3467", description: "Lorem Ipsum is simply text of the Lorem Ipsum is simply my text of the printing and Ipsum is simply text of the Ipsum is simply text of thetypesetting Ipsum is simply text of the stry simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply text of the Lorem Ipsum is simply my text of", phone: "84 98892 4854", picture: File.new(Rails.root.join('app', 'assets', 'img', 'professional', 'professionaldefault.png'), 'r'))
 puts "PROFESSIONALS cadastrados!"
 
 puts "------------------------------------------------------------------"
@@ -94,14 +94,14 @@ puts "---------------------------BLOG FIM-------------------------------"
 puts "------------------------------------------------------------------"
 
 puts "Cadastrando DIARIES(ATENDIMENTOS)..."
-Diary.create!(name: "Clínica Teste", address: "Natal/RN - Rua exemplo, N° 2", phone: "(84) 94545 4545", week: "Segunda a Sexta-feira:", start_time: "8:00:00", end_time: "17:00:00")
-Diary.create!(name: "Clínica Teste", address: "Currais Novos/RN - Rua exemplo, N° 18", phone: "(84) 93333 3333", week: "Segunda a Sexta-feira:", start_time: "9:00:00", end_time: "10:00:00")
+Diary.create!(name: "Clínica Teste", address: "Natal/RN - Rua exemplo, N° 2", phone: "84 94545 4545", week: "Segunda a Sexta-feira:", start_time: "8:00:00", end_time: "17:00:00")
+Diary.create!(name: "Clínica Teste", address: "Currais Novos/RN - Rua exemplo, N° 18", phone: "84 93333 3333", week: "Segunda a Sexta-feira:", start_time: "9:00:00", end_time: "10:00:00")
 puts "DIARIES(ATENDIMENTOS) cadastrados!"
 
 puts "------------------------------------------------------------------"
 
 puts "Cadastrando SETTINGS..."
-Setting.create!(email: "exemplo@exemplo.com.br", header:"testeeeee do header", phone: "(84) 99629 1483", facebook: "", instagram: "", twitter: "", linkedin: "", youtube: "http://www.youtube.com/zarabarbosa", picture: File.new(Rails.root.join('app', 'assets', 'img', 'settings', 'logo_header.png'), 'r'), picture_footer: File.new(Rails.root.join('app', 'assets', 'img', 'settings', 'logo_footer.png'), 'r'), privacy_policy: "Teste de política de privacidade.", terms_use: "Teste de termos de uso.")
+Setting.create!(email: "exemplo@exemplo.com.br", header:"testeeeee do header", phone: "84 99629 1483", facebook: "", instagram: "", twitter: "", linkedin: "", youtube: "http://www.youtube.com/zarabarbosa", picture: File.new(Rails.root.join('app', 'assets', 'img', 'settings', 'logo_header.png'), 'r'), picture_footer: File.new(Rails.root.join('app', 'assets', 'img', 'settings', 'logo_footer.png'), 'r'), privacy_policy: "Teste de política de privacidade.", terms_use: "Teste de termos de uso.")
 puts "SETTINGS cadastrados!"
 
 puts "------------------------------------------------------------------"
@@ -115,9 +115,9 @@ CategoryCourse.create!(name: "Auto-Controle")
 puts "CATEGORY_COURSES cadastradas!"
 puts "----------------------------------"
 puts "Cadastrando COURSES..."
-Course.create(price: "19,90", link_sale: "http://www.hotmart.com.br", title: "Curso de auto-cuidado", description: "Descrição do curso de auto-cuidado.", link_video: "http://www.youtube.com.br", introduction_image: File.new(Rails.root.join('app', 'assets', 'img', 'course', 'course-img-1.jpg'), 'r'), firstbutton: "(firstbutton) R$19,90", secondbutton: "(secondbutton) R$19,90", title_detail: "Details Título", title_advantage: "Advantages Title", detail_body: "Conteúdo exemplo detail_body", category_course_id: 2)
-Course.create(price: "7,90", link_sale: "http://www.hotmart.com.br", title: "Curso de Workshop", description: "Descrição do Workshop.", link_video: "http://www.youtube.com.br", introduction_image: File.new(Rails.root.join('app', 'assets', 'img', 'course', 'course-img-1.jpg'), 'r'), firstbutton: "(firstbutton) R$19,90", secondbutton: "(secondbutton) R$19,90", title_detail: "Details Título", title_advantage: "Advantages Title", detail_body: "Conteúdo exemplo detail_body", category_course_id: 1)
-Course.create(price: "15,00", link_sale: "http://www.hotmart.com.br", title: "2° Curso de Workshop", description: "Descrição do 2° Workshop.", link_video: "http://www.youtube.com.br", introduction_image: File.new(Rails.root.join('app', 'assets', 'img', 'course', 'course-img-1.jpg'), 'r'), firstbutton: "(firstbutton) R$19,90", secondbutton: "(secondbutton) R$19,90", title_detail: "Details Título", title_advantage: "Advantages Title", detail_body: "Conteúdo exemplo detail_body", category_course_id: 1)
+Course.create(price: "19,90", link_sale: "http://www.hotmart.com.br", title: "Curso de auto-cuidado", description: "Descrição do curso de auto-cuidado.", link_video: "http://www.youtube.com.br", introduction_image: File.new(Rails.root.join('app', 'assets', 'img', 'course', 'course-img-1.jpg'), 'r'), firstbutton: "(firstbutton) R$19,90", secondbutton: "(secondbutton) R$19,90", title_detail: "Details Título", title_advantage: "Advantages Title", is_active: "Ativo", order_course: 1, detail_body: "Conteúdo exemplo detail_body", category_course_id: 2)
+Course.create(price: "7,90", link_sale: "http://www.hotmart.com.br", title: "Curso de Workshop", description: "Descrição do Workshop.", link_video: "http://www.youtube.com.br", introduction_image: File.new(Rails.root.join('app', 'assets', 'img', 'course', 'course-img-1.jpg'), 'r'), firstbutton: "(firstbutton) R$19,90", secondbutton: "(secondbutton) R$19,90", title_detail: "Details Título", title_advantage: "Advantages Title", is_active: "Ativo", order_course: 2, detail_body: "Conteúdo exemplo detail_body", category_course_id: 1)
+Course.create(price: "15,00", link_sale: "http://www.hotmart.com.br", title: "2° Curso de Workshop", description: "Descrição do 2° Workshop.", link_video: "http://www.youtube.com.br", introduction_image: File.new(Rails.root.join('app', 'assets', 'img', 'course', 'course-img-1.jpg'), 'r'), firstbutton: "(firstbutton) R$19,90", secondbutton: "(secondbutton) R$19,90", title_detail: "Details Título", title_advantage: "Advantages Title", is_active: "Ativo", order_course: 3, detail_body: "Conteúdo exemplo detail_body", category_course_id: 1)
 # slug do friendly_id
 Course.find_each(&:save)
 puts "COURSES cadastrados!"
@@ -138,6 +138,7 @@ puts "----------------------------------"
 puts "Cadastrando CHECK_ADVANTAGE..."
 CheckAdvantage.create!(video: "checked", e_book: "checked", work_book: "checked", meditation: "checked", conference: "checked", member: "checked", access_life: "checked", assurance: "checked", course_id: 1)
 CheckAdvantage.create!(video: "checked", e_book: "checked", work_book: "unchecked", meditation: "unchecked", conference: "unchecked", member: "unchecked", access_life: "checked", assurance: "checked", course_id: 2)
+CheckAdvantage.create!(video: "checked", e_book: "checked", work_book: "unchecked", meditation: "unchecked", conference: "unchecked", member: "unchecked", access_life: "checked", assurance: "checked", course_id: 3)
 puts "CHECK_ADVANTAGE cadastrados!"
 puts "----------------------------------"
 
