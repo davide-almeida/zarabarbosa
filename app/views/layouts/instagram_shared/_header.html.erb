@@ -1,0 +1,61 @@
+<!-- 	Loader-START 	-->
+    <div id="loader-wrapper"></div>
+    <!-- 	Loader-END 	-->
+
+    <div id="content-block">
+
+    <!-- Header-START -->
+        <header>
+            <div class="container ">
+            	<div class="row">
+            		<div class="col-xs-12 text-center">
+            			<!-- 	Header more info-START 	-->
+						<div class="headerMoreInfo">
+							<!--  	Phone block-START 	-->
+							<div class="phoneBlock">
+								<i class="flatIcon Fphone2"><%= image_tag("phone-call.png", :alt => "Contato") %></i>
+								<p>Whatsapp</p>
+								<h5 class="h5 as"><a><%= @settings.phone %></a></h5>
+							</div>
+							<!--  	Phone block-END 	-->
+							<%#= link_to("Agendar", site_home_path(:anchor => "contato"), :class => "button btnSize1") %>
+							<%= link_to "https://api.whatsapp.com/send?1=pt_BR&phone=55#{@whatsapp}", class:"button", :target => "_blank", rel:"offline-resource" do %>Fale comigo<% end %>
+						</div>
+						<!-- 	Header more info-END 	-->
+
+						<div class="responsiveSrollWrapper">
+							<!-- 	Header top-START 	-->
+							<div class="headerTopInfo">
+								<div class="headerTopInfoContaner">
+									<!-- 	Logo-START 	-->
+									<%= link_to root_url, class:"logo" do %>
+										<%= image_tag @settings.picture.url(:medium) %>
+									<% end %>
+									<!-- 	Logo-END 	-->
+
+									<!-- 	Responsive menu-START 	-->
+									<div class="menuIcon"> 
+										<span></span> 
+										<span></span> 
+										<span></span> 
+										<span></span> 
+									</div>
+									<!-- 	Responsive menu-END 	-->
+								</div>
+							</div>
+							<!-- 	Header top-END 	-->
+						</div>
+            		</div>
+            	</div>
+            </div>
+        </header>
+		<!-- Header-END -->
+     	<div class="headerClearFix"></div>
+
+
+		 <%= render partial: 'site/home/shared/send_mail' %>
+		 <% flash.each do |key, value| %>
+			<script>
+				$.notify("<%= value %>", "info")
+			</script>
+		<% end %>

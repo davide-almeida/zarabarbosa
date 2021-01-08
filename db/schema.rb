@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200206183054) do
+ActiveRecord::Schema.define(version: 20210108142756) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -153,6 +153,23 @@ ActiveRecord::Schema.define(version: 20200206183054) do
     t.datetime "picture_updated_at"
   end
 
+  create_table "instagram_links", force: :cascade do |t|
+    t.string "title"
+    t.string "description"
+    t.string "link"
+    t.bigint "instagram_page_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["instagram_page_id"], name: "index_instagram_links_on_instagram_page_id"
+  end
+
+  create_table "instagram_pages", force: :cascade do |t|
+    t.string "title"
+    t.string "footer"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.text "body"
@@ -271,6 +288,7 @@ ActiveRecord::Schema.define(version: 20200206183054) do
   add_foreign_key "check_advantages", "courses"
   add_foreign_key "courses", "category_courses"
   add_foreign_key "downloads", "download_categories"
+  add_foreign_key "instagram_links", "instagram_pages"
   add_foreign_key "posts", "admins"
   add_foreign_key "posts", "categories"
   add_foreign_key "question_courses", "courses"

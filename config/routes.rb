@@ -21,6 +21,7 @@ Rails.application.routes.draw do
     resources :site_storages
     resources :download_categories
     resources :downloads
+    resources :instagram_pages
     get 'admin', to: 'home#index'
     get 'admins', to: 'admins#index'
     get 'questions', to: 'questions#index'
@@ -50,6 +51,8 @@ Rails.application.routes.draw do
     resources :posts, only: [:show, :index]
     root :to => "posts#index"
   end
+
+  resources :instagram_pages, only: [:index], path: 'instagram'#, as: 'instagram'
 
   #devise
   devise_for :admins, :skip => [:registrations]

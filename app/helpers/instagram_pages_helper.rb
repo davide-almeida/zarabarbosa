@@ -1,0 +1,2 @@
+module InstagramPagesHelper
+end

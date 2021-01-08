@@ -1,0 +1,124 @@
+<div id="loader-wrapper"></div>
+
+<div class="instagram_top">
+    <div class="container">
+        <div class="row ">
+            <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                    <!-- 	Header top-START 	-->
+                    <div class="headerInstagram">
+                        <div class="headerTopInfoContaner">
+                            <!-- 	Logo-START 	-->
+                            <%= link_to root_url, class:"logo" do %>
+                                <%= image_tag @settings.picture.url(:medium) %>
+                            <% end %>
+                            <!-- 	Logo-END 	-->
+                        </div>
+                    </div>
+                    <!-- 	Header top-END 	-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="headerClearFix"></div>
+
+<% if (instagram_pages_count > 0) && (instagram_links_count > 0) %>
+    <%# if InstagramPage.count > 0 %>
+    <div class="instagram_landingpage">
+        <div class="">
+            <div class="container">
+                <div class="text-center">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-12">
+                            <h5 class="instagram_title"><%= @instagram_pages.title %></h5>
+                        </div>
+                    </div>
+
+                    <!-- Instagram Link - start -->
+                    <% @instagram_links.each do |instagram_link| %>
+                        <div class="instagram_links">
+                            <div class="">
+                                <a href="#" target="_blank">
+                                <%= link_to instagram_link.link, target: "_blank" do %>
+                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                        <div class="cell-view">
+                                            <div class="block">
+                                                <div class="blockContent normall">
+                                                    <h6 class="h6 as"><%= instagram_link.title %></h6>
+                                                    <p><%= instagram_link.description %></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <% end %>
+                            </div>
+                        </div>
+                    <% end %>
+                    <!-- Instagram Link - end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="emptySpace-xs60 emptySpace60"></div>
+
+    <div class="footer_instagram">
+        <div class="navbar navbar-inverse navbar-fixed-bottom text-center">
+            <div class="navbar-inner">
+                <div class="container">
+                    <span><%= @instagram_pages.footer %></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<% elsif %>
+    <%# if InstagramPage.count == 0 %>
+    <div class="instagram_landingpage">
+        <div class="">
+            <div class="container">
+                <div class="text-center">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-12">
+                            <h5 class="instagram_title">Links</h5>
+                        </div>
+                    </div>
+
+                    <!-- Instagram Link - start -->
+                    <div class="instagram_links">
+                        <div class="">
+                            <a href="http://zarabarbosa.com" target="_blank">
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <div class="cell-view">
+                                        <div class="block">
+                                            <div class="blockContent normall">
+                                                <h6 class="h6 as">Site</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Instagram Link - end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="emptySpace-xs60 emptySpace60"></div>
+
+    <div class="footer_instagram">
+        <div class="navbar navbar-inverse navbar-fixed-bottom text-center">
+            <div class="navbar-inner">
+                <div class="container">
+                    <span>zarabarbosa.com | Todos os direitos reservados</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<% end %>
+

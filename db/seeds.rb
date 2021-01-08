@@ -144,3 +144,9 @@ puts "----------------------------------"
 
 puts "------------------------Course FIM--------------------------------"
 puts "------------------------------------------------------------------"
+
+# puts "------------------------Instagram INÍCIO--------------------------"
+# puts "Cadastrando INSTAGRAMS..."
+# Instagram.create!(title: "Links", footer:"zarabarbosa.com")
+# puts "INSTAGRAMS cadastrados!"
+# puts "------------------------Instagram FIM-----------------------------"

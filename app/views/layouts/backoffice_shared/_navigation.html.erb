@@ -42,7 +42,7 @@
                     <% end %>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-files-o fa-fw"></i> Editar Site<span class="fa arrow"></span></a>
+                    <a href="#"><i class="fa fa-files-o fa-fw"></i> Site<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
                             <%= link_to backoffice_flags_path do %> Banner Topo <% end %>
@@ -96,6 +96,18 @@
                             </li>
                             <li>
                                 <%= link_to backoffice_courses_path do %> Cursos <% end %>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-code"></i> Landing Pages <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <% if instagram_pages_count > 0 %>
+                                    <%= link_to edit_backoffice_instagram_page_path(1) do %> Instagram Links <% end %>
+                                <% elsif %>
+                                    <%= link_to new_backoffice_instagram_page_path do %> Instagram Links <% end %>
+                                <% end %>
                             </li>
                         </ul>
                     </li>

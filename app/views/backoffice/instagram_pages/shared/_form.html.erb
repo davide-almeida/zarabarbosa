@@ -1,0 +1,56 @@
+<h1 class="page-header">Cursos</h1>
+<% if @instagram_page.errors.any? %>
+  <div class="alert alert-danger alert-dismissable">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+    <!-- message -->
+    <ul>
+      <% @instagram_page.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+
+  </div>
+<% end %>
+<div class="panel panel-default" >
+    <div class="panel-heading">
+        <%= action %>
+    </div>
+    <!-- /.panel-heading -->
+    <div class="panel-body">
+        <div class="col-lg-6">
+            <%= form_for([:backoffice, @instagram_page]) do |f| %>
+                <div align="center"><h2>Configurações<h2></div>
+                <div class="form-group">
+                    <label>Título da página</label>
+                    <%= f.text_field :title, class:"form-control", placeholder:"Ex.: Links", required:"required" %>
+                </div>
+                <div class="form-group">
+                    <label>Rodapé (footer)</label>
+                    <%= f.text_field :footer, class:"form-control", placeholder:"Ex.: zarabarbosa.com - Todos os direitos reservados", required:"required" %>
+                </div>
+                
+                <hr class="hrpanel">
+
+                <div align="center"><h2>Links<h2></div>
+                <div class="form-group">
+                    <label>Lista</label>
+                    <%= f.nested_fields_for :instagram_links do |ff| %>
+                        <p> <%= ff.text_field :title, class:"form-control", placeholder:"Tíulo" %> </p>
+                        <p> <%= ff.text_field :description, class:"form-control", placeholder:"Breve descrição" %> </p>
+                        <p> <%= ff.text_field :link, class:"form-control", placeholder:"Link" %> </p>
+                        <p> <%= ff.remove_nested_fields_link 'Excluir', class: 'btn btn-outline btn-danger btn-sm', role: 'button' %> </p>
+                        <br />
+                    <% end  %>
+                    <p><%= f.add_nested_fields_link :instagram_links, 'Adicionar', class: 'btn btn-outline btn-primary btn-sm', role: 'button' %></p>
+                </div>
+
+                <hr class="hrpanel">
+
+                <button type="submit" class="btn btn-default">Cadastrar</button>
+            <% end %>
+        </div>
+    </div>
+    <!-- /.panel-body -->
+</div>
+<!-- /panel panel-default -->
+<br /><br /><br />
