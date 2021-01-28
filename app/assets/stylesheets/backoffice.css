@@ -5,63 +5,88 @@
 */
 
 .checkbox label:after {
-    content: '';
-    display: table;
-    clear: both;
-  }
-  
-  .checkbox .cr {
-    position: relative;
-    display: inline-block;
-    border: 1px solid #a9a9a9;
-    border-radius: .25em;
-    width: 1.3em;
-    height: 1.3em;
-    float: left;
-    margin-right: .5em;
-  }
-  
-  .checkbox .cr .cr-icon {
-    position: absolute;
-    font-size: .8em;
-    line-height: 0;
-    top: 50%;
-    left: 15%;
-  }
-  
-  .checkbox label input[type="checkbox"] {
-    display: none;
-  }
-  
-  .checkbox label input[type="checkbox"]+.cr>.cr-icon {
-    opacity: 0;
-  }
-  
-  .checkbox label input[type="checkbox"]:checked+.cr>.cr-icon {
-    opacity: 1;
-  }
+  content: '';
+  display: table;
+  clear: both;
+}
 
-  /* retangulo roxo adicionado no dashboard (backoffice) */
-  .panel-purple {
-    border-color: #9d33b7;
-  }
+.checkbox .cr {
+  position: relative;
+  display: inline-block;
+  border: 1px solid #a9a9a9;
+  border-radius: .25em;
+  width: 1.3em;
+  height: 1.3em;
+  float: left;
+  margin-right: .5em;
+}
 
-  /* line 6568, /home/vagrant/.rvm/gems/ruby-2.4.3/gems/bootstrap_sb_admin_base_v2-0.3.6/vendor/assets/stylesheets/bootstrap/bootstrap.scss */
-  .panel-purple > .panel-heading {
-    color: #fff;
-    background-color: #9d33b7;
-    border-color: #9d33b7;
-  }
-  /* line 6572, /home/vagrant/.rvm/gems/ruby-2.4.3/gems/bootstrap_sb_admin_base_v2-0.3.6/vendor/assets/stylesheets/bootstrap/bootstrap.scss */
-  .panel-purple > .panel-heading + .panel-collapse > .panel-body {
-    border-top-color: #9d33b7;
-  }
-  /* line 6575, /home/vagrant/.rvm/gems/ruby-2.4.3/gems/bootstrap_sb_admin_base_v2-0.3.6/vendor/assets/stylesheets/bootstrap/bootstrap.scss */
-  .panel-purple > .panel-heading .badge {
-    color: #9d33b7;
-    background-color: #fff;
-  }
-  /* line 6580, /home/vagrant/.rvm/gems/ruby-2.4.3/gems/bootstrap_sb_admin_base_v2-0.3.6/vendor/assets/stylesheets/bootstrap/bootstrap.scss */
-  .panel-purple > .panel-footer + .panel-collapse > .panel-body {
-    border-bottom-color: #9d33b7;
-  }
+.checkbox .cr .cr-icon {
+  position: absolute;
+  font-size: .8em;
+  line-height: 0;
+  top: 50%;
+  left: 15%;
+}
+
+.checkbox label input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox label input[type="checkbox"]+.cr>.cr-icon {
+  opacity: 0;
+}
+
+.checkbox label input[type="checkbox"]:checked+.cr>.cr-icon {
+  opacity: 1;
+}
+
+/* retangulo roxo adicionado no dashboard (backoffice) */
+.panel-purple {
+  border-color: #9d33b7;
+}
+
+/* line 6568, /home/vagrant/.rvm/gems/ruby-2.4.3/gems/bootstrap_sb_admin_base_v2-0.3.6/vendor/assets/stylesheets/bootstrap/bootstrap.scss */
+.panel-purple > .panel-heading {
+  color: #fff;
+  background-color: #9d33b7;
+  border-color: #9d33b7;
+}
+/* line 6572, /home/vagrant/.rvm/gems/ruby-2.4.3/gems/bootstrap_sb_admin_base_v2-0.3.6/vendor/assets/stylesheets/bootstrap/bootstrap.scss */
+.panel-purple > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #9d33b7;
+}
+/* line 6575, /home/vagrant/.rvm/gems/ruby-2.4.3/gems/bootstrap_sb_admin_base_v2-0.3.6/vendor/assets/stylesheets/bootstrap/bootstrap.scss */
+.panel-purple > .panel-heading .badge {
+  color: #9d33b7;
+  background-color: #fff;
+}
+/* line 6580, /home/vagrant/.rvm/gems/ruby-2.4.3/gems/bootstrap_sb_admin_base_v2-0.3.6/vendor/assets/stylesheets/bootstrap/bootstrap.scss */
+.panel-purple > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: #9d33b7;
+}
+
+.alternative-form {
+  background-color: #f1f1f1;
+  padding: 10px 10px;
+  margin-bottom: 10px;
+}
+
+.alternative-single {
+  background-color: #e7e7e7;
+  padding: 10px 10px;
+  margin: 0px 0px 10px 0;
+  border: 1px solid #ccc;
+}
+
+.question-item {
+  background-color: #f7f7f7;
+  padding: 20px 8px 10px 8px;
+  border: 1px solid #ccc;
+}
+
+.test-rules {
+  background-color: #f7f7f7;
+  padding: 20px 8px 10px 8px;
+  border: 1px solid #ccc;
+}

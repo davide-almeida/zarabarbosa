@@ -115,6 +115,16 @@ $(document).ready(function(){
 	});
 });
 
+// $(document).ready(function() { 
+//   $(window).on('load', function() {
+//     if ($('.shuffle').length > 0) {
+//       console.log("shuffle existe");
+//     } else {
+//       console.log("shuffle não existe");
+//     }
+//   });
+// });
+
 
 var Shuffle = window.Shuffle;
 
@@ -264,5 +274,7 @@ class Demo {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  window.demo = new Demo(document.getElementById('grid'));
+  if ($('#grid').length > 0) {
+    window.demo = new Demo(document.getElementById('grid'));
+  }
 });

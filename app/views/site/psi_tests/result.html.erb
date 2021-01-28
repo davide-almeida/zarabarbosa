@@ -1,0 +1,99 @@
+<!-- 	Top banner-START 	-->
+<div class="contentPadding bg bgShadow" style="background-image: url(<%= asset_path 'img/banner-courses.png' %>)">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="servicesTitle">
+                    <div class="cell-view">
+                        <h1 class="h1 light as"><%= @psi_test.title %></h1>
+                        <div class="breadCrumbs small">
+                            <%= link_to 'Início', root_path %> <i class="fa fa-angle-right"></i>
+                            <span><%= link_to 'Testes', site_psi_tests_path %></span> <i class="fa fa-angle-right"></i>
+                            <span><%= @psi_test.title %></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 	Top banner-END 	-->
+
+<% if @psi_test.is_active ==  "Ativo" %>
+
+<!-- description -->
+<div class="contentPadding">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="imgWrapper">
+                            <%= image_tag @psi_test.picture.url %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="aboutOur">
+                    <h2 class="h2 as" style="margin-bottom: 0px;">Descrição</h2>
+                    <!-- <p style="margin-top: 0;">Categoria: <%#= @courses.category_course.name %></p> -->
+                    <!-- <div class="emptySpace30"></div> -->
+                    <div class="simple-article normall">
+                        <p><%= @psi_test.description.html_safe %></p>
+                    </div>
+                </div>
+                <!-- <div class="emptySpace-xs30"></div> -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- description - FIM -->
+
+<!-- Test -->
+<div class="contentPadding grey">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="survey-test">
+                    <div class="test-title">
+                        <h3 id="title" class="text-center">Resultado</h3>
+                        <p id="description" class="description text-center">
+                            <%= @psi_test.title %>
+                        </p>
+                    </div>
+                    <div id ="survey-form">
+                        <div class="question">
+                            <div class="form-group">
+                                <h5 class="result">Pontos: <%= @result %></h5>
+                                <span class="result-description"><center><%= @description.html_safe %></center></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="emptySpace-xs30"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Test - FIM -->
+
+<% else %>
+
+    <div class="contentPadding">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="aboutOur">
+                        <h2 class="h2 as" style="margin-bottom: 0px; text-align: center;">O <%= @psi_test.title %> não está
+                            disponível. <br />Em caso de dúvidas entre em contato conosco.</h2>
+                        <!-- <p style="margin-top: 0;">Categoria: <%= @courses.category_course.name %></p> -->
+                        <div class="emptySpace30"></div>
+                    </div>
+                    <div class="emptySpace-xs30"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+<% end %>

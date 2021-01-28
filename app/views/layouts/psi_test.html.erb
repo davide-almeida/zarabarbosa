@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+  <!-- Mirrored from galaxyanalytics.net/demos/psycology/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Sep 2018 15:52:58 GMT -->
+  <head>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140937107-1"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-140937107-1');
+      </script>
+      <!-- Global site FIM - Google Analytics -->
+
+      <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+      <!-- google config -->
+      <meta name="google-site-verification" content="RhWFnpOzdZDsPVn1X6KY7WJznakJTVTNCeq11ZfGTA0" />
+      <!-- google config - fim -->
+      <meta name="format-detection" content="telephone=no" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+
+      <%= Setting.first.header.html_safe %>
+      
+      <!-- fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7COpen+Sans:300,400,600,700%7CRaleway:400,700,800" rel="stylesheet">
+
+      <%= favicon_link_tag 'favicon.ico' %>
+      <title>Zara Barbosa - Psicóloga</title>
+      <!--    Styles-START 	-->
+      <%= stylesheet_link_tag 'site/bootstrap.min.css', media: 'all' %>
+      <%= stylesheet_link_tag 'application.css', media: 'all' %>
+      <%= stylesheet_link_tag 'site/swiper.css', media: 'all' %>
+      <%= stylesheet_link_tag 'site/sumoselect.css', media: 'all' %>    
+      <%#= stylesheet_link_tag 'site/flaticon.css', media: 'all' %>
+      <%#= stylesheet_link_tag 'fonts/icons/font/flaticon.css', media: 'all' %>
+      <%#= stylesheet_link_tag 'site/fonts/icons/font/flaticon.css', media: 'all' %>
+      <%= stylesheet_link_tag 'site/fonts/icons/font/flaticon.css', media: 'all' %>
+      <%= stylesheet_link_tag 'tests/style.css', media: 'all' %>
+      <%= stylesheet_link_tag 'site/application.css', media: 'all' %>
+      <%= stylesheet_link_tag 'site/shuffle', media: 'all' %>
+      <%= stylesheet_link_tag 'tests/psi_test', media: 'all' %>
+
+      <!--    Styles-END 	-->
+      <style>
+        #loader-wrapper {position: fixed;left: 0;top: -100px;right: 0;bottom: -100px;background: #fff;z-index: 100;}
+      </style>
+    
+  </head>
+  <body>
+    
+    <%= render partial: 'layouts/site_shared/header' %>
+
+      <%= yield %>
+
+    <%= render partial: 'layouts/site_shared/footer' %>
+
+	  <!--    Scripts-START 	-->
+      <%#= javascript_include_tag 'site/button.js' %>
+      <%= javascript_include_tag 'application' %>
+      <%= javascript_include_tag 'site/jquery.min.js' %>
+      <%= javascript_include_tag 'site/swiper.jquery.min.js' %>
+      <%= javascript_include_tag 'site/SmoothScroll.js' %>
+      <%= javascript_include_tag 'site/jquery.sumoselect.min.js' %>
+      <%= javascript_include_tag 'site/simple-lightbox.min.js' %>
+      <%= javascript_include_tag 'site/global.js' %>
+      <%= javascript_include_tag 'site/bootstrap.min.js' %>
+      <%= javascript_include_tag 'site/site.js' %>
+      <%= javascript_include_tag 'site/shuffle.js' %>
+      <%= javascript_include_tag 'site/psi_test.js' %>
+      
+    <!--    Scripts-END 	-->
+  <%= render partial: 'layouts/shared/notifications'  %>
+  </body>
+
+<!-- Mirrored from galaxyanalytics.net/demos/psycology/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Sep 2018 15:53:49 GMT -->
+</html>

@@ -1,0 +1,148 @@
+<h1 class="page-header">Testes</h1>
+<% if @psi_test.errors.any? %>
+<div class="alert alert-danger alert-dismissable">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+    <!-- message -->
+    <ul>
+        <% @psi_test.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+        <% end %>
+    </ul>
+
+</div>
+<% end %>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <%= action %>
+    </div>
+    <!-- /.panel-heading -->
+    <div class="panel-body">
+        <div class="col-lg-12 col-xs-12">
+            <%= form_for([:backoffice, @psi_test]) do |f| %>
+            <div align="center">
+                <h2>Teste<h2>
+            </div>
+            <div class="form-group col-lg-6 col-xs-12">
+                <label>Título do teste</label>
+                <%= f.text_field :title, class:"form-control", placeholder:"Título do teste", required:"required" %>
+            </div>
+            <div class="form-group col-lg-6 col-xs-12">
+                <label>Status</label>
+                <%= f.select(:is_active, @active_options_for_select, {}, {:class =>"form-control", :tabindex => "-1"}) %>
+            </div>
+            <div class="form-group col-lg-12 col-xs-12">
+                <label>Imagem Destaque (1280px x 720px OU com a mesma proporção)</label>
+                <%= f.file_field :picture, class:"form-control", placeholder:"Imagem de destaque." %>
+            </div>
+            <div class="form-group col-lg-12 col-xs-12">
+                <label>Descrição</label>
+                <%= f.text_area :description, class:"form-control tinymce", placeholder:"Descrição do produto." %>
+            </div>
+
+            <div class="form-group col-lg-12 col-xs-12">
+                <hr class="hrpanel">
+            </div>
+
+            <div align="center">
+                <h2>Lista de questões<h2>
+            </div>
+            <div class="form-group">
+                <%= f.nested_fields_for :test_questions do |ff| %>
+                <div class="form-group col-lg-12 col-xs-12 question-item">
+                    <label>Questão</label>
+                    <p> <%= ff.text_field :title, class:"form-control", placeholder:"Título da questão" %> </p>
+                    <div class="alternative-form col-lg-12 col-xs-12">
+
+                        <%= ff.nested_fields_for :test_alternatives do |fff| %>
+                        <div class="alternative-single col-lg-12 col-xs-12">
+                            <div class="form-group col-lg-6 col-xs-12">
+                                <label>Alternativa</label>
+                                <%= fff.text_field :title, class:"form-control", placeholder:"Digite a alternativa" %>
+                            </div>
+                            <div class="form-group col-lg-6 col-xs-12">
+                                <label>Pontos</label>
+                                <%= fff.number_field :rank_point, class:"form-control", step:"0.1", placeholder:"Digite um valor Ex.: 2,8", required:"required" %>
+                            </div>
+                            <p> <%= fff.remove_nested_fields_link 'Excluir alternativa', class: 'btn btn-outline btn-danger btn-sm', role: 'button' %>
+                            </p>
+                        </div>
+                        <% end %>
+                        <p><%= ff.add_nested_fields_link :test_alternatives, 'Adicionar alternativa', class: 'btn btn-outline btn-primary btn-sm', role: 'button' %>
+                        </p>
+
+                    </div>
+                    <p> <%= ff.remove_nested_fields_link 'Excluir questão', class: 'btn btn-outline btn-danger btn-sm', role: 'button' %>
+                    </p>
+                    <br />
+                </div>
+                <% end  %>
+                <p><%= f.add_nested_fields_link :test_questions, 'Adicionar questão', class: 'btn btn-outline btn-primary btn-sm', role: 'button' %>
+                </p>
+            </div>
+
+            <div class="form-group col-lg-12 col-xs-12">
+                <hr class="hrpanel">
+            </div>
+
+            <div align="center">
+                <h2>Regras do teste<h2>
+            </div>
+            <%= f.nested_fields_for :test_results do |result| %>
+            <div class="form-group col-lg-12 col-xs-12 test-rules">
+                <div class="form-group col-lg-6 col-xs-12">
+                    <label>Condição <%#= raise %></label>
+                    <%= result.select(:condition, @condition_options_for_select, {}, {:class =>"form-control selectTest_added", :tabindex => "-1"}) %>
+                    <!--
+                    <select class="selectTest_added">
+                        <option>Choose Color</option>
+                        <option value="1inputs">1 Inputs</option>
+                        <option value="2inputs">2 Inputs</option>
+                    </select>
+                    -->
+                </div>
+                <div class="1inputs box" id="inputid">
+                    <div class="form-group col-lg-6 col-xs-6">
+                        <label>Pontos</label>
+                        <%= result.number_field :rank_point_limit, class:"form-control", placeholder:"Digite um número. Ex.: 2,8", required:"required" %>
+                    </div>
+                </div>
+                <!--
+                <div class="2inputs box" style="display: none;">
+                    <div class="form-group col-lg-3 col-xs-6">
+                        <label>Entre</label>
+                        <%= result.number_field :rank_point_limit, class:"form-control", placeholder:"Digite o número inicial. Ex.: 2,8", required:"required" %>
+                    </div>
+                    <div class="form-group col-lg-3 col-xs-6">
+                        <label>e</label>
+                        <input type="text" class="form-control" placeholder="Digite o número limite" />
+                    </div>
+                </div> -->
+                <div class="form-group col-lg-12 col-xs-12">
+                    <label>Descrição</label>
+                    <%= result.text_area :description, class:"form-control tinymce", placeholder:"Descrição", required:"required" %>
+                </div>
+                <p> <%= result.remove_nested_fields_link 'Excluir regra', class: 'btn btn-outline btn-danger btn-sm', role: 'button' %>
+                </p>
+            </div>
+            <% end %>
+            <p><% %><%= f.add_nested_fields_link :test_results, 'Adicionar regra', class: 'btn btn-outline btn-primary btn-sm add-rule', role: 'button' %>
+            </p>
+            <!--
+            <div id="testee">
+                <select>
+                    <option>Choose Color</option>
+                    <option value="1inputs">1 Inputs</option>
+                    <option value="2inputs">2 Inputs</option>
+                </select>
+            </div> -->
+
+            <br /><br />
+
+            <button type="submit" class="btn btn-default">Cadastrar</button>
+            <% end %>
+        </div>
+    </div>
+    <!-- /.panel-body -->
+</div>
+<!-- /panel panel-default -->
+<br /><br /><br />

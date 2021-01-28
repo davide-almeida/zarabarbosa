@@ -1,0 +1,139 @@
+<!-- 	Top banner-START 	-->
+<div class="contentPadding bg bgShadow" style="background-image: url(<%= asset_path 'img/banner-courses.png' %>)">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="servicesTitle">
+          <div class="cell-view">
+            <h1 class="h1 light as"><%= @psi_test.title %></h1>
+            <div class="breadCrumbs small">
+              <%= link_to 'Início', root_path %> <i class="fa fa-angle-right"></i>
+              <span><%= link_to 'Testes', site_psi_tests_path %></span> <i class="fa fa-angle-right"></i>
+              <span><%= @psi_test.title %></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 	Top banner-END 	-->
+
+<% if @psi_test.is_active ==  "Ativo" %>
+
+<!-- description -->
+<div class="contentPadding">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="imgWrapper">
+              <%= image_tag @psi_test.picture.url %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="aboutOur">
+          <h2 class="h2 as" style="margin-bottom: 0px;">Descrição</h2>
+          <!-- <p style="margin-top: 0;">Categoria: <%#= @courses.category_course.name %></p> -->
+          <!-- <div class="emptySpace30"></div> -->
+          <div class="simple-article normall">
+            <p><%= @psi_test.description.html_safe %></p>
+          </div>
+        </div>
+        <!-- <div class="emptySpace-xs30"></div> -->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- description - FIM -->
+
+<!-- Test -->
+<div class="contentPadding grey">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div id="survey-test">
+          <div class="test-title">
+            <h3 id="title" class="text-center">Início do teste</h3>
+            <p id="description" class="description text-center">
+              O teste levará poucos minutos
+            </p>
+          </div>
+          <%= form_for @psi_test, url: save_email_site_psi_test_path(@psi_test.id), :html => { :id => "survey-form" } do |f| %>
+            
+            <% @psi_test.test_questions.each do |question| %>
+              <!-- Questions - Start -->
+              <div class="question">
+                <div class="form-group">
+                  <h5 class="question-title">
+                    <%= question.title %>
+                  </h5>
+                </div>
+                <div class="form-group">
+                  <% question.test_alternatives.each do |alternative| %>
+                    <label>
+                      <input name="<%= question.id %>" value="<%= alternative.id %>" type="radio" class="input-radio" /> <%= alternative.title %>
+                    </label>
+                  <% end %>
+                </div>
+              </div>
+              <!-- Questions - End -->
+
+              <hr class="hr3">
+            <% end %>
+
+            <!-- Question - Start -->
+            <div class="question">
+              <div class="form-group">
+                <label id="email-label" for="email">Email</label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="Digite o seu email" autocomplete="on" required />
+              </div>
+            </div>
+            <!-- Question - End -->
+
+            <!-- Question - Start -->
+            <div class="question">
+              <div class="form-group">
+                <label>
+                  <input name="check" value="check" type="checkbox" class="input-checkbox" required />Concordo em receber emails promocionais do zarabarbosa.com.
+                </label>
+              </div>
+            </div>
+            <!-- Question - End -->
+            
+            <div class="form-group">
+              <button type="submit" id="submit" class="submit-button">
+                Enviar
+              </button>
+            </div>
+          <% end %>
+        </div>
+
+        <div class="emptySpace-xs30"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Test - FIM -->
+
+<% else %>
+
+<div class="contentPadding">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="aboutOur">
+          <h2 class="h2 as" style="margin-bottom: 0px; text-align: center;">O <%= @psi_test.title %> não está
+            disponível. <br />Em caso de dúvidas entre em contato conosco.</h2>
+          <!-- <p style="margin-top: 0;">Categoria: <%= @courses.category_course.name %></p> -->
+          <div class="emptySpace30"></div>
+        </div>
+        <div class="emptySpace-xs30"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>

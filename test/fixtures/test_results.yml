@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  condition: MyString
+  rank_point_limit: 1.5
+  description: MyText
+  psi_test: one
+
+two:
+  condition: MyString
+  rank_point_limit: 1.5
+  description: MyText
+  psi_test: two

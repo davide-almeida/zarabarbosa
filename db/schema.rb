@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20210108142756) do
+ActiveRecord::Schema.define(version: 20210119125249) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -208,6 +208,18 @@ ActiveRecord::Schema.define(version: 20210108142756) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "psi_tests", force: :cascade do |t|
+    t.string "title"
+    t.integer "is_active"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "picture_file_name"
+    t.string "picture_content_type"
+    t.integer "picture_file_size"
+    t.datetime "picture_updated_at"
+    t.text "description"
+  end
+
   create_table "question_courses", force: :cascade do |t|
     t.string "query"
     t.string "answer"
@@ -269,6 +281,41 @@ ActiveRecord::Schema.define(version: 20210108142756) do
     t.datetime "annex_updated_at"
   end
 
+  create_table "test_alternatives", force: :cascade do |t|
+    t.string "title"
+    t.float "rank_point"
+    t.bigint "test_question_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["test_question_id"], name: "index_test_alternatives_on_test_question_id"
+  end
+
+  create_table "test_emails", force: :cascade do |t|
+    t.string "email"
+    t.bigint "psi_test_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["psi_test_id"], name: "index_test_emails_on_psi_test_id"
+  end
+
+  create_table "test_questions", force: :cascade do |t|
+    t.string "title"
+    t.bigint "psi_test_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["psi_test_id"], name: "index_test_questions_on_psi_test_id"
+  end
+
+  create_table "test_results", force: :cascade do |t|
+    t.string "condition"
+    t.float "rank_point_limit"
+    t.text "description"
+    t.bigint "psi_test_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["psi_test_id"], name: "index_test_results_on_psi_test_id"
+  end
+
   create_table "testimonials", force: :cascade do |t|
     t.string "name"
     t.text "body"
@@ -292,5 +339,9 @@ ActiveRecord::Schema.define(version: 20210108142756) do
   add_foreign_key "posts", "admins"
   add_foreign_key "posts", "categories"
   add_foreign_key "question_courses", "courses"
+  add_foreign_key "test_alternatives", "test_questions"
+  add_foreign_key "test_emails", "psi_tests"
+  add_foreign_key "test_questions", "psi_tests"
+  add_foreign_key "test_results", "psi_tests"
   add_foreign_key "testimonials", "courses"
 end

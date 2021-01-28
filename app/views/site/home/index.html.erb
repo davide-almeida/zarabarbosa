@@ -18,8 +18,10 @@
 							<% else %>
 								<div class="sliderBg img-fluid" style="background-image: url(<%= flag.picture.url(:medium) %>)">
 									<!-- MOBILE START -->
-									<section class="slideMobile align-middle hidden-md hidden-lg"">
-										<h4 class="h4 light as"><%= flag.title %></h1> <br />
+									<section class="slideMobile align-middle hidden-md hidden-lg">
+										<div class="bannerTitleMobile">
+											<h4 class="h4 light as"><%= flag.title %></h1> <br />
+										</div>
 										<div class="bannerBtnWrapper">
 											<!--<a href="#" class="button btnSize1">View all Services</a> -->
 											<% if flag.link_flag.present? %>

@@ -915,10 +915,10 @@ html.overflow-hidden body {
 }
 
 .cell-view {
-    /* display: table-cell; */
+    display: table-cell;
     vertical-align: middle;
-    /* width: 10000px; */
-	padding: 15px 0;
+    width: 10000px;
+	padding: 75px 0;
 }
 
 /*Body selection*/
@@ -1984,7 +1984,7 @@ body.hidden-scroll {
 .mainSwiperbanner .swiper-button-prev {
 	width: 40px;
 	height: 40px;
-	margin-top: 11px;
+	/* margin-top: 11px; */
 	background-color: rgba(0, 0, 0, 0.5);
 	-webkit-transition: all 150ms linear;
 	transition: all 150ms linear;
@@ -3030,7 +3030,8 @@ nav ul li ul li:hover i.fa {
 	height: 690px;
 	z-index: 2;
 	position: relative;
-	padding-top: 250px;
+	/* padding-top: 250px; */
+	padding-top: 12%;
 }
 
 .sliderBg {
@@ -3091,7 +3092,18 @@ nav ul li ul li:hover i.fa {
 
 .bannerTitle .as {
 	text-transform: none;
-	margin-bottom: 11px;
+	padding: 10px 10px;
+	/* margin-bottom: 11px; */
+	background-color: rgba(205, 73, 113, .7);
+	border-radius: 10px;
+}
+
+.bannerTitleMobile .as {
+	text-transform: none;
+	padding: 10px 10px;
+	background-color: rgba(205, 73, 113, .7);
+	/* border: 2px solid #cd4971; */
+	border-radius: 10px;
 }
 
 .bannerTitle p {
@@ -3380,6 +3392,7 @@ nav ul li ul li:hover i.fa {
 	transition: all 350ms linear;
 	-webkit-transition-delay: 300ms;
 	transition-delay: 300ms;
+	text-align: center;
 }
 .bannerBtnWrapper {
 	opacity: 0;

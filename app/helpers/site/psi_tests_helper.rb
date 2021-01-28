@@ -1,0 +1,2 @@
+module Site::PsiTestsHelper
+end

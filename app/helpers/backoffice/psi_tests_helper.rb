@@ -1,0 +1,2 @@
+module Backoffice::PsiTestsHelper
+end

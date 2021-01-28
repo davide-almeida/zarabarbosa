@@ -47,6 +47,9 @@ $(document).ready(function() {
       });
       /* end iffe */
     })();
+
+    // shuffle
+    
   
     /* end ready */
   });

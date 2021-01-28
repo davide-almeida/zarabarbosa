@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  rank_point: 1.5
+  test_question: one
+
+two:
+  title: MyString
+  rank_point: 1.5
+  test_question: two

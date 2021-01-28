@@ -14,7 +14,7 @@ class Backoffice::SiteStoragesController < BackofficeController
   def create
     @site_storage = SiteStorage.new(params_site_storage)
     if @site_storage.save
-      redirect_to backoffice_site_storages_path, notice: "A arquivo (#{@site_storage.name}) foi cadastrado com sucesso!"
+      redirect_to backoffice_site_storages_path, notice: "O arquivo (#{@site_storage.name}) foi cadastrado com sucesso!"
     else
       render :index
     end

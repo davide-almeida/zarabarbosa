@@ -52,7 +52,7 @@ gem 'nested_form_fields'
 # Paginação - https://github.com/kaminari/kaminari
 gem 'kaminari'
 # Translations for the kaminari gem
-gem  'kaminari-i18n'
+gem 'kaminari-i18n'
 # https://github.com/thoughtbot/paperclip
 gem "paperclip", "~> 6.0.0"
 # https://github.com/ddollar/foreman

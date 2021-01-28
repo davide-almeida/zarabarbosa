@@ -1,0 +1,62 @@
+<h1 class="page-header">Testes</h1>
+<div class="panel panel-default" >
+    <div class="panel-heading">
+        Listando testes <span class="badge badge-light"><%= @psi_tests_count %></span>
+        <%= link_to new_backoffice_psi_test_path, class: "btn btn-success pull-right", style: "margin-top: -5px" do %>
+            Novo Cadastro
+        <% end %>
+    </div>
+    <!-- /.panel-heading -->
+    <div class="panel-body">
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Status</th>
+                        <th>Título</th>
+                        <th>Descrição</th>
+                        <th>Qtd. questões</th>
+                        <th>Qtd. Emails</th>
+                        <th>Imagem destaque</th>
+                        <th colspan="2">Opções</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% @psi_tests.each do |psi_test| %>
+                        <tr>
+                            <td width="3%"><%= psi_test.id %></td>
+                            <td><%= psi_test.is_active %></td>
+                            <td><%= psi_test.title %></td>
+                            <td><%= psi_test.description.truncate(100).html_safe %></td>
+                            <td><%= psi_test.test_questions.count %></td>
+                            <td><%= psi_test.test_emails.count %></td>
+                            <td>
+                                <% if psi_test.picture.present?%>
+                                    <%= image_tag psi_test.picture.url(:medium) %>
+                                <% else %>
+                                    Sem Imagem
+                                <% end %>
+                            </td>
+                            <td width="3%">
+                                <%= link_to edit_backoffice_psi_test_path(psi_test.id), class: "btn btn-primary btn-circle" do %>
+                                    <i class="fa fa-edit"></i>
+                                <% end %>
+                            </td>
+                            <td width="3%">
+                                <%= link_to backoffice_psi_test_path(psi_test.id), class: "btn btn-danger btn-circle", data: {confirm: "Você realmente deseja excluir (#{psi_test.title})?"}, method: :delete do  %>
+                                    <i class="fa fa-trash"></i>
+                                <% end %>
+                            </td>
+                            <%#= raise %>
+                        </tr>
+                    <% end %>
+                </tbody>
+            </table>
+        </div>
+        <!-- /.table-responsive -->
+        </p> <center><%= paginate @psi_tests %></center>
+    </div>
+    <!-- /.panel-body -->
+</div>
+

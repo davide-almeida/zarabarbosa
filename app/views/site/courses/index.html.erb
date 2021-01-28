@@ -45,6 +45,7 @@
                 <% if @courses.blank? %>
                     <p>Não há cursos disponíveis.</p>
                 <% else %>
+                    
                     <% @courses.each do |course| %>
                         <!-- Card INI -->
                         <div class="col-xs-12 col-sm-6 col-md-4 picture-item" data-groups='["<%= course.category_course.name.downcase %>"]'>

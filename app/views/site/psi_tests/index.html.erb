@@ -1,0 +1,58 @@
+<!-- 	Top banner-START 	-->
+<div class="contentPadding bg bgShadow" style="background-image: url(<%= asset_path 'img/banner-courses.png' %>)">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="servicesTitle">
+                    <div class="cell-view">
+                        <h1 class="h1 light as">Testes</h1>
+                        <div class="breadCrumbs small">
+                            <%= link_to 'Início', root_path %> <i class="fa fa-angle-right"></i> <span>Testes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 	Top banner-END 	-->
+
+<div class="contentPadding service3">
+    <div class="container"> 
+        <div class="container">
+            <div id="grid">
+                <% if @psi_tests.blank? %>
+                    <p>Não há testes disponíveis.</p>
+                <% else %>
+                    <% @psi_tests.each do |psi_test| %>
+                        <!-- Card INI -->
+                        <div class="col-xs-12 col-sm-6 col-md-4 picture-item">
+                            <div class="container-card">
+                                <div class="card">
+                                    <!-- <img class="thumb" src="" alt="Avatar" style="width:100%"> -->
+                                    <%= link_to site_psi_test_path(psi_test.id) do %><%= image_tag(psi_test.picture.url, alt:"Imagem destaque", style:"width:100%") %><% end %>
+                                    <div class="container-card">
+                                        <h6 class="h6 as card-title"><%= psi_test.title %></h6>
+                                        <div class="card-category"> <%#= psi_test.category_course.name %> </div>
+                                        <div class="tumbContent small card-text">
+                                            <p class="card-text"><%= psi_test.description.truncate(100).html_safe %></p> 
+                                        </div>
+                                        <!-- <p class="price">Por R$ 0,00 </p> -->
+                                    </div>
+                                    <div class="card-footer text-muted">
+                                        <p class="readmore"><%= link_to 'Saber mais', site_psi_test_path(psi_test.id) %></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card FIM -->
+                    <% end %>
+                <% end %>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

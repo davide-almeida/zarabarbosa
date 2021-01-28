@@ -53,3 +53,85 @@ function ResetCampos(){
       }
   }
 }
+
+/* tests */
+// $(document).ready(function(){
+  // $(window).on('load', function() {
+  
+  //   console.log("O id #testee existe");
+  //   $("select").change(function(){
+  //       console.log("MUDOU!");
+  //       $(this).find("option:selected").each(function(){
+  //           var optionValue = $(this).attr("value");
+  //           if(optionValue){
+  //               $(".box").not("." + optionValue).hide();
+  //               $("." + optionValue).show();
+  //           } else{
+  //               $(".box").hide();
+  //           }
+  //       });
+  //   }).change();
+    
+  // });
+// });
+
+// two rules inputs
+// document.addEventListener('DOMContentLoaded', () => {
+
+  // $(function() {
+  //   inputN = 0
+  //   $('.add-rule').click(function() {
+  //     inputN += 1;
+  //     if (document.getElementById("inputid")) {
+  //         document.getElementById("inputid").id = 'inputid' + inputN;
+  //         console.log("Entrou na changediv()");
+  //     }
+  //     console.log(inputN);
+  //     setInterval( function() {
+  //       $('.selectTest_added').change(function(){
+  //           $('.box').hide();
+  //           $('.' + $(this).val()).show();
+  //           // console.log("Change select!!");
+  //       });
+  //     }, 1);
+  //   });
+  // });
+
+  // function changediv() {
+  //   if (document.getElementById("inputid")) {
+  //       // document.getElementById("inputid").innerHTML = Date();
+  //       document.getElementById("inputid").id = 'inputid' + inputN;
+  //       console.log("Entrou na changediv()");
+  //   }
+    // } else {
+    //     document.getElementById("div_top2").innerHTML = "teste";            
+    //     document.getElementById("div_top2").id = "inputid";
+    // }
+  // }
+
+// });
+
+// $(document).ready(function() { 
+
+  // $('.add-rule').click(function() {
+    // $('#testee').change(function(){
+    //   setInterval( function() {
+    //     $('.box').hide();
+    //     $('#' + $(this).val()).show();
+    //   });
+    // console.log("Clicou");
+    // }, 1);
+  // });
+
+// });
+
+// $(document).ready(function() { 
+//   $(window).on('load', function() {
+//     if ($('#testee').length) {
+//     }  else {
+//       console.log("O id #testee não existe");
+//     }
+//   });
+//  });
+ 
+
