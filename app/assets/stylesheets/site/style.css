@@ -226,7 +226,8 @@ body {
 }
 
 body p {
-	color: #898989;
+	/* color: #898989; */
+	color: #000;
 }
 
 b,
