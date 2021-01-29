@@ -23,6 +23,7 @@ Rails.application.routes.draw do
     resources :downloads
     resources :instagram_pages
     resources :psi_tests
+    resources :test_emails
     get 'admin', to: 'home#index'
     get 'admins', to: 'admins#index'
     get 'questions', to: 'questions#index'

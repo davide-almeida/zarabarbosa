@@ -2,6 +2,7 @@
 //= require bootbox
 //= require jquery-ui/widgets/datepicker
 //= require jquery-ui/i18n/datepicker-pt-BR
+//= require datatables
 
 /* Bootbox - Sobrescreve o data-confirm do Rails */
 $.rails.allowAction = function(element) {
@@ -135,3 +136,105 @@ function ResetCampos(){
 //  });
  
 
+// DataTables
+$(document).ready( function () {
+  if ($("#datatable").length) {
+    $('#datatable').DataTable({
+      dom: 'Bfrtip',
+      // dom: '<"top"i>rt<"bottom"flp><"clear">',
+      // "dom": "<'row'<'col-md-6'l><'col-md-6'Bf>>" +
+      //         "<'row'<'col-md-6'><'col-md-6'>>" +
+      //         "<'row'<'col-md-12't>><'row'<'col-md-12'ip>>",
+      responsive: true,
+      // lengthMenu: [
+      //     [ 10, 25, 50, -1 ],
+      //     [ '10 registros', '25 registros', '50 registros', 'Exibir todos' ]
+      // ],
+      // buttons: ['copyHtml5','excelHtml5','csvHtml5','pdfHtml5']
+      buttons: [
+          [
+            'pageLength'
+          ],
+          {
+              extend: 'print',
+              text: 'Imprimir',
+              exportOptions: {
+                  columns: [ 1, 2 ] //Definir quais colunas estarão visíveis para impressão
+              }
+          },
+          {
+            extend: 'copy',
+            text: 'Copiar'
+          },
+          {
+              extend: 'csv',
+              text: 'Excel'
+          },
+      ],
+      "pagingType": "simple_numbers",
+      // "pagingType": "simple_numbers",
+      // "dom": '<"topcustom"lfr>t<"bottomcustom"ip>',
+      "language": {
+          "url": "//cdn.datatables.net/plug-ins/1.10.16/i18n/Portuguese-Brasil.json",
+          buttons: {
+              pageLength: {
+                  _: "Exibir %d registros"
+              }
+          }
+      }
+    });
+  }
+} );
+
+
+// $(document).ready( function () {
+//   if ($("#datatable2").length) {
+//     $('#datatable2').DataTable({
+//       dom: 'Blfrtip',
+//       buttons: ['copyHtml5','excelHtml5','csvHtml5','pdfHtml5']
+//     });
+//   }
+// } );
+
+$(document).ready( function () {
+  if ($("table.tabela_display_receita").length) {
+    $('table.tabela_display_receita').DataTable({
+      dom: 'Bfrtip',
+      responsive: true,
+      lengthMenu: [
+          [ 10, 25, 50, -1 ],
+          [ '10 registros', '25 registros', '50 registros', 'Exibir todos' ]
+      ],
+      buttons: [
+          // {
+          //     extend: 'csv',
+          //     text: 'Exportar Excel'
+          // },
+          // {
+          //     extend: 'copy',
+          //     text: 'Copiar'
+          // },
+          {
+              extend: 'print',
+              text: 'Imprimir',
+              exportOptions: {
+                  columns: [ 0, 1, 2, 3, 4, 5, 6 ] //Definir quais colunas estarão visíveis para impressão
+              }
+          },
+          // [
+          //     'pageLength'
+          // ]
+
+      ],
+      "language": {
+          "url": "//cdn.datatables.net/plug-ins/1.10.16/i18n/Portuguese-Brasil.json",
+          buttons: {
+              pageLength: {
+                  _: "Exibir %d registros"
+              }
+          }
+      }
+
+    });
+  }
+} );

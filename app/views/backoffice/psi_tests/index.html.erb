@@ -1,10 +1,23 @@
 <h1 class="page-header">Testes</h1>
 <div class="panel panel-default" >
     <div class="panel-heading">
-        Listando testes <span class="badge badge-light"><%= @psi_tests_count %></span>
-        <%= link_to new_backoffice_psi_test_path, class: "btn btn-success pull-right", style: "margin-top: -5px" do %>
+        Ações
+    </div>
+    <div class="panel-body">
+        <%= link_to new_backoffice_psi_test_path, class: "btn btn-success" do %>
             Novo Cadastro
         <% end %>
+        <%= link_to backoffice_test_emails_path, class: "btn btn-info" do %>
+            Lista de Emails
+        <% end %>
+    </div>
+</div>
+
+<div class="panel panel-default" >
+    <div class="panel-heading">
+        <div class="">
+            Listando testes <span class="badge badge-light"><%= @psi_tests_count %></span>
+        </div>
     </div>
     <!-- /.panel-heading -->
     <div class="panel-body">
@@ -48,7 +61,6 @@
                                     <i class="fa fa-trash"></i>
                                 <% end %>
                             </td>
-                            <%#= raise %>
                         </tr>
                     <% end %>
                 </tbody>

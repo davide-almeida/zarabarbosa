@@ -1,6 +1,6 @@
 class Site::PsiTestsController < ApplicationController
   layout 'psi_test'
-  before_action :set_psi_test, only: [:show]
+  before_action :set_psi_test, only: [:show, :result, :save_email]
 
   def index
     basic_settings
@@ -14,13 +14,13 @@ class Site::PsiTestsController < ApplicationController
   def show
     basic_settings
     @test_email = TestEmail.new
-    @psi_test = PsiTest.where(:is_active => "Ativo").find(params[:id])
+    # @psi_test = PsiTest.where(:is_active => "Ativo").find(params[:id])
 
   end
 
   def save_email
     # calc sum
-    @psi_test = PsiTest.find(params[:id])
+    # @psi_test = PsiTest.find(params[:id])
 
     @sum = 0
     @psi_test.test_questions.each do |question|
@@ -48,7 +48,7 @@ class Site::PsiTestsController < ApplicationController
   def result
     basic_settings
 
-    @psi_test = PsiTest.find(params[:id])
+    # @psi_test = PsiTest.find(params[:id])
     @result = params["calc"]
 
     @psi_test.test_results.order(:rank_point_limit).each do |rule|
@@ -85,7 +85,7 @@ class Site::PsiTestsController < ApplicationController
     end
 
     def set_psi_test
-      @psi_test = PsiTest.find(params[:id])
+      @psi_test = PsiTest.friendly.find(params[:id])
     end
 
     def params_psi_test

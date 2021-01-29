@@ -1,0 +1,47 @@
+<h1 class="page-header">Testes - Lista de Emails</h1>
+
+<div class="panel panel-default" >
+    <div class="panel-heading">
+        <div class="">
+            Listando emails <span class="badge badge-light"><%#= @emails_count %></span>
+        </div>
+    </div>
+    <!-- /.panel-heading -->
+    <div class="panel-body">
+        <div class="table-responsive">
+            <!-- <table class="table table-striped table-bordered table-hover" id="datatable"> -->
+            <table class="table table-striped table-bordered" style="width:100%" id="datatable">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Testes</th>
+                        <th>Emails</th>
+                        <th width="1%">Editar</th>
+                        <th width="1%">Excluir</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% @emails.each do |email| %>
+                        <tr>
+                            <td width="3%"><%= email.id %></td>
+                            <td><%= email.psi_test.title %></td>
+                            <td><%= email.email %></td>
+                            <td width="1%" class="text-center">
+                                <%= link_to edit_backoffice_test_email_path(email.id), class: "btn btn-primary btn-circle" do %>
+                                    <i class="fa fa-edit"></i>
+                                <% end %>
+                            </div>
+                            <td width="1%" class="text-center">
+                                <%= link_to backoffice_test_email_path(email.id), class: "btn btn-danger btn-circle", data: {confirm: "Você realmente deseja excluir o email: (#{email.email})?"}, method: :delete do  %>
+                                    <i class="fa fa-trash"></i>
+                                <% end %>
+                            </td>
+                        </tr>
+                    <% end %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- /.panel-body -->
+
+
