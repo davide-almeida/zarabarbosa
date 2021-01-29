@@ -85,18 +85,6 @@ hr.thick {
     height: 4px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 /* botões categoria de cursos - ver depois */
 .button {
     background-color: #cd4971; /* Green */
@@ -169,4 +157,9 @@ hr.thick {
 
 .whitebg {
   background-color: #ffffff;
+}
+
+/* blog title */
+.blogTitle a:hover {
+	color: #cd4971;
 }
