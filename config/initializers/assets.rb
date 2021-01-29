@@ -44,8 +44,8 @@ Rails.application.config.assets.precompile += %w( site/psi_test.js )
 
 # #PAINEL
 Rails.application.config.assets.precompile += %w( backoffice.css )
-Rails.application.config.assets.precompile += %w( datatables.css )
-Rails.application.config.assets.precompile += %w( datatables.js )
+# Rails.application.config.assets.precompile += %w( datatables.css )
+# Rails.application.config.assets.precompile += %w( datatables.js )
 
 Rails.application.config.assets.precompile += %w( backoffice.js )
 # Rails.application.config.assets.precompile += %w( tinymce/langs/pt.js )

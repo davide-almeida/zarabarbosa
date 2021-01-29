@@ -2,7 +2,7 @@
 //= require bootbox
 //= require jquery-ui/widgets/datepicker
 //= require jquery-ui/i18n/datepicker-pt-BR
-//= require datatables
+
 
 /* Bootbox - Sobrescreve o data-confirm do Rails */
 $.rails.allowAction = function(element) {
