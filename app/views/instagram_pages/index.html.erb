@@ -37,8 +37,7 @@
                     <!-- Instagram Link - start -->
                     <% @instagram_links.each do |instagram_link| %>
                         <div class="instagram_links">
-                            <div class="">
-                                <a href="#" target="_blank">
+                            <div class="instagram-block">
                                 <%= link_to instagram_link.link, target: "_blank" do %>
                                     <div class="col-xs-12 col-sm-12 col-md-12">
                                         <div class="cell-view">
@@ -53,9 +52,10 @@
                                 <% end %>
                             </div>
                         </div>
+                        <br />
                     <% end %>
                     <!-- Instagram Link - end -->
-
+                    <div class="emptySpace-xs60 emptySpace60"></div>
                 </div>
             </div>
         </div>

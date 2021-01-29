@@ -120,7 +120,7 @@ body {
     cursor:pointer;
 }
 .instagram_landingpage .tumbWrapper3:hover .h6{ 
-color:#fff;
+    color:#fff;
 }
 
 .instagram_landingpage .tumbWrapper3:hover p{
@@ -133,8 +133,8 @@ color:#fff;
 
 .instagram_links .cell-view {
     background: #ffffff;
-	padding: 8px;
-    margin-bottom: 15px;
+	padding: 8px 8px;
+    // margin-bottom: 15px;
     // border: 10px solid #00fa21;
     border-radius: 8px;
   
@@ -158,12 +158,17 @@ color:#fff;
 	color:#8e8d8d;
 }
 .instagram_links{
-	margin-top:40px;
+    margin-top:40px;
+    margin-bottom: 40px;
     // grid-row-gap: 1em;
 }
 
 .instagram_links .block .blockContent {
     padding-left: 0px;
+}
+
+.instagram-block {
+    padding: 10px 0px 10px 0px;
 }
 
 @media only screen and (max-device-width : 640px) {
