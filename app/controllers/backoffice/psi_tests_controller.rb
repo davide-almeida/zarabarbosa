@@ -54,7 +54,7 @@ class Backoffice::PsiTestsController < BackofficeController
   end
   
     def set_psi_test
-      @psi_test = PsiTest.find(params[:id])
+      @psi_test = PsiTest.friendly.find(params[:id])
     end
     
     def params_psi_test
