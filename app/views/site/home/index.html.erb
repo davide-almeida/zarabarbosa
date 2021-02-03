@@ -106,12 +106,12 @@
 					<!-- 	News1-START 	-->
 					<% @posts.each do |post| %>
 						<div class="col-xs-12 col-sm-4">
-							<div class="tumbWrapper style2">
+							<div class="tumbWrapper style2 blogPost">
 								<div class="imgWrapper">
 									<%= link_to blog_post_path(post.slug) do %><%= image_tag post.picture.url(:medium) %><% end %>
 									<%= link_to blog_post_path(post.slug) do %><div class="timeBlock"><%= l(post.post_date) %></div><% end %>
 								</div>
-								<h6 class="h6 as"><%= link_to blog_post_path(post.slug) do %><%= post.title %><% end %></h6>
+								<h6 class="h6"><%= link_to blog_post_path(post.slug) do %><%= post.title %><% end %></h6>
 								<!-- <div class="tumbContent small">
 									<%#= link_to blog_post_path(post.slug) do %><p><%#= post.body.truncate(290, omission: '...').html_safe %></p><%# end %>
 								</div> -->

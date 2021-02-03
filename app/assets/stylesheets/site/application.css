@@ -163,3 +163,11 @@ hr.thick {
 .blogTitle a:hover {
 	color: #cd4971;
 }
+
+.blogPost:hover a{
+	color: #cd4971;
+}
+
+.course-card:hover .readMore{
+	color: #ccc;
+}

@@ -48,29 +48,31 @@
                     
                     <% @courses.each do |course| %>
                         <!-- Card INI -->
-                        <div class="col-xs-12 col-sm-6 col-md-4 picture-item" data-groups='["<%= course.category_course.name.downcase %>"]'>
-                            <div class="container-card">
-                                <div class="card">
-                                    <!-- <img class="thumb" src="" alt="Avatar" style="width:100%"> -->
-                                    <%= link_to site_course_path(course.slug) do %><%= image_tag(course.introduction_image.url, alt:"Avatar", style:"width:100%") %><% end %>
-                                    <div class="container-card">
-                                        <h6 class="h6 as card-title"><%= course.title %></h6>
-                                        <div class="card-category"> <%= course.category_course.name %> </div>
-                                        <div class="tumbContent small card-text">
-                                            <p class="card-text"><%= course.description.html_safe %></p> 
+                            <div class="col-xs-12 col-sm-6 col-md-4 picture-item" data-groups='["<%= course.category_course.name.downcase %>"]'>
+                                <div class="container-card">
+                                    <%= link_to site_course_path(course.slug) do %>
+                                        <div class="card course-card">
+                                            <!-- <img class="thumb" src="" alt="Avatar" style="width:100%"> -->
+                                            <%= image_tag(course.introduction_image.url, alt:"Avatar", style:"width:100%") %>
+                                            <div class="container-card">
+                                                <h6 class="h6 as card-title"><%= course.title %></h6>
+                                                <div class="card-category"> <%= course.category_course.name %> </div>
+                                                <div class="tumbContent small card-text">
+                                                    <p class="card-text"><%= course.description.html_safe %></p> 
+                                                </div>
+                                                <p class="price">Por R$<%= course.price %></p>
+                                            </div>
+                                            <div class="card-footer text-muted">
+                                                <p class="readmore">Saber mais<%#= link_to 'Saber mais', site_course_path(course.slug) %></p>
+                                            </div>
                                         </div>
-                                        <p class="price">Por R$<%= course.price %></p>
-                                    </div>
-                                    <div class="card-footer text-muted">
-                                        <p class="readmore"><%= link_to 'Saber mais', site_course_path(course.slug) %></p>
-                                    </div>
+                                    <% end %>
                                 </div>
                             </div>
-                        </div>
                         <!-- Card FIM -->
                     <% end %>
-                <% end %>
 
+                <% end %>
             </div>
         </div>
     </div>

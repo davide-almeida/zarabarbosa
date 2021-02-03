@@ -54,23 +54,23 @@
                         <!-- Card INI -->
                         <div class="col-xs-12 col-sm-6 col-md-4 picture-item" data-groups='["<%= download.download_category.name.downcase %>"]'>
                             <div class="container-card">
-                                <div class="card">
-                                    <!-- <img class="thumb" src="" alt="Avatar" style="width:100%"> -->
-                                    <%= link_to site_download_path(download.slug) do %>
+                                <%= link_to site_download_path(download.slug) do %>
+                                    <div class="card">
+                                        <!-- <img class="thumb" src="" alt="Avatar" style="width:100%"> -->
                                         <%= image_tag(download.picture.url, alt:"Imagem", style:"width:100%") %>
-                                    <% end %>
-                                    <div class="container-card">
-                                        <h6 class="h6 as card-title"><%= download.title %></h6>
-                                        <div class="card-category"> <%= download.download_category.name %> </div>
-                                        <div class="tumbContent small card-text">
-                                            <p class="card-text"><%= download.description.html_safe %></p>
+                                        <div class="container-card">
+                                            <h6 class="h6 as card-title"><%= download.title %></h6>
+                                            <div class="card-category"> <%= download.download_category.name %> </div>
+                                            <div class="tumbContent small card-text">
+                                                <p class="card-text"><%= download.description.html_safe %></p>
+                                            </div>
+                                            <!-- <p class="price">Por R$<%#= course.price %></p> -->
                                         </div>
-                                        <!-- <p class="price">Por R$<%#= course.price %></p> -->
+                                        <div class="card-footer text-muted">
+                                            <p class="readmore">Baixar<%#= link_to 'Baixar', site_download_path(download.slug) %></p>
+                                        </div>
                                     </div>
-                                    <div class="card-footer text-muted">
-                                        <p class="readmore"><%= link_to 'Baixar', site_download_path(download.slug) %></p>
-                                    </div>
-                                </div>
+                                <% end %>
                             </div>
                         </div>
                         <!-- Card FIM -->
