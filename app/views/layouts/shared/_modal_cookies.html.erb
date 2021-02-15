@@ -1,5 +1,5 @@
 
-<% if (!cookie_active_nil) && (cookie_privacy_policy_present) && (cookie_active) %>
+<% if (!cookie_active_nil) && (cookie_privacy_policy_present) && (cookie_active) && (cookie_modal_text_present) %>
   <!-- Modal -->
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true" data-backdrop="false">
     <div class="modal-dialog" role="document">
@@ -7,13 +7,11 @@
         <div class="modal-body col-md-12 col-sm-12 col-xs-12">
           <div class="text-wraper col-md-10 col-sm-10 col-xs-12">
             <p class="modal-cookies-text">
-              Nós usamos cookies e outras tecnologias semelhantes para melhorar a sua experiência em nossos serviços, personalizar publicidade e recomendar conteúdo de seu interesse.
-              Ao navegar neste site você concorda com a utilização de cookies.
-              Para mais informações conheça nossa "política de privacidade" ou acesse as "preferências de cookies" no seu navegador para gerenciar suas configurações.
+              <%= cookie_modal_text.html_safe %>
             </p>
           </div>
           <div class="col-md-2 col-sm-2 col-xs-12 div_button">
-            <button type="button" class="cookie_button button" data-dismiss="modal">Prosseguir</button> 
+            <button type="button" class="cookie_button button" data-dismiss="modal">Aceitar</button> 
           </div>
         </div>
       </div>

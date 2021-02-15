@@ -60,7 +60,7 @@ class Backoffice::SettingsController < BackofficeController
 
     def params_setting
       params.require(:setting).permit(
-        :email, :phone, :header, :facebook, :instagram, :twitter, :linkedin, :youtube, :picture, :picture_footer, :privacy_policy, :terms_use, :cookie_active
+        :email, :phone, :header, :facebook, :instagram, :twitter, :linkedin, :youtube, :picture, :picture_footer, :privacy_policy, :terms_use, :cookie_active, :cookie_modal_text
       )
     end
 

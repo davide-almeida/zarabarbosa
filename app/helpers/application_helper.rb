@@ -22,5 +22,13 @@ module ApplicationHelper
     def cookie_privacy_policy_present
 		@cookie_privacy_policy_present = Setting.first.privacy_policy.present?
 	end
+    def cookie_modal_text_present
+		@cookie_modal_text_present = Setting.first.cookie_modal_text.present?
+	end
+    def cookie_modal_text
+        if cookie_modal_text_present
+		    @cookie_modal_text = Setting.first.cookie_modal_text
+        end
+	end
     
 end
