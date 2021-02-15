@@ -113,6 +113,11 @@ $(document).ready(function(){
 		}
 
 	});
+
+  // show cookie modal
+  if ($('#myModal').length > 0) {
+    $('#myModal').modal('show');
+  }
 });
 
 // $(document).ready(function() { 
@@ -278,3 +283,4 @@ document.addEventListener('DOMContentLoaded', () => {
     window.demo = new Demo(document.getElementById('grid'));
   }
 });
+

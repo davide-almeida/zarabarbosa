@@ -62,7 +62,11 @@
                 <%= f.file_field :picture_footer, class:"form-control", placeholder:"Imagem" %>
             </div>
             <div class="form-group">
-                <label>Política de privacidade</label>
+                <label>Ativar/Desativar popup de cookies</label>
+                <%= f.select(:cookie_active, @cookie_active_options_for_select, {}, {:class =>"form-control", :tabindex => "-1"}) %>
+            </div>
+            <div class="form-group">
+                <label>Política de privacidade e cookies</label>
                 <%= f.text_area :privacy_policy, class:"form-control tinymce", placeholder:"Digite aqui a política de privacidade. A política de privacidade pode ser acessada através do link no rodapé do site." %>
             </div>
             <div class="form-group">

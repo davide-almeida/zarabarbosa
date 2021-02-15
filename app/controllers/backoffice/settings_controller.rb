@@ -51,7 +51,7 @@ class Backoffice::SettingsController < BackofficeController
 
   private
     def options_for_select
-      #@branch_options_for_select = Branch.all
+      @cookie_active_options_for_select = ["Ativo", "Inativo"]
     end
 
     def set_setting
@@ -59,7 +59,9 @@ class Backoffice::SettingsController < BackofficeController
     end
 
     def params_setting
-      params.require(:setting).permit(:email, :phone, :header, :facebook, :instagram, :twitter, :linkedin, :youtube, :picture, :picture_footer, :privacy_policy, :terms_use)
+      params.require(:setting).permit(
+        :email, :phone, :header, :facebook, :instagram, :twitter, :linkedin, :youtube, :picture, :picture_footer, :privacy_policy, :terms_use, :cookie_active
+      )
     end
 
 

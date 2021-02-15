@@ -56,6 +56,10 @@
       <%= yield %>
 
     <%= render partial: 'layouts/site_shared/footer' %>
+    
+    <% if @first_visit == true %>
+      <%= render partial: 'layouts/shared/modal_cookies' %>
+    <% end %>
 
 	  <!--    Scripts-START 	-->
       <%#= javascript_include_tag 'site/button.js' %>

@@ -1,5 +1,5 @@
 class Blog::CategoriesController < BlogController
-
+  before_action { :first_time_visit }
   #before_action :set_post, only: [:show]
 
   def index

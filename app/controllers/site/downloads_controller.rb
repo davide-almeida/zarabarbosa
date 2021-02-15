@@ -1,5 +1,6 @@
 class Site::DownloadsController < SiteController
   before_action :set_download, only: [:show]
+  before_action { :first_time_visit }
 
   def index
     @settings = Setting.first

@@ -1,4 +1,6 @@
 class Blog::PostsController < BlogController
+  before_action { :first_time_visit }
+  
   def index
     @categories = Category.friendly.order(:name)
     @posts = Post.friendly.order(id: :desc).page(params[:page]).per(5)

@@ -230,6 +230,10 @@ body p {
 	color: #000;
 }
 
+.bottomInfo p {
+	color: #898989;
+}
+
 b,
 strong {
     font-weight: 700;

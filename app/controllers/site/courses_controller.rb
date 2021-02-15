@@ -1,5 +1,6 @@
 class Site::CoursesController < SiteController
   before_action :set_course, only: [:show]
+  before_action { :first_time_visit }
 
   def index
     @settings = Setting.first

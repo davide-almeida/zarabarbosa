@@ -26,10 +26,23 @@
     <%= favicon_link_tag 'favicon.ico' %>
   	<title>Zara Barbosa - Psicóloga</title>
   	<!--    Styles-START 	-->
+    <%#= stylesheet_link_tag 'site/bootstrap.min.css', media: 'all' %>
+    <%#= stylesheet_link_tag 'application.css', media: 'all' %>
+    <%#= stylesheet_link_tag 'site/swiper.css', media: 'all' %>
+    <%#= stylesheet_link_tag 'site/style.css', media: 'all' %>
+
+
     <%= stylesheet_link_tag 'site/bootstrap.min.css', media: 'all' %>
-    <%= stylesheet_link_tag 'site/application.css', media: 'all' %>
+    <%= stylesheet_link_tag 'application.css', media: 'all' %>
     <%= stylesheet_link_tag 'site/swiper.css', media: 'all' %>
+    <%= stylesheet_link_tag 'site/sumoselect.css', media: 'all' %>    
+    <%#= stylesheet_link_tag 'site/flaticon.css', media: 'all' %>
+    <%#= stylesheet_link_tag 'fonts/icons/font/flaticon.css', media: 'all' %>
+    <%#= stylesheet_link_tag 'site/fonts/icons/font/flaticon.css', media: 'all' %>
+    <%= stylesheet_link_tag 'site/fonts/icons/font/flaticon.css', media: 'all' %>
     <%= stylesheet_link_tag 'site/style.css', media: 'all' %>
+    <%= stylesheet_link_tag 'site/application.css', media: 'all' %>
+    <%= stylesheet_link_tag 'site/shuffle', media: 'all' %>
 
     <!--    Styles-END 	-->
   	<style>
@@ -45,14 +58,23 @@
 
     <%= render partial: 'layouts/site_shared/footer' %>
 
+    <% if @first_visit == true %>
+      <%= render partial: 'layouts/shared/modal_cookies' %>
+    <% end %>
+
 	  <!--    Scripts-START 	-->
+      <%= javascript_include_tag 'application' %>
       <%= javascript_include_tag 'site/jquery.min.js' %>
       <%= javascript_include_tag 'site/swiper.jquery.min.js' %>
       <%= javascript_include_tag 'site/SmoothScroll.js' %>
       <%= javascript_include_tag 'site/jquery.sumoselect.min.js' %>
       <%= javascript_include_tag 'site/simple-lightbox.min.js' %>
       <%= javascript_include_tag 'site/global.js' %>
+      <%= javascript_include_tag 'site/bootstrap.min.js' %>
+      <%= javascript_include_tag 'site/site.js' %>
       <%= tinymce %>
+
+
     <!--    Scripts-END 	-->
 
   </body>

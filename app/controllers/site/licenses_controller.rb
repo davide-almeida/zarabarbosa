@@ -1,4 +1,6 @@
 class Site::LicensesController < SiteController
+  before_action { :first_time_visit }
+  
   def privacy_policy
     #@privacy_policy = Setting.first.privacy_policy
     @settings = Setting.first

@@ -88,3 +88,216 @@ hr.hrpanel {
 .space-form-dashboard {
     margin-top: 10%;
 }
+
+
+/* Modal cookies */
+.modal {
+    top: auto;
+    vertical-align: middle;
+}
+
+.div_button {
+    /* padding: 16px; */
+}
+
+.cookie_button {
+    /* width: 100%;
+    vertical-align: middle;
+    padding: 16px; */
+    font-size: 18px;
+    box-sizing: border-box;
+    font-weight: 700;
+    border-radius: 4px;
+    cursor: pointer;
+    line-height: 28px;
+    min-height: 48px;
+    padding: 4px 16px;
+    transition: all .2s ease-in-out;
+    width: 100%;
+    background-color: #1250c4;
+    color: #fff;
+    border: 2px solid #1250c4;
+    text-transform: capitalize;
+}
+
+/* .modal-content{
+    -webkit-box-shadow: 0 5px 15px rgba(0,0,0,0);
+    -moz-box-shadow: 0 5px 15px rgba(0,0,0,0);
+    -o-box-shadow: 0 5px 15px rgba(0,0,0,0);
+    box-shadow: 0 5px 15px rgba(0,0,0,0);
+} */
+
+.modal-dialog {
+    margin-bottom: 0.1%;
+    width: 96%;
+    /* justify-content: space-between; */
+}
+
+.modal-cookies-text {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: middle;
+}
+
+
+/* .col-xs-12 .text-wrapper {
+    margin-bottom: 16px;
+} */
+
+.text-wraper {
+    line-height: 1.5;
+}
+
+@media screen and (max-width: 767px) {
+    .modal-cookies-text {
+        margin-bottom: 16px;
+    }
+}
+
+.modal-body {
+    vertical-align: middle;
+    padding: 16px 0;
+}
+
+
+
+/* .modal-dialog {
+    position: fixed;
+    z-index: 2147483647;
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    margin: auto;
+    max-width: 1334px;
+    min-height: 70px;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 40%);
+    border: solid 1px #eeeeee;
+    background-color: #fff;
+} */
+
+/* .cookie-banner-lgpd-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: inherit;
+} */
+
+/* .cookie-banner-lgpd_text-box {
+    vertical-align: middle;
+    padding: 16px;
+} */
+
+/* .cookie-banner-lgpd_text {
+    font-family: opensans, helvetica, arial, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.45px;
+    color: #333;
+} */
+
+/* .cookie-banner-lgpd_button-box {
+    padding: 16px 16px 16px 0;
+} */
+
+/* .cookie-banner-lgpd_accept-button {
+    background-color: #0069de;
+    padding: 8px 16px;
+    border-radius: 3px;
+    font-family: opensans, helvetica, arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+} */
+
+
+
+
+/* MODAL DO G1 */
+
+/* #cookie-banner-lgpd.cookie-banner-lgpd-animated.cookie-banner-lgpd-visible {
+    animation-name: bounceInUp;
+} */
+
+/* #cookie-banner-lgpd.cookie-banner-lgpd-animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+} */
+
+/* #cookie-banner-lgpd {
+    position: fixed;
+    z-index: 2147483647;
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    margin: auto;
+    max-width: 1334px;
+    min-height: 70px;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 40%);
+    border: solid 1px #eeeeee;
+    background-color: #fff;
+} */
+
+/* #cookie-banner-lgpd .cookie-banner-lgpd-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: inherit;
+} */
+
+/* #cookie-banner-lgpd .cookie-banner-lgpd-container .cookie-banner-lgpd_text-box {
+    vertical-align: middle;
+    padding: 16px;
+} */
+
+/* #cookie-banner-lgpd .cookie-banner-lgpd-container .cookie-banner-lgpd_text-box {
+    vertical-align: middle;
+    padding: 16px;
+} */
+
+/* #cookie-banner-lgpd .cookie-banner-lgpd-container .cookie-banner-lgpd_text-box .cookie-banner-lgpd_text {
+    font-family: opensans, helvetica, arial, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.45px;
+    color: #333;
+} */
+
+/* #cookie-banner-lgpd .cookie-banner-lgpd-container .cookie-banner-lgpd_button-box {
+    padding: 16px 16px 16px 0;
+} */
+
+/* #cookie-banner-lgpd .cookie-banner-lgpd-container .cookie-banner-lgpd_button-box .cookie-banner-lgpd_accept-button {
+    background-color: #0069de;
+    padding: 8px 16px;
+    border-radius: 3px;
+    font-family: opensans, helvetica, arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+} */

@@ -1,3 +1,5 @@
 class SiteController < ApplicationController
-  	layout 'site'
+	before_action { :first_time_visit }
+
+	layout 'site'
 end

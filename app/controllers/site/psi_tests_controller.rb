@@ -1,6 +1,7 @@
 class Site::PsiTestsController < ApplicationController
   layout 'psi_test'
   before_action :set_psi_test, only: [:show, :result, :save_email]
+  before_action { :first_time_visit }
 
   def index
     basic_settings
