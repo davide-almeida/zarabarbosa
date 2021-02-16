@@ -12,4 +12,9 @@ class Site::LicensesController < SiteController
     @settings = Setting.first
     @professionals = Professional.order(:id)
   end
+  
+  def cookie_policy
+    @settings = Setting.first
+    @professionals = Professional.order(:id)
+  end
 end

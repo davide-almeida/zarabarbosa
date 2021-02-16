@@ -70,12 +70,16 @@
                 <%= f.text_area :cookie_modal_text, class:"form-control tinymce", placeholder:"Digite aqui a mensagem que será exibida no modal referente ao aviso de uso de cookies." %>
             </div>
             <div class="form-group">
-                <label>Política de privacidade e cookies</label>
+                <label>Política de privacidade</label>
                 <%= f.text_area :privacy_policy, class:"form-control tinymce", placeholder:"Digite aqui a política de privacidade. A política de privacidade pode ser acessada através do link no rodapé do site." %>
             </div>
             <div class="form-group">
                 <label>Termos de uso</label>
                 <%= f.text_area :terms_use, class:"form-control tinymce", placeholder:"Digite aqui os termos de uso. Os termos de uso podem ser acessados através do link no rodapé do site." %>
+            </div>
+            <div class="form-group">
+                <label>Política de cookies</label>
+                <%= f.text_area :cookie_policy, class:"form-control tinymce", placeholder:"Digite aqui a política de cookies. As políticas de cookies podem ser acessadas através do link no rodapé do site." %>
             </div>
             <button type="submit" class="btn btn-default">Cadastrar</button>
             <% end %>

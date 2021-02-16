@@ -52,6 +52,7 @@ Rails.application.routes.draw do
     get 'home', to: 'home#index'
     get 'politicas-de-privacidade', to: 'licenses#privacy_policy'
     get 'termos-de-uso', to: 'licenses#terms_use'
+    get 'politicas-de-cookies', to: 'licenses#cookie_policy'
   end
 
   namespace :blog do
