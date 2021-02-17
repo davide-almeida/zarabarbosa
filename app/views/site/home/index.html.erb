@@ -377,8 +377,8 @@
 						<% @diaries.each do |diary| %>
 							<div class="emptySpace30"></div>
 							<div class="contactContent normall">
-								<span><u><%= diary.name %></u></span></br>
-								<p><%= diary.address %></p></br>
+								<span><u><%= diary.name %></u></span><br>
+								<p><%= diary.address %></p><br>
 								<p><span>Telefone:</span> <%= diary.phone %></p>
 								<div class="emptySpace5"></div>
 								<span><%= diary.week %></span> <p><%= diary.start_time.strftime("%H:%M") %> às <%= diary.end_time.strftime("%H:%M") %></p>

@@ -3522,7 +3522,8 @@ nav ul li ul li:hover i.fa {
 	.colorBlack .contactContent span,
 	.colorBlack .contactContent p, 
 	.colorBlack .contactContent a {
-		color: #cd4971;
+		/* color: #cd4971; */
+		color: #000;
 	}
 	.contactContent  {
 		padding-bottom: 0
