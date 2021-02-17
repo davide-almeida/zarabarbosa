@@ -2253,7 +2253,9 @@ header {
 
 
 .headerTopInfo {
-	background: url(../../assets/img/menu-bg.png);
+	/* background: url(../../assets/img/menu-bg.png); */
+	background: rgb(255,242,246);
+	background: linear-gradient(0deg, rgba(255,242,246,1) 0%, rgba(255,255,255,1) 26%);
 	position: relative;
 	padding: 35px 0;
 }
@@ -2263,7 +2265,9 @@ header {
 	top: 0;
 	left: 100%;
 	width: 5000px;
-	background: url(../../assets/img/menu-bg.png);
+	/* background: url(../../assets/img/menu-bg.png); */
+	background: rgb(255,242,246);
+	background: linear-gradient(0deg, rgba(255,242,246,1) 0%, rgba(255,255,255,1) 26%);
 	height: 100%;
 	content: '';
 }
@@ -2273,7 +2277,9 @@ header {
 	top: 0;
 	right: 100%;
 	width: 5000px;
-	background: url(../../assets/img/menu-bg.png);
+	/* background: url(../../assets/img/menu-bg.png); */
+	background: rgb(255,242,246);
+	background: linear-gradient(0deg, rgba(255,242,246,1) 0%, rgba(255,255,255,1) 26%);
 	height: 100%;
 	content: '';
 }
