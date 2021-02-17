@@ -2822,14 +2822,18 @@ nav ul li ul li:hover i.fa {
 		margin: 0 auto;
 		padding: 23px 0;
 		text-align: center;
-		background: #f2f2f2;
+		/* background: #f2f2f2; */
+		background: rgb(255,242,246);
+		background: linear-gradient(0deg, rgba(255,242,246,1) 0%, rgba(255,255,255,1) 26%);
 	}
 	.headerMoreInfo:after{
 		position: absolute;
 		top: 0;
 		right: 100%;
 		width: 5000px;
-		background: #f2f2f2;
+		/* background: #f2f2f2; */
+		background: rgb(255,242,246);
+		background: linear-gradient(0deg, rgba(255,242,246,1) 0%, rgba(255,255,255,1) 26%);
 		height: 100%;
 		content: '';
 	}
@@ -2838,7 +2842,9 @@ nav ul li ul li:hover i.fa {
 		top: 0;
 		left: 100%;
 		width: 5000px;
-		background: #f2f2f2;
+		/* background: #f2f2f2; */
+		background: rgb(255,242,246);
+		background: linear-gradient(0deg, rgba(255,242,246,1) 0%, rgba(255,255,255,1) 26%);
 		height: 100%;
 		content: '';
 	}
