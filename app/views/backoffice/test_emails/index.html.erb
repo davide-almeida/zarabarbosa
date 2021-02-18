@@ -16,6 +16,7 @@
                         <th>#</th>
                         <th>Testes</th>
                         <th>Emails</th>
+                        <th>Pontuação</th>
                         <th width="1%">Editar</th>
                         <th width="1%">Excluir</th>
                     </tr>
@@ -26,6 +27,13 @@
                             <td width="3%"><%= email.id %></td>
                             <td><%= email.psi_test.title %></td>
                             <td><%= email.email %></td>
+                            <td>
+                                <% if email.rank_point.present? %>
+                                    <%= email.rank_point %>
+                                <% else %>
+                                    Não pontuado
+                                <% end %>
+                            </td>
                             <td width="1%" class="text-center">
                                 <%= link_to edit_backoffice_test_email_path(email.id), class: "btn btn-primary btn-circle" do %>
                                     <i class="fa fa-edit"></i>

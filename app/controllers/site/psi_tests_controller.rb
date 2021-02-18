@@ -34,11 +34,22 @@ class Site::PsiTestsController < ApplicationController
 
     # Save email
     @email = params[:email]
+    @rank_point = @sum
     # @test_result = TestResult.new(email: @email, psi_test_id: params[:id])
-    @test_email = TestEmail.where(:email => @email).first_or_initialize(:psi_test_id => @psi_test.id)
-    @test_email.save
+    @email_check = TestEmail.find_by_email(@email)
+    @test_email = TestEmail.new
+    if @email_check == nil
+      @test_email = TestEmail.new(email: @email, rank_point: @rank_point, psi_test_id: @psi_test.id)
+      @test_email.save
+    else
+      @email_check.update_column(:rank_point, @rank_point)
+    end
 
-    if @test_email.save
+    # raise
+    # @test_email = TestEmail.where(:email => @email).first_or_initialize(:psi_test_id => @psi_test.id)
+    # @test_email.save
+
+    if (@test_email.save) || (@email_check.update(:rank_point => @rank_point))
       redirect_to result_site_psi_test_path(:id => params[:id], :calc => @sum), notice: "O email (#{@test_email.email}) foi cadastrado com sucesso!"
     else
       render :edit, notice: "Ocorreu um erro!"
