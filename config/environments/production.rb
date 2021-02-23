@@ -70,10 +70,12 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = { :address => "mail.zarabarbosa.com", 
                                          :port => 587, 
+                                         :domain => 'zarabarbosa.com',
                                          :user_name => Rails.application.secrets.email_user_name,
                                          :password => Rails.application.secrets.email_password,
                                          :authentication => "plain",
-                                         :enable_starttls_auto => true
+                                         :enable_starttls_auto => true,
+                                         :openssl_verify_mode  => 'none'
                                         }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
