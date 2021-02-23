@@ -10,18 +10,27 @@ Rails.application.configure do
   #config.reload_classes_only_on_change = false
 
   # mailcatcher
-  #config.action_mailer.delivery_method = :smtp
-  #config.action_mailer.smtp_settings = { :address => "localhost", :port => 1025 }
-  #config.action_mailer.raise_delivery_errors = false
+  # config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.smtp_settings = { :address => "localhost", :port => 1025 }
+  # config.action_mailer.raise_delivery_errors = false
 
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = { :address => "smtp.gmail.com", 
+  config.action_mailer.smtp_settings = { :address => "mail.zarabarbosa.com", 
                                          :port => 587, 
+                                         :domain => 'zarabarbosa.com',
                                          :user_name => Rails.application.secrets.email_user_name,
                                          :password => Rails.application.secrets.email_password,
                                          :authentication => "plain",
-                                         :enable_starttls_auto => true
+                                         :enable_starttls_auto => true,
+                                         :openssl_verify_mode  => 'none'
                                         }
+  # config.action_mailer.smtp_settings = { :address => "smtp.gmail.com", 
+  #                                        :port => 587, 
+  #                                        :user_name => Rails.application.secrets.email_user_name,
+  #                                        :password => Rails.application.secrets.email_password,
+  #                                        :authentication => "plain",
+  #                                        :enable_starttls_auto => true
+  #                                       }
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development

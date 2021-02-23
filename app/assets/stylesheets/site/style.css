@@ -7431,3 +7431,7 @@ margin-bottom:60px;
 	text-align: center;
 	z-index: 9999;
 }
+
+.recaptcha {
+	margin-top: 15px;
+}

@@ -12,8 +12,13 @@ class Site::SendMailController < ApplicationController
 
     def create
         @email = Setting.first.email
-        if verify_recaptcha(model: AdminMailer)
-            AdminMailer.send_message(@email, @email, params[:'recipient-text'], params[:'subject-text'], params[:'message-text'], params[:'name-text'], params[:'phone-text']).deliver_now
+        #ContactMailer.send_message(@email, @email, params[:'recipient-text'], params[:'subject-text'], params[:'message-text'], params[:'name-text'], params[:'phone-text']).deliver_now
+        #respond_to do |format|
+        #    format.js #{ redirect_to(site_home_path, notice: 'Enviado!') }
+        #end
+
+        if verify_recaptcha(model: ContactMailer)
+            ContactMailer.send_message(@email, @email, params[:'recipient-text'], params[:'subject-text'], params[:'message-text'], params[:'name-text'], params[:'phone-text']).deliver_now
             respond_to do |format|
                 format.js #{ redirect_to(site_home_path, notice: 'Enviado!') }
             end

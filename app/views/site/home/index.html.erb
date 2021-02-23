@@ -397,32 +397,32 @@
 						<div class="row">
 							<div class="col-xs-12 col-md-6">
 								<!--<input class="simple-input" type="text" value="" placeholder="Nome Completo" />-->
-								<%= text_field_tag(:'name-text', nil, class:'simple-input', placeholder:'Nome Completo') %>
+								<%= text_field_tag(:'name-text', nil, class:'simple-input', placeholder:'Nome Completo', required: true) %>
 								<div class="emptySpace15"></div>
 							</div>
 							<div class="col-xs-12 col-md-6">
 								<!--<input class="simple-input" type="email" value="" placeholder="Email" />-->
-								<%= email_field_tag(:'recipient-text', nil, class:'simple-input', placeholder:'Email') %>
+								<%= email_field_tag(:'recipient-text', nil, class:'simple-input', placeholder:'Email', required: true) %>
 								<div class="emptySpace15"></div>
 							</div>
 							<div class="col-xs-12 col-md-6">
 								<!--<input class="simple-input" type="text" value="" placeholder="Telefone" />-->
-								<%= text_field_tag(:'phone-text', nil, class:'simple-input', placeholder:'Telefone') %>
+								<%= text_field_tag(:'phone-text', nil, class:'simple-input', placeholder:'Telefone', required: true) %>
 								<div class="emptySpace15"></div>
 							</div>
 							<div class="col-xs-12 col-md-6">
 								<!-- 	SumoSelect-START 	-->
 								<div class="sumoWrapper">
-									<%= select_tag :'subject-text', "<option selected disabled>Assunto</option><option>Agendamento</option><option>D&uacute;vidas</option><option>Outros</option>".html_safe, class: 'SelectBox', id: 'subject-text' %>
+									<%= select_tag :'subject-text', "<option selected disabled>Assunto</option><option>Agendamento</option><option>D&uacute;vidas</option><option>Outros</option>".html_safe, class: 'SelectBox', id: 'subject-text', required: true %>
 								</div>
 								<!-- 	SumoSelect-END 	-->
 								<div class="emptySpace-sm15"></div>
 							</div>
 							<div class="col-xs-12">
-								<%= text_area_tag(:'message-text', nil, class:'simple-input', placeholder:'Texto') %>
+								<%= text_area_tag(:'message-text', nil, class:'simple-input', placeholder:'Texto', required: true) %>
 								<!--<textarea class="simple-input" placeholder="Texto"></textarea>-->
 							</div>
-							<div class="col-xs-12">
+							<div class="col-xs-12 recaptcha">
 								<%= recaptcha_tags %>
 							</div>
 						</div>
