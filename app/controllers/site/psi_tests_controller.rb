@@ -49,8 +49,16 @@ class Site::PsiTestsController < ApplicationController
     # @test_email = TestEmail.where(:email => @email).first_or_initialize(:psi_test_id => @psi_test.id)
     # @test_email.save
 
+    # send email
+    calc(@sum)
+    @mail_subject = @psi_test.title
+    @mail_body = @description.html_safe
+    @result = @sum
+    TestMailer.send_message(@email, @mail_subject, @mail_body, @sum).deliver_later
+
+
     if (@test_email.save) || (@email_check.update(:rank_point => @rank_point))
-      redirect_to result_site_psi_test_path(:id => params[:id], :calc => @sum), notice: "O email (#{@test_email.email}) foi cadastrado com sucesso!"
+      redirect_to result_site_psi_test_path(:id => params[:id], :calc => @sum), notice: "O resultado do teste será exibido!"
     else
       render :edit, notice: "Ocorreu um erro!"
     end
@@ -59,34 +67,8 @@ class Site::PsiTestsController < ApplicationController
 
   def result
     basic_settings
-
-    # @psi_test = PsiTest.find(params[:id])
-    @result = params["calc"]
-
-    @psi_test.test_results.order(:rank_point_limit).each do |rule|
-      if rule.condition == "<"
-        if @result.to_f < rule.rank_point_limit
-          @description = rule.description.html_safe
-          break
-        end
-      elsif rule.condition == ">"
-        if @result.to_f > rule.rank_point_limit
-          @description = rule.description.html_safe
-          break
-        end
-      elsif rule.condition == "="
-        if @result.to_f == rule.rank_point_limit
-          @description = rule.description.html_safe
-          break
-        end
-      end
-
-      @rule_sum = @psi_test.test_results.sum(:rank_point_limit)
-      if @result.to_f > @rule_sum
-        @description = "Houve um erro!"
-      end
-
-    end
+    @result = params[:calc]
+    calc(@result)
 
   end
 
@@ -94,6 +76,34 @@ class Site::PsiTestsController < ApplicationController
     def basic_settings
       @settings = Setting.first
       @professionals = Professional.order(:id)
+    end
+
+    # função para calcular a soma dos pontos e retornar um resultado com o texto (testes)
+    def calc(calc_sum)
+      @result = calc_sum
+      @psi_test.test_results.order(:rank_point_limit).each do |rule|
+        if rule.condition == "<"
+          if @result.to_f < rule.rank_point_limit
+            @description = rule.description.html_safe
+            break
+          end
+        elsif rule.condition == ">"
+          if @result.to_f > rule.rank_point_limit
+            @description = rule.description.html_safe
+            break
+          end
+        elsif rule.condition == "="
+          if @result.to_f == rule.rank_point_limit
+            @description = rule.description.html_safe
+            break
+          end
+        end
+  
+        @rule_sum = @psi_test.test_results.sum(:rank_point_limit)
+        if @result.to_f > @rule_sum
+          @description = "Houve um erro!"
+        end
+      end
     end
 
     def set_psi_test

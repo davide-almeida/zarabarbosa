@@ -41,6 +41,7 @@ Rails.application.routes.draw do
 
   namespace :site do
     resources :send_mail, only: [:edit, :create]
+    resources :send_mail_tests, only: [:edit, :create]
     resources :courses, only: [:show, :index], path: 'cursos'
     resources :downloads, only: [:show, :index], path: 'downloads'
     resources :psi_tests, only: [:index, :show], path: 'testes' do
