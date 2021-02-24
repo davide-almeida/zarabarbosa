@@ -281,6 +281,17 @@ hr.hr3 {
   margin-bottom: 10px;
 }
 
-.result-description {
+/* .result-description {
   text-align: center;
+} */
+
+.result-description p {
+  font-size: 16px;
+  color: #1b1b32;
+  line-height: normal;
+}
+
+.test-checker {
+  font-size: 15px !important;
+  color: #888;
 }
