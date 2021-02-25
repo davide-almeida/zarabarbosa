@@ -1,0 +1,61 @@
+<!-- 	Top banner-START 	-->
+<div class="contentPadding bg bgShadow" style="background-image: url(<%= asset_path 'img/banner-pages-pink.jpg' %>)">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="servicesTitle">
+                    <div class="cell-view">
+                        <h1 class="h1 light as">Emails</h1>
+                        <div class="breadCrumbs small">
+                            <%= link_to 'Início', root_path %> <i class="fa fa-angle-right"></i> <span>emails</span> <i class="fa fa-angle-right"></i> <span>Cancelamento de inscrição</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 	Top banner-END 	-->
+<div class="emptySpace50"></div>
+<div class="contentPadding appointWrapper2 text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-xs-12">
+        <% if @email_exist == true %>
+          <div class="aboutOur">
+            <div class="emptySpace20"></div>
+            <h2 class="h2 as light" style="margin-bottom: 0px;">Cancelamento de inscrição</h2>
+            <div class="emptySpace5"></div>
+            <p class="" style="color:#fff;">Click no botão abaixo para cancelar sua inscrição e não receber emails promocionais do www.zarabarbosa.com</p>
+            <div class="emptySpace30"></div>
+            <div class="normall">
+              <%= form_for(@email, url: site_settings_update_path(id: @email.id)) do |f| %>
+                <div class="btnAlign">
+                  <%= f.hidden_field(:subscription, value: false) %>
+                  <%#= f.submit 'Cancelar inscrição' %>
+                  <%#= link_to 'submit', "#", :onclick => "$('#form_id').submit()", { :style => 'width:0px;' } %>
+                  <%= link_to "<button>Cancelar inscrição</button>".html_safe, "#", {class: "btn btn--outline btn--large btn--1493941431965", :style => '', :onclick => "$('#form_id').submit()"} %>
+                </div>
+              <% end %>
+            </div>
+            <div class="emptySpace20"></div>
+          </div>
+        <% else %>
+          <div class="aboutOur">
+            <div class="emptySpace20"></div>
+            <h2 class="h2 as light" style="margin-bottom: 0px;">Email não inscrito</h2>
+            <div class="emptySpace5"></div>
+            <p class="" style="color:#fff;"></p>
+            <div class="emptySpace30"></div>
+            <div class="normall">
+              <p class="" style="color:#fff;">O seu email não está mais inscrito em nossa lista.</p>
+            </div>
+            <div class="emptySpace20"></div>
+          </div>
+        <% end %>
+        <div class="emptySpace-xs30"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="emptySpace50"></div>

@@ -39,26 +39,23 @@ class Site::PsiTestsController < ApplicationController
     @email_check = TestEmail.find_by_email(@email)
     @test_email = TestEmail.new
     if @email_check == nil
-      @test_email = TestEmail.new(email: @email, rank_point: @rank_point, psi_test_id: @psi_test.id)
+      @test_email = TestEmail.new(email: @email, rank_point: @rank_point, subscription: true, psi_test_id: @psi_test.id)
       @test_email.save
+      @email_check = @test_email
     else
-      @email_check.update_column(:rank_point, @rank_point)
+      @email_check.update_columns(rank_point: @rank_point, subscription: true)
     end
-
-    # raise
-    # @test_email = TestEmail.where(:email => @email).first_or_initialize(:psi_test_id => @psi_test.id)
-    # @test_email.save
-
-    # send email
-    calc(@sum)
-    @mail_subject = @psi_test.title
-    @mail_body = @description.html_safe
-    @result = @sum
-    TestMailer.send_message(@email, @mail_subject, @mail_body, @sum).deliver_later
-
 
     if (@test_email.save) || (@email_check.update(:rank_point => @rank_point))
       redirect_to result_site_psi_test_path(:id => params[:id], :calc => @sum), notice: "O resultado do teste será exibido!"
+      # send email
+      calc(@sum)
+      @mail_subject = @psi_test.title
+      @mail_body = @description.html_safe
+      @result = @sum
+
+      @unsubscribe = Rails.application.message_verifier(:unsubscribe).generate(@email_check.id)
+      TestMailer.send_message(@email, @mail_subject, @mail_body, @sum, @unsubscribe).deliver_later
     else
       render :edit, notice: "Ocorreu um erro!"
     end
@@ -69,8 +66,8 @@ class Site::PsiTestsController < ApplicationController
     basic_settings
     @result = params[:calc]
     calc(@result)
-
   end
+
 
   private
     def basic_settings
@@ -112,7 +109,7 @@ class Site::PsiTestsController < ApplicationController
 
     def params_psi_test
       params.require(:psi_test).permit(
-        test_emails_attributes:[:email, :_destroy, :id]
+        test_emails_attributes:[:email, :subscription, :_destroy, :id]
       )
     end
 

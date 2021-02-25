@@ -1,5 +1,5 @@
 class Backoffice::TestEmailsController < BackofficeController
-  before_action :set_test_email, only: [:edit, :destroy]
+  before_action :set_test_email, only: [:edit, :update, :destroy]
   def index
     @emails = TestEmail.all
     @emails_count = TestEmail.count
@@ -30,13 +30,16 @@ class Backoffice::TestEmailsController < BackofficeController
   private
     def options_for_select
       @test_email_options_for_select = PsiTest.all
+      @subscription_options_for_select = [
+      ["Inscrito", true], ["Cancelado", false]
+    ]
     end
     def set_test_email
       @test_email = TestEmail.find(params[:id])
     end
 
     def params_test_email
-      params.require(:test_email).permit(:email)
+      params.require(:test_email).permit(:email, :subscription, :psi_test_id)
     end
   
 end

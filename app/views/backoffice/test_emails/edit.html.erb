@@ -23,9 +23,13 @@
                     <label>Email</label>
                     <%= f.text_field :email, class:"form-control", placeholder:"Título do teste", required:"required" %>
                 </div>
-                <div class="form-group col-lg-6 col-xs-12">
+                <div class="form-group col-lg-3 col-xs-12">
                     <label>Teste</label>
                     <%= f.collection_select(:psi_test_id, @test_email_options_for_select, :id, :title, {}, {:class =>"form-control"}) %>
+                </div>
+                <div class="form-group col-lg-3 col-xs-12">
+                    <label>Inscrito/Cancelado</label>
+                    <%= f.select(:subscription, @subscription_options_for_select, {}, {:class =>"form-control", :tabindex => "-1"}) %>
                 </div>
                 <div class="form-group col-lg-12 col-xs-12">
                     <button type="submit" class="btn btn-default">Cadastrar</button>

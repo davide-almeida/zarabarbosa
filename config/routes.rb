@@ -48,12 +48,22 @@ Rails.application.routes.draw do
       member do
         patch :save_email, path: 'novo-teste'
         get :result, path: 'resultado'
+        # get :unsubscribe, path: 'desinscrever'
+        # patch :update, path: 'update'
       end
     end
     get 'home', to: 'home#index'
     get 'politicas-de-privacidade', to: 'licenses#privacy_policy'
     get 'termos-de-uso', to: 'licenses#terms_use'
     get 'politicas-de-cookies', to: 'licenses#cookie_policy'
+    get 'politicas-de-cookies', to: 'licenses#cookie_policy'
+    # get 'desinscrever', to: 'settings#unsubscribe'
+    # resources :settings, only: [:index] do
+    #   patch :unsubscribe
+    # end
+    get 'settings/unsubscribe'
+    patch 'settings/update'
+
   end
 
   namespace :blog do
