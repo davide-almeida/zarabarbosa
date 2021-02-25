@@ -17,10 +17,6 @@
 //= require nested_form_fields
 // require shuffle
 
-
-
-
-
 // jQuery(document).ready(function(jQuery) {   
              
 //     var topMenu = jQuery("#top-menu"),

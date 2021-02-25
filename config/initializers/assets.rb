@@ -36,6 +36,7 @@ Rails.application.config.assets.precompile += %w( site/global.js )
 Rails.application.config.assets.precompile += %w( site/map.js )
 Rails.application.config.assets.precompile += %w( site/site.js )
 Rails.application.config.assets.precompile += %w( site/shuffle.js )
+# Rails.application.config.assets.precompile += %w( site.js )
 
 # PSI_TEST
 Rails.application.config.assets.precompile += %w( tests/psi_test.css )

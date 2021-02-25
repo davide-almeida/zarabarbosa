@@ -62,6 +62,7 @@ Rails.application.routes.draw do
     #   patch :unsubscribe
     # end
     get 'settings/unsubscribe'
+    get 'settings/unsubscribed'
     patch 'settings/update'
 
   end

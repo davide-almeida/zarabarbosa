@@ -24,12 +24,16 @@ class Site::SettingsController < SiteController
   def update
     @email = TestEmail.find(params[:id])
     if @email.update(test_email_params)
-        flash[:notice] = 'Subscription Cancelled' 
-        redirect_to root_url
+        # raise
+        redirect_to site_settings_unsubscribed_path, notice: "Sua inscrição foi cancelada com sucesso!"
     else
-        flash[:alert] = 'There was a problem'
-        render :unsubscribe
+        render :unsubscribe, notice: "Houve um erro."
     end
+  end
+
+  # após cancelar a inscrição
+  def unsubscribed
+    basic_settings
   end
 
   private
