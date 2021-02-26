@@ -75,7 +75,7 @@
                 <div class="form-group">
                   <% question.test_alternatives.each do |alternative| %>
                     <label>
-                      <input name="<%= question.id %>" value="<%= alternative.id %>" type="radio" class="input-radio" /> <%= alternative.title %>
+                      <input name="<%= question.id %>" value="<%= alternative.id %>" type="radio" class="input-radio" required /> <%= alternative.title %>
                     </label>
                   <% end %>
                 </div>
