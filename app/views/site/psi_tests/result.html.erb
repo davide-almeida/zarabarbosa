@@ -20,67 +20,65 @@
 <!-- 	Top banner-END 	-->
 
 <% if @psi_test.is_active ==  "Ativo" %>
-
-<!-- description -->
-<!--
-<div class="contentPadding">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="imgWrapper">
-                            <%= image_tag @psi_test.picture.url %>
+    <!-- Test -->
+    <div class="contentPadding">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div id="survey-test">
+                        <div class="test-title">
+                            <h3 id="title" class="text-center">Resultado</h3>
+                            <p id="description" class="description text-center">
+                                <%= @psi_test.title %>
+                            </p>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="aboutOur">
-                    <h2 class="h2 as" style="margin-bottom: 0px;">Descrição</h2> -->
-                    <!-- <p style="margin-top: 0;">Categoria: <%#= @courses.category_course.name %></p> -->
-                    <!-- <div class="emptySpace30"></div> -->
-                   <!-- <div class="simple-article normall">
-                        <p><%= @psi_test.description.html_safe %></p>
-                    </div>
-                </div> -->
-                <!-- <div class="emptySpace-xs30"></div> -->
-            <!--</div>
-        </div>
-    </div>
-</div> -->
-<!-- description - FIM -->
-
-<!-- Test -->
-<div class="contentPadding">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div id="survey-test">
-                    <div class="test-title">
-                        <h3 id="title" class="text-center">Resultado</h3>
-                        <p id="description" class="description text-center">
-                            <%= @psi_test.title %>
-                        </p>
-                    </div>
-                    <div id ="survey-form">
-                        <div class="question">
-                            <div class="form-group">
-                                <h5 class="result">Pontuação: <%= @result %></h5> <br />
-                                <span class="result-description"><%= @description.html_safe %></span>
+                        <div id ="survey-form">
+                            <div class="question">
+                                <div class="form-group">
+                                    <h5 class="result">Pontuação: <%= @result %></h5> <br />
+                                    <span class="result-description"><%= @description.html_safe %></span>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="emptySpace-xs30"></div>
                 </div>
+            </div>
+        </div>
 
-                <div class="emptySpace-xs30"></div>
+        <br />
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div id="survey-test">
+                        <div id ="survey-form">
+                            <div class="question">
+                                <div class="social_shared">
+                                    <% if params[:shared] == "true" %>
+                                        <h5 class="result">Você também gostaria de fazer este teste?</h5> <br />
+                                        <div class="">
+                                            <%= link_to site_psi_test_path(@psi_test.slug), class:"button", :target => "_self", rel:"offline-resource" do %>Fazer o teste<% end %>
+                                        </div>
+                                    <% else %>
+                                        <h5 class="result">Gostaria de compartilhar nas redes sociais?</h5> <br />
+                                        <%#= social_share_button_tag(@psi_test.title) %>
+                                        <%#= social_share_button_tag('Share to Facebook', :url => "https://zarabarbosa.com", desc: @psi_test.title, :allow_sites => %w(facebook)) %>
+                                        <%= social_share_button_tag(@psi_test.title, :allow_sites => %w(facebook twitter linkedin whatsapp_web telegram email), desc: @psi_test.title, :url => "https://zarabarbosa.com#{request.fullpath}&shared=true") %>
+                                        <%#= link_to "FACEBOOK", "https://facebook.com/sharer/sharer.php?u=http://localhost:3000/site/testes/teste-testador-1/resultado?calc=4.0" %>
+                                    <% end %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="emptySpace-xs30"></div>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Test - FIM -->
+    <!-- Test - FIM -->
 
-<% else %>
+<% else %> <%#  %>
 
     <div class="contentPadding">
         <div class="container">

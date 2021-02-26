@@ -17,6 +17,8 @@
 //= require nested_form_fields
 // require shuffle
 
+//= require social-share-button
+
 // jQuery(document).ready(function(jQuery) {   
              
 //     var topMenu = jQuery("#top-menu"),

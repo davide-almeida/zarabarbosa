@@ -67,6 +67,8 @@ gem 'active_link_to'
 # gem 'shufflejs-rails'
 # https://github.com/norman/friendly_id
 gem 'friendly_id', '~> 5.2.4'
+# https://github.com/huacnlee/social-share-button
+gem 'social-share-button'
 
 source 'http://insecure.rails-assets.org' do
   # https://rails-assets.org/#/components/bootstrap?version=3.3.7
