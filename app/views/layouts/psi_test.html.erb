@@ -27,7 +27,13 @@
       <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7COpen+Sans:300,400,600,700%7CRaleway:400,700,800" rel="stylesheet">
 
       <%= favicon_link_tag 'favicon.png', sizes:"32x32" %>
-      <title>Zara Barbosa - Psicóloga</title>
+
+      <% if !@psi_test.nil? %>
+        <title>Zara Barbosa - <%= @psi_test.title %></title>
+      <% else %>
+        <title>Zara Barbosa - Testes</title>
+      <% end %>
+
       <!--    Styles-START 	-->
       <%= stylesheet_link_tag 'site/bootstrap.min.css', media: 'all' %>
       <%= stylesheet_link_tag 'application.css', media: 'all' %>
