@@ -25,6 +25,7 @@ Rails.application.config.assets.precompile += %w( site/sumoselect.css )
 Rails.application.config.assets.precompile += %w( site/fonts/icons/font/flaticon.css )
 Rails.application.config.assets.precompile += %w( site/shuffle.scss )
 Rails.application.config.assets.precompile += %w( instagram_pages.scss )
+Rails.application.config.assets.precompile += %w( social_share.scss ) #Atribuido as páginas com botão de compartilhar a página nas redes sociais
 
 Rails.application.config.assets.precompile += %w( site/bootstrap.min.js )
 Rails.application.config.assets.precompile += %w( site/jquery.min.js )
@@ -42,7 +43,6 @@ Rails.application.config.assets.precompile += %w( site/shuffle.js )
 Rails.application.config.assets.precompile += %w( tests/psi_test.css )
 Rails.application.config.assets.precompile += %w( tests/style.css )
 Rails.application.config.assets.precompile += %w( site/psi_test.js )
-Rails.application.config.assets.precompile += %w( tests/application.scss )
 
 # #PAINEL
 Rails.application.config.assets.precompile += %w( backoffice.css )

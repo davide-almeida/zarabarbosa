@@ -91,21 +91,13 @@
                             </div>
                             <!-- 	Blog1-END 	-->
                             <div class="emptySpace90 emptySpace-xs30"></div>
-                            <div class="emptySpace80 emptySpace-xs30"></div>
-
-                        <div class="emptySpace90 emptySpace-xs30"></div>
-                        <div class="emptySpace90 emptySpace-xs30"></div>
-
-                        <!-- 	Page pagitaion-START 	--> <!--
-                        <div class="paginationWrapper large">
-                            <a class="pagiPrev" href="#"><i class="fa fa-angle-left"></i></a>
-                            <div class="nubmerPagination">
-                                <a class="numberPagi activePagi" href="#">1</a>
-                                <a class="numberPagi" href="#">2</a>
+                            
+                            <div class="breadCrumbs small">
+                                <p><strong>Gostou? Compartilhe nas redes sociais</strong></p>
+                                <%= social_share_button_tag(@post.title, :allow_sites => %w(facebook twitter linkedin whatsapp_web telegram email), desc: @post.title, :url => "https://zarabarbosa.com#{request.fullpath}") %>
                             </div>
-                            <a class="pagiNext" href="#"><i class="fa fa-angle-right"></i></a>
-                        </div> -->
-                        <!-- 	Page pagitaion-END 	-->
+                            
+                            <div class="emptySpace80 emptySpace-xs30"></div>
                     </div>
                 </div>
             </div>

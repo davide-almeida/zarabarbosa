@@ -28,6 +28,7 @@
 
       <%= favicon_link_tag 'favicon.png', sizes:"32x32" %>
 
+      <%# Atribuindo o title da página de testes como nome do teste %>
       <% if !@psi_test.nil? %>
         <title>Zara Barbosa - <%= @psi_test.title %></title>
       <% else %>
@@ -48,7 +49,7 @@
       <%= stylesheet_link_tag 'site/application.css', media: 'all' %>
       <%= stylesheet_link_tag 'site/shuffle', media: 'all' %>
       <%= stylesheet_link_tag 'tests/psi_test', media: 'all' %>
-      <%= stylesheet_link_tag 'tests/application', media: 'all' %>
+      <%= stylesheet_link_tag 'social_share', media: 'all' %>
 
       <!--    Styles-END 	-->
       <style>
