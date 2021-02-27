@@ -6,8 +6,8 @@ class InstagramLink < ApplicationRecord
 
   # método para verificar se o campo "link" começa com "http://". Caso não comece com "http://" será adicionado.
   def link_validation
-    if self.link[0,7] != "http://"
-      self.link.insert(0, "http://")
+    if self.link[0,8] != "https://"
+      self.link.insert(0, "https://")
     end
   end
   
