@@ -5,7 +5,6 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-# ruby 2.4.3
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
@@ -59,7 +58,7 @@ gem "paperclip", "~> 6.0.0"
 # https://github.com/ddollar/foreman
 gem 'foreman'
 #toolbar textarea - GIT(GEM): https://github.com/spohlenz/tinymce-rails - Exemplos: https://www.tiny.cloud/docs/demo/basic-example/
-gem 'tinymce-rails'#, '~> 4.9.7'
+gem 'tinymce-rails'
 # https://github.com/spohlenz/tinymce-rails-langs - translate tools
 gem 'tinymce-rails-langs'
 # https://github.com/comfy/active_link_to
