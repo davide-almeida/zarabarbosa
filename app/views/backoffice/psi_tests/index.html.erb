@@ -32,6 +32,7 @@
                         <th>Qtd. questões</th>
                         <th>Qtd. Emails</th>
                         <th>Imagem destaque</th>
+                        <th>Data criação</th>
                         <th colspan="2">Opções</th>
                     </tr>
                 </thead>
@@ -51,6 +52,7 @@
                                     Sem Imagem
                                 <% end %>
                             </td>
+                            <td><%= psi_test.created_at.strftime("%d/%m/%Y - %H:%M") %></td>
                             <td width="3%">
                                 <%= link_to edit_backoffice_psi_test_path(psi_test.id), class: "btn btn-primary btn-circle" do %>
                                     <i class="fa fa-edit"></i>
